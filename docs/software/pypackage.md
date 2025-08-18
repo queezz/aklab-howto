@@ -1,4 +1,4 @@
-# Python
+# Python Package
 
 Overview of Python basics, environments, and packaging used in this handbook.
 

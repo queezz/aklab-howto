@@ -9,7 +9,7 @@
 Keep subjects short (≤72 chars).
 
 ## Tag a release
-```
+```bash
 git add -A
 git commit -m "chore(version): bump to 0.1.1"
 git tag -a v0.1.1 -m "v0.1.1"
@@ -17,12 +17,12 @@ git push --follow-tags
 ```
 
 ## Install from a Git tag (no PyPI)
-```
+```bash
 pip install "git+https://github.com/you/yourrepo@v0.1.1"
 ```
 
 ## Fix a mistaken tag
-```
+```bash
 git tag -d v0.1.1
 git push origin :refs/tags/v0.1.1
 # re-tag the right commit, then push again
