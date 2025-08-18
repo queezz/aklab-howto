@@ -1,0 +1,46 @@
+site_name: Lab How-To
+site_description: A practical handbook for Git, virtualenvs, packaging, and releases.
+theme:
+  name: material
+  features:
+    - navigation.sections
+    - navigation.top
+    - content.code.copy
+    - content.tabs.link
+    - toc.follow
+  language: en
+nav:
+  - Home: index.md
+  - Software:
+      - Git: software/git.md
+      - Python: software/python.md
+      - Virtual Environments: software/venv.md
+      - Poetry & uv: software/poetry-uv.md
+      - Workflows: software/workflows.md
+  - Analysis:
+      - Pandas: analysis/pandas.md
+      - Plotting: analysis/plotting.md
+      - Notebooks: analysis/notebooks.md
+      - Stats: analysis/stats.md
+  - Hardware:
+      - Instruments: hardware/instruments.md
+      - Circuits: hardware/circuits.md
+      - Sensors: hardware/sensors.md
+      - Safety: hardware/safety.md
+  - Lab:
+      - File Naming: lab/file-naming.md
+      - Reproducibility: lab/reproducibility.md
+      - Experiment Workflows: lab/experiment-workflows.md
+  - Cheats Sheets:
+      - Git: cheatsheets/git.md
+      - Python: cheatsheets/python.md
+      - Linux: cheatsheets/linux.md
+      - Hardware: cheatsheets/hardware.md
+markdown_extensions:
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - pymdownx.details
+  - pymdownx.superfences
+  - mdx_truly_sane_lists

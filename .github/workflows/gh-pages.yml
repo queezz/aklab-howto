@@ -1,0 +1,29 @@
+name: Deploy MkDocs to GitHub Pages
+
+on:
+  push:
+    branches: [ "main", "master" ]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Install MkDocs and plugins
+        run: |
+          python -m pip install -U pip
+          python -m pip install mkdocs mkdocs-material pymdown-extensions mdx_truly_sane_lists
+
+      - name: Build and deploy
+        run: mkdocs gh-deploy --force
