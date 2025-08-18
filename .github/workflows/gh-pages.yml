@@ -1,29 +1,32 @@
-name: Deploy MkDocs to GitHub Pages
+name: Deploy MkDocs site
 
 on:
   push:
-    branches: [ "main", "master" ]
-  workflow_dispatch:
+    branches: [ main, master ]
 
 permissions:
-  contents: write
+  contents: write  # needed to push to gh-pages
 
 jobs:
-  deploy:
+  build-deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Check out repository
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
+      - uses: actions/setup-python@v5
         with:
           python-version: "3.x"
 
-      - name: Install MkDocs and plugins
+      - name: Install MkDocs + plugins
         run: |
-          python -m pip install -U pip
-          python -m pip install mkdocs mkdocs-material pymdown-extensions mdx_truly_sane_lists
+          pip install mkdocs mkdocs-material pymdown-extensions mdx_truly_sane_lists \
+          "mkdocstrings[python]>=0.25"
 
-      - name: Build and deploy
-        run: mkdocs gh-deploy --force
+      - name: Build site
+        run: mkdocs build --strict
+
+      - name: Deploy to gh-pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./site
