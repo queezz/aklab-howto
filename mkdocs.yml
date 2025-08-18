@@ -66,7 +66,7 @@ nav:
         - Versioning: software/git/versioning.md
       - PyPackage: software/pypackage.md
       - Virtual Environments: software/venv.md
-      - Poetry & uv: software/poetry.md
+      - Poetry: software/poetry.md
       - Workflows: software/workflows.md
   - Analysis:
       - Pandas: analysis/pandas.md
