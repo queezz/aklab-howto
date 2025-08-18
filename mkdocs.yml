@@ -1,21 +1,84 @@
 site_name: Lab How-To
-site_description: A practical handbook for Git, virtualenvs, packaging, and releases.
+docs_dir: docs
+
 theme:
   name: material
   features:
-    - navigation.sections
-    - navigation.top
+    - navigation.instant
+    - navigation.tracking
     - content.code.copy
-    - content.tabs.link
-    - toc.follow
-  language: en
+    - navigation.tabs # put top-level pages in tabs
+  palette:
+    - scheme: bh-dark
+      primary: custom
+      accent: yellow
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+    - scheme: default
+      primary: amber
+      accent: red
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+  icon:
+    repo: fontawesome/brands/github
+plugins:
+  - search
+  - mkdocstrings:
+      handlers:
+        python:
+          paths: ["src"]
+          options:
+            docstring_style: numpy      # or "google"
+            show_source: false
+            docstring_section_style: table
+            show_signature_annotations: true
+            show_if_no_docstring: true
+            filters: ["!^_"]            # hide private members 
+            show_category_heading: true      # adds “Attributes”, “Classes”, “Functions”, …
+            show_symbol_type_heading: true   # colored badges as section headings
+            show_symbol_type_toc: true       # those section headings appear in the ToC
+            show_root_heading: true          # show the module/class name as a heading             
+markdown_extensions:
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.arithmatex:   # for LaTeX
+      generic: true  
+  - mdx_truly_sane_lists:
+      nested_indent: 4
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.superfences
+  - pymdownx.highlight
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.inlinehilite
+# MARK: EXTRA
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+extra_css:
+  - styles/brand.css
+
+# Top-right repo link
+repo_url: https://github.com/queezz/bh-molecule
+repo_name: queezz/bh-molecule
+
+# MARK: NAV
 nav:
   - Home: index.md
   - Software:
       - Git: software/git.md
-      - Python: software/python.md
+      - PyPackage: software/pypackage.md
       - Virtual Environments: software/venv.md
-      - Poetry & uv: software/poetry-uv.md
+      - Poetry & uv: software/poetry.md
       - Workflows: software/workflows.md
   - Analysis:
       - Pandas: analysis/pandas.md
@@ -36,11 +99,3 @@ nav:
       - Python: cheatsheets/python.md
       - Linux: cheatsheets/linux.md
       - Hardware: cheatsheets/hardware.md
-markdown_extensions:
-  - admonition
-  - attr_list
-  - def_list
-  - footnotes
-  - pymdownx.details
-  - pymdownx.superfences
-  - mdx_truly_sane_lists
