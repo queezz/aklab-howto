@@ -2,7 +2,13 @@
 
 A practical, copy-pasteable handbook of workflows and recipes organized as a MkDocs documentation site.
 
-## Quick start
+## PyProject scaffolding
+
+```bash
+python scaffold.py my-new-project --author "Your Name" --email you@example.com --desc "Short one-liner." --git --docs
+```
+
+## Building docs
 - Prerequisites: Python 3.11+, MkDocs, and MkDocs Material theme.
 - Install documentation tooling:
   ```bash
