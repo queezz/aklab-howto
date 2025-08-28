@@ -74,6 +74,7 @@ nav:
       - Notebooks: analysis/notebooks.md
       - Stats: analysis/stats.md
   - Hardware:
+      - KiCad: hardware/KiCad.md
       - Instruments: hardware/instruments.md
       - Circuits: hardware/circuits.md
       - Sensors: hardware/sensors.md
