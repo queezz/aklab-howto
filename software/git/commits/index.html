@@ -16,7 +16,7 @@
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.17">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.18">
     
     
       
@@ -294,7 +294,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../hardware/instruments/" class="md-tabs__link">
+        <a href="../../../hardware/KiCad/" class="md-tabs__link">
           
   
   
@@ -626,6 +626,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#roll-back-recent" class="md-nav__link">
+    <span class="md-ellipsis">
+      Roll back recent
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -945,6 +954,29 @@
             Hardware
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../hardware/KiCad/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    KiCad
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
             
               
                 
@@ -1373,6 +1405,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#roll-back-recent" class="md-nav__link">
+    <span class="md-ellipsis">
+      Roll back recent
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1446,6 +1487,21 @@ git<span class="w"> </span>commit<span class="w"> </span>--amend
 git<span class="w"> </span>rebase<span class="w"> </span>-i<span class="w"> </span>--autosquash<span class="w"> </span>HEAD~N
 </code></pre></div>
 <hr />
+<h2 id="roll-back-recent">Roll back recent<a class="headerlink" href="#roll-back-recent" title="Permanent link">&para;</a></h2>
+<p><div class="highlight"><pre><span></span><code>git<span class="w"> </span>reset<span class="w"> </span>--soft<span class="w"> </span>HEAD~1
+</code></pre></div>
+Roll back one local commit and keep All edits:
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>reset<span class="w"> </span>--mixed<span class="w"> </span>HEAD~1
+</code></pre></div></p>
+<p>--soft:
+Removes the commit, but leaves all changes staged (in the index, as if you had already run git add).
+→ You can immediately run git commit again without re-adding files.</p>
+<p>--mixed (default):
+Removes the commit, unstages the changes but keeps them in your working directory.
+→ You’ll see the edits as “modified” and can choose what to git add before committing again.</p>
+<p>--hard:
+Removes the commit and throws away the changes completely.
+→ Nothing left in working directory.</p>
 
 
 
