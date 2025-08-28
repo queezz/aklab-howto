@@ -53,8 +53,8 @@ extra_css:
   - styles/brand.css
 
 # Top-right repo link
-repo_url: https://github.com/queezz/bh-molecule
-repo_name: queezz/bh-molecule
+repo_url: https://github.com/queezz/aklab-howto
+repo_name: queezz/aklab-howto
 
 # MARK: NAV
 nav:
