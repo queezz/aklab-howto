@@ -71,3 +71,25 @@ git push
   ```
 
 ---
+
+## Roll back recent
+
+```bash
+git reset --soft HEAD~1
+```
+Roll back one local commit and keep All edits:
+```bash
+git reset --mixed HEAD~1
+```
+
+--soft:
+Removes the commit, but leaves all changes staged (in the index, as if you had already run git add).
+→ You can immediately run git commit again without re-adding files.
+
+--mixed (default):
+Removes the commit, unstages the changes but keeps them in your working directory.
+→ You’ll see the edits as “modified” and can choose what to git add before committing again.
+
+--hard:
+Removes the commit and throws away the changes completely.
+→ Nothing left in working directory.
