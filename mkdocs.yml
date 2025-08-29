@@ -84,6 +84,7 @@ nav:
         - Control Unit: hardware/controlunit/control-unit.md
         - Waveshare AD/DA: hardware/controlunit/high-precision-adda-board.md
         - Y-corp ADC: hardware/controlunit/y-corp-adc-board.md
+      - RasPi Pinouts: hardware/RasPi-pinout.md
       - Instruments: hardware/instruments.md
       - Sensors: hardware/sensors.md
       - Safety: hardware/safety.md
