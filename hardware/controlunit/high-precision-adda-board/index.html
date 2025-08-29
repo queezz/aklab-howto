@@ -55,7 +55,16 @@
     
     
     
-  </head>
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -906,7 +915,7 @@
   
   
   <span class="md-ellipsis">
-    Control
+    Control Unit
     
   </span>
   
@@ -917,7 +926,7 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4_2">
             <span class="md-nav__icon md-icon"></span>
-            Control
+            Control Unit
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -933,7 +942,7 @@
   
   
   <span class="md-ellipsis">
-    Control Unit
+    About
     
   </span>
   
@@ -1071,6 +1080,29 @@
           </ul>
         </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RasPi-pinout/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    RasPi Pinouts
+    
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -1497,7 +1529,7 @@
 <a class="md-button" href="https://www.waveshare.com/high-precision-ad-da-board.htm" rel="noopener" target="_blank">Waveshare Shop</a></p>
 <p>Raspberry Pi High-Precision AD/DA Expansion Board</p>
 <h2 id="whats-on-the-board">What's on the board<a class="headerlink" href="#whats-on-the-board" title="Permanent link">&para;</a></h2>
-<p><img alt="High precision AD/DA board" src="../../../images/High-Precision-AD-DA-Board-intro.jpg" width="500" /></p>
+<p><a class="glightbox" href="../../../images/High-Precision-AD-DA-Board-intro.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="High precision AD/DA board" src="../../../images/High-Precision-AD-DA-Board-intro.jpg" width="500" /></a></p>
 <ol>
 <li>Raspberry Pi GPIO interface : for connecting with the Pi</li>
 <li>AD/DA input/output : screw terminals</li>
@@ -1593,7 +1625,7 @@
 </tbody>
 </table>
 <h2 id="dimensions">Dimensions<a class="headerlink" href="#dimensions" title="Permanent link">&para;</a></h2>
-<p><img alt="High precision AD/DA board" src="../../../images/High-Precision-AD-DA-Board-size.jpg" width="360" /></p>
+<p><a class="glightbox" href="../../../images/High-Precision-AD-DA-Board-size.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="High precision AD/DA board" src="../../../images/High-Precision-AD-DA-Board-size.jpg" width="360" /></a></p>
 
 
 
@@ -1652,5 +1684,7 @@
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
-  </body>
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
 </html>

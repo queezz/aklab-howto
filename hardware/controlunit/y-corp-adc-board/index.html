@@ -12,7 +12,7 @@
         <link rel="prev" href="../high-precision-adda-board/">
       
       
-        <link rel="next" href="../../instruments/">
+        <link rel="next" href="../../RasPi-pinout/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -55,7 +55,16 @@
     
     
     
-  </head>
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -906,7 +915,7 @@
   
   
   <span class="md-ellipsis">
-    Control
+    Control Unit
     
   </span>
   
@@ -917,7 +926,7 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4_2">
             <span class="md-nav__icon md-icon"></span>
-            Control
+            Control Unit
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -933,7 +942,7 @@
   
   
   <span class="md-ellipsis">
-    Control Unit
+    About
     
   </span>
   
@@ -1122,6 +1131,29 @@
           </ul>
         </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RasPi-pinout/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    RasPi Pinouts
+    
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -1600,7 +1632,7 @@
 <p>I2C アナログ入力ボード AIO-32/0RA-IRC by Y-Corporation</p>
 <p>An I²C-connected analog input board with <strong>32 channels</strong> (16-bit resolution).<br />
 Designed for use with <strong>Raspberry Pi</strong> and <strong>Jetson Nano</strong> as an expansion board.</p>
-<h2 id="_1"><img alt="Old control unit" src="../../../images/y-corp-aio-32-0ra-irc.jpg" width="360" /><a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<h2 id="_1"><a class="glightbox" href="../../../images/y-corp-aio-32-0ra-irc.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Old control unit" src="../../../images/y-corp-aio-32-0ra-irc.jpg" width="360" /></a><a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <h2 id="features">Features<a class="headerlink" href="#features" title="Permanent link">&para;</a></h2>
 <h3 id="input-range">Input range<a class="headerlink" href="#input-range" title="Permanent link">&para;</a></h3>
 <blockquote>
@@ -1703,5 +1735,7 @@ Designed for use with <strong>Raspberry Pi</strong> and <strong>Jetson Nano</str
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
-  </body>
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
 </html>
