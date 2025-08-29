@@ -1,1 +1,12 @@
 site/
+
+# Python cache and metadata
+__pycache__/
+*.py[cod]
+*.egg-info/
+*.egg-info/*
+
+# Distribution / packaging
+build/
+dist/
+.eggs/

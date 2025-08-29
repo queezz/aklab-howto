@@ -26,6 +26,7 @@ theme:
         name: Switch to dark mode
 plugins:
   - search
+  - glightbox  
 markdown_extensions:
   - admonition
   - attr_list
@@ -80,8 +81,8 @@ nav:
       - Stats: analysis/stats.md
   - Hardware:
       - KiCad: hardware/KiCad.md
-      - Control:
-        - Control Unit: hardware/controlunit/control-unit.md
+      - Control Unit:
+        - About : hardware/controlunit/control-unit.md
         - Waveshare AD/DA: hardware/controlunit/high-precision-adda-board.md
         - Y-corp ADC: hardware/controlunit/y-corp-adc-board.md
       - RasPi Pinouts: hardware/RasPi-pinout.md

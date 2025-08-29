@@ -39,3 +39,16 @@ python scaffold.py my-new-project --author "Your Name" --email you@example.com -
 
 ## Documentation site
 - The content is organized under `docs/` and exposed via the MkDocs navigation defined in `mkdocs.yml`.
+
+## Venv
+```powershell
+python -m venv "$env:USERPROFILE/.venvs/explainers" 
+```
+
+```powershell
+& "$env:USERPROFILE/.venvs/explainers/Scripts/Activate.ps1"
+```
+
+```powershell
+python -m pip install -e ".[docs]"
+```
