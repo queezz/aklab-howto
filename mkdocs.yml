@@ -3,11 +3,14 @@ docs_dir: docs
 
 theme:
   name: material
+  icon:
+    repo: fontawesome/brands/github
   features:
     - navigation.instant
     - navigation.tracking
     - content.code.copy
     - navigation.tabs # put top-level pages in tabs
+    - content.image.zoom
   palette:
     - scheme: bh-dark
       primary: custom
@@ -21,8 +24,6 @@ theme:
       toggle:
         icon: material/weather-night
         name: Switch to dark mode
-  icon:
-    repo: fontawesome/brands/github
 plugins:
   - search
 markdown_extensions:
@@ -45,6 +46,10 @@ markdown_extensions:
   - pymdownx.critic
   - pymdownx.details
   - pymdownx.inlinehilite
+  - md_in_html
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
 # MARK: EXTRA
 extra_javascript:
   - javascripts/mathjax.js
@@ -75,8 +80,11 @@ nav:
       - Stats: analysis/stats.md
   - Hardware:
       - KiCad: hardware/KiCad.md
+      - Control:
+        - Control Unit: hardware/controlunit/control-unit.md
+        - Waveshare AD/DA: hardware/controlunit/high-precision-adda-board.md
+        - Y-corp ADC: hardware/controlunit/y-corp-adc-board.md
       - Instruments: hardware/instruments.md
-      - Circuits: hardware/circuits.md
       - Sensors: hardware/sensors.md
       - Safety: hardware/safety.md
   - Lab:
