@@ -17,3 +17,8 @@ Maybe one day this will become a well-managed, easy-to-maintain, well-documented
 ## Control Unit Jungle
 
 ![Old control unit](../../images/old-control-unit.jpg){ width="360" }
+
+## Design a better box
+![BNC Panel Front](./images/bnc-panel-with-cover.jpg){ width="360" }
+![BNC panel PCB](./images/bnc-panel-pcb.jpg){ width="360" }
+![PiHat PCB Desgin](./images/pihat-pcb-design.jpg){ width="360" }

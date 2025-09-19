@@ -72,6 +72,7 @@ nav:
         - Versioning: software/git/versioning.md
       - PyPackage: software/pypackage.md
       - Virtual Environments: software/venv.md
+      - Flask Server: software/pihti-vacuum.md
       - Poetry: software/poetry.md
       - Workflows: software/workflows.md
   - Analysis:
@@ -85,9 +86,10 @@ nav:
         - About : hardware/controlunit/control-unit.md
         - Waveshare AD/DA: hardware/controlunit/high-precision-adda-board.md
         - Y-corp ADC: hardware/controlunit/y-corp-adc-board.md
+      - Sensors:
+        - WCS1800: hardware/sensors/wcs1800.md
       - RasPi Pinouts: hardware/RasPi-pinout.md
       - Instruments: hardware/instruments.md
-      - Sensors: hardware/sensors.md
       - Safety: hardware/safety.md
   - Lab:
       - File Naming: lab/file-naming.md
