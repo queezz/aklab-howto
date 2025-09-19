@@ -36,6 +36,7 @@ python -m pip install -e ".[dev]"
 
 
 ## Usage
+For this, you don't need to install the package, just copy the scaffolding.py to your folder and run it.
 
 ```bash
 python scaffold.py NAME [--author AUTHOR] [--email EMAIL]
@@ -61,16 +62,10 @@ python scaffold.py NAME [--author AUTHOR] [--email EMAIL]
 
 ## Example
 
-Scaffold a new project called `packagename` with Git and Docs enabled:
+Scaffold a new project called `ramanechelle` with Git and Docs enabled:
 
 ```bash
-python scaffold.py packagename \
-  --author "John Doe" \
-  --email "john@doe.com" \
-  --desc "Explainers for physics and engineering." \
-  --repo-url "https://github.com/yourgithubname/packagename" \
-  --git \
-  --docs
+python .\scaffold.py  --author "John Doe" --desc "Echelle for Raman" --docs "ramanechelle"
 ```
 
 ---
