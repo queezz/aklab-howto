@@ -66,6 +66,7 @@ repo_name: queezz/aklab-howto
 nav:
   - Home: index.md
   - Software:
+      - Installation: software/installation-guide.md
       - Git:
         - Intro: software/git/intro.md
         - Commits: software/git/commits.md
