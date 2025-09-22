@@ -73,6 +73,7 @@ nav:
         - Versioning: software/git/versioning.md
       - PyPackage: software/pypackage.md
       - Virtual Environments: software/venv.md
+      - Venv Troubles: software/venv-troubles.md
       - Flask Server: software/pihti-vacuum.md
       - Poetry: software/poetry.md
       - Workflows: software/workflows.md
