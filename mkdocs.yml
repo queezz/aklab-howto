@@ -89,6 +89,7 @@ nav:
         - Y-corp ADC: hardware/controlunit/y-corp-adc-board.md
       - Sensors:
         - WCS1800: hardware/sensors/wcs1800.md
+        - ACS712: hardware/sensors/acs712.md
       - RasPi Pinouts: hardware/RasPi-pinout.md
       - Instruments: hardware/instruments.md
       - Safety: hardware/safety.md
