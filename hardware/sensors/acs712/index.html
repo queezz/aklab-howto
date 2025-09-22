@@ -6,10 +6,10 @@
       
       
       
-        <link rel="prev" href="../intro/">
+        <link rel="prev" href="../wcs1800/">
       
       
-        <link rel="next" href="../versioning/">
+        <link rel="next" href="../../RasPi-pinout/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -17,7 +17,7 @@
     
     
       
-        <title>Commits - Lab How-To</title>
+        <title>ACS712 - Lab How-To</title>
       
     
     
@@ -81,7 +81,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#git-commit-culture" class="md-skip">
+        <a href="#acs712-hall-sensor" class="md-skip">
           Skip to content
         </a>
       
@@ -115,7 +115,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Commits
+              ACS712
             
           </span>
         </div>
@@ -243,13 +243,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../../installation-guide/" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../../software/installation-guide/" class="md-tabs__link">
           
   
   
@@ -285,11 +283,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../../hardware/KiCad/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../KiCad/" class="md-tabs__link">
           
   
   
@@ -412,29 +412,24 @@
       
   
   
-    
   
   
-  
     
     
     
     
       
-        
-        
-      
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2">
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
             
   
   
@@ -447,7 +442,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Software
@@ -461,7 +456,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../installation-guide/" class="md-nav__link">
+      <a href="../../../software/installation-guide/" class="md-nav__link">
         
   
   
@@ -481,8 +476,6 @@
                 
   
   
-    
-  
   
   
     
@@ -493,11 +486,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2">
         
           
           <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
@@ -513,7 +506,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_2">
             <span class="md-nav__icon md-icon"></span>
             Git
@@ -527,7 +520,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../intro/" class="md-nav__link">
+      <a href="../../../software/git/intro/" class="md-nav__link">
         
   
   
@@ -547,32 +540,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Commits
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../software/git/commits/" class="md-nav__link">
         
   
   
@@ -583,80 +554,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#why-it-matters" class="md-nav__link">
-    <span class="md-ellipsis">
-      Why it matters
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#conventional-commits-lite" class="md-nav__link">
-    <span class="md-ellipsis">
-      Conventional Commits (lite)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#commit-hygiene" class="md-nav__link">
-    <span class="md-ellipsis">
-      Commit hygiene
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#daily-flow" class="md-nav__link">
-    <span class="md-ellipsis">
-      Daily flow
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#squash-amend" class="md-nav__link">
-    <span class="md-ellipsis">
-      Squash &amp; Amend
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#roll-back-recent" class="md-nav__link">
-    <span class="md-ellipsis">
-      Roll back recent
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -669,7 +566,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../versioning/" class="md-nav__link">
+      <a href="../../../software/git/versioning/" class="md-nav__link">
         
   
   
@@ -700,7 +597,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../pypackage/" class="md-nav__link">
+      <a href="../../../software/pypackage/" class="md-nav__link">
         
   
   
@@ -723,7 +620,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../venv/" class="md-nav__link">
+      <a href="../../../software/venv/" class="md-nav__link">
         
   
   
@@ -746,7 +643,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../pihti-vacuum/" class="md-nav__link">
+      <a href="../../../software/pihti-vacuum/" class="md-nav__link">
         
   
   
@@ -769,7 +666,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../poetry/" class="md-nav__link">
+      <a href="../../../software/poetry/" class="md-nav__link">
         
   
   
@@ -792,7 +689,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../workflows/" class="md-nav__link">
+      <a href="../../../software/workflows/" class="md-nav__link">
         
   
   
@@ -959,24 +856,29 @@
       
   
   
+    
   
   
+  
     
     
     
     
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4">
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
         
           
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
             
   
   
@@ -989,7 +891,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             Hardware
@@ -1003,7 +905,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../hardware/KiCad/" class="md-nav__link">
+      <a href="../../KiCad/" class="md-nav__link">
         
   
   
@@ -1067,7 +969,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../hardware/controlunit/control-unit/" class="md-nav__link">
+      <a href="../../controlunit/control-unit/" class="md-nav__link">
         
   
   
@@ -1090,7 +992,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../hardware/controlunit/high-precision-adda-board/" class="md-nav__link">
+      <a href="../../controlunit/high-precision-adda-board/" class="md-nav__link">
         
   
   
@@ -1113,7 +1015,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../hardware/controlunit/y-corp-adc-board/" class="md-nav__link">
+      <a href="../../controlunit/y-corp-adc-board/" class="md-nav__link">
         
   
   
@@ -1141,6 +1043,8 @@
                 
   
   
+    
+  
   
   
     
@@ -1151,11 +1055,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" checked>
         
           
           <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
@@ -1171,7 +1075,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4_3">
             <span class="md-nav__icon md-icon"></span>
             Sensors
@@ -1185,7 +1089,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../hardware/sensors/wcs1800/" class="md-nav__link">
+      <a href="../wcs1800/" class="md-nav__link">
         
   
   
@@ -1205,10 +1109,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../../hardware/sensors/acs712/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    ACS712
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1219,6 +1145,44 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#about" class="md-nav__link">
+    <span class="md-ellipsis">
+      About
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sensitivity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sensitivity
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1239,7 +1203,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../hardware/RasPi-pinout/" class="md-nav__link">
+      <a href="../../RasPi-pinout/" class="md-nav__link">
         
   
   
@@ -1262,7 +1226,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../hardware/instruments/" class="md-nav__link">
+      <a href="../../instruments/" class="md-nav__link">
         
   
   
@@ -1285,7 +1249,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../hardware/safety/" class="md-nav__link">
+      <a href="../../safety/" class="md-nav__link">
         
   
   
@@ -1592,54 +1556,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#why-it-matters" class="md-nav__link">
+  <a href="#about" class="md-nav__link">
     <span class="md-ellipsis">
-      Why it matters
+      About
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#conventional-commits-lite" class="md-nav__link">
+  <a href="#sensitivity" class="md-nav__link">
     <span class="md-ellipsis">
-      Conventional Commits (lite)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#commit-hygiene" class="md-nav__link">
-    <span class="md-ellipsis">
-      Commit hygiene
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#daily-flow" class="md-nav__link">
-    <span class="md-ellipsis">
-      Daily flow
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#squash-amend" class="md-nav__link">
-    <span class="md-ellipsis">
-      Squash &amp; Amend
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#roll-back-recent" class="md-nav__link">
-    <span class="md-ellipsis">
-      Roll back recent
+      Sensitivity
     </span>
   </a>
   
@@ -1664,75 +1592,43 @@
   
 
 
-<h1 id="git-commit-culture">Git Commit Culture<a class="headerlink" href="#git-commit-culture" title="Permanent link">¶</a></h1>
-<h2 id="why-it-matters">Why it matters<a class="headerlink" href="#why-it-matters" title="Permanent link">¶</a></h2>
-<p>Commits are not just for you — they are the history your collaborators (and your future self) will read. A clean history makes debugging and reviewing easier.</p>
-<h2 id="conventional-commits-lite">Conventional Commits (lite)<a class="headerlink" href="#conventional-commits-lite" title="Permanent link">¶</a></h2>
-<p>Use a short, structured format:</p>
-<div class="highlight"><pre><span></span><code>&lt;type&gt;(&lt;scope&gt;): &lt;subject&gt;
-</code></pre></div>
-<p>Examples:</p>
-<ul>
-<li><code>feat(vis133m): pixel/band maps + explicit time vector</code></li>
-<li><code>fix(wavecal): accept 0-based channel index</code></li>
-<li><code>docs: add quickstart</code></li>
-<li><code>chore(version): bump to 0.1.1</code></li>
-</ul>
-<p><strong>Types</strong>: feat, fix, docs, chore, refactor, test, build, ci.
-<strong>Scope</strong>: optional, but helps (<code>venv</code>, <code>mkdocs</code>, <code>wavecal</code>).
-<strong>Subject</strong>: imperative, ≤72 chars.</p>
-<h2 id="commit-hygiene">Commit hygiene<a class="headerlink" href="#commit-hygiene" title="Permanent link">¶</a></h2>
-<ul>
-<li>One logical change per commit (atomic).</li>
-<li>Tiny commits are fine — they show the story.</li>
-<li>Push when ready → avoids spamming CI (like GitHub Pages).</li>
-<li>Commit body (optional): explain <em>why</em>, not just <em>what</em>.</li>
-<li>Breaking changes →</li>
-</ul>
-<p></p><div class="highlight"><pre><span></span><code>BREAKING CHANGE: old flag removed; use --foo instead
-</code></pre></div>
-* Reference issues/PRs → <code>Fixes #123</code>.<p></p>
-<h2 id="daily-flow">Daily flow<a class="headerlink" href="#daily-flow" title="Permanent link">¶</a></h2>
-<div class="highlight"><pre><span></span><code><span class="c1"># work in small commits</span>
-git<span class="w"> </span>add<span class="w"> </span>-A
-git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">"feat(venv): add explainer draft"</span>
-git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">"fix(venv): typos"</span>
-git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">"docs(venv): reorder sections"</span>
-
-<span class="c1"># clean up before pushing</span>
-git<span class="w"> </span>rebase<span class="w"> </span>-i<span class="w"> </span>HEAD~3<span class="w">   </span><span class="c1"># squash/fixup</span>
-git<span class="w"> </span>push
-</code></pre></div>
-<h2 id="squash-amend">Squash &amp; Amend<a class="headerlink" href="#squash-amend" title="Permanent link">¶</a></h2>
-<ul>
-<li><strong>Amend last commit</strong>:</li>
-</ul>
-<p></p><div class="highlight"><pre><span></span><code>git<span class="w"> </span>add<span class="w"> </span>&lt;files&gt;
-git<span class="w"> </span>commit<span class="w"> </span>--amend
-</code></pre></div>
-* <strong>Squash multiple commits</strong>:<p></p>
-<p></p><div class="highlight"><pre><span></span><code>git<span class="w"> </span>rebase<span class="w"> </span>-i<span class="w"> </span>HEAD~N
-</code></pre></div>
-* <strong>Fixup autosquash</strong>:<p></p>
-<div class="highlight"><pre><span></span><code>git<span class="w"> </span>commit<span class="w"> </span>--fixup<span class="o">=</span>&lt;sha&gt;
-git<span class="w"> </span>rebase<span class="w"> </span>-i<span class="w"> </span>--autosquash<span class="w"> </span>HEAD~N
-</code></pre></div>
-<hr>
-<h2 id="roll-back-recent">Roll back recent<a class="headerlink" href="#roll-back-recent" title="Permanent link">¶</a></h2>
-<p></p><div class="highlight"><pre><span></span><code>git<span class="w"> </span>reset<span class="w"> </span>--soft<span class="w"> </span>HEAD~1
-</code></pre></div>
-Roll back one local commit and keep All edits:
-<div class="highlight"><pre><span></span><code>git<span class="w"> </span>reset<span class="w"> </span>--mixed<span class="w"> </span>HEAD~1
-</code></pre></div><p></p>
-<p>--soft:
-Removes the commit, but leaves all changes staged (in the index, as if you had already run git add).
-→ You can immediately run git commit again without re-adding files.</p>
-<p>--mixed (default):
-Removes the commit, unstages the changes but keeps them in your working directory.
-→ You’ll see the edits as “modified” and can choose what to git add before committing again.</p>
-<p>--hard:
-Removes the commit and throws away the changes completely.
-→ Nothing left in working directory.</p>
+<h1 id="acs712-hall-sensor">ACS712 Hall Sensor<a class="headerlink" href="#acs712-hall-sensor" title="Permanent link">¶</a></h1>
+<p><a class="md-button" href="https://www.amazon.co.jp/-/en/dp/B00JQ1XU6A?ref_=ppx_hzsearch_conn_dt_b_fed_asin_title_2" rel="noopener" target="_blank">Amazon Module</a>
+<a class="md-button" href="../acs712-datasheet.pdf" rel="noopener" target="_blank">Datasheet</a>
+<a class="md-button" href="https://github.com/queezz/ControlUnit/blob/master/controlunit/devices/conversions.py#L60" rel="noopener" target="_blank">In Control Unit</a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../ac_sl1100.jpg" data-desc-position="bottom"><img alt="ACS712 Module" src="../ac_sl1100.jpg" width="300"></a></p>
+<h2 id="about">About<a class="headerlink" href="#about" title="Permanent link">¶</a></h2>
+<p>The device consists of a precise, low-offset, linear Hall circuit with a copper conduction path located near the surface of the die.<br>
+Applied current flowing through this copper conduction path generates a magnetic field which the Hall IC converts into a proportional voltage.  </p>
+<p>Device accuracy is optimized through the close proximity of the magnetic signal to the Hall transducer.<br>
+A precise, proportional voltage is provided by the low-offset, chopper-stabilized BiCMOS Hall IC, which is programmed for accuracy after packaging.</p>
+<h2 id="sensitivity">Sensitivity<a class="headerlink" href="#sensitivity" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th>Model</th>
+<th>Range</th>
+<th>Sensitivity</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ACS712-05B</td>
+<td>±5 A</td>
+<td>185 mV/A</td>
+</tr>
+<tr>
+<td>ACS712-20B</td>
+<td>±20 A</td>
+<td>100 mV/A</td>
+</tr>
+<tr>
+<td>ACS712-30B</td>
+<td>±30 A</td>
+<td>66 mV/A</td>
+</tr>
+</tbody>
+</table>
 
 
 
