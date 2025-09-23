@@ -1,0 +1,1713 @@
+<!DOCTYPE html><html lang="en" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../../hardware/safety/">
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.20">
+    
+    
+      
+        <title>Echelle spectra - Lab How-To</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.e53b48f4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../styles/brand.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="bh-dark" data-md-color-primary="custom" data-md-color-accent="yellow">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#echelle-project-overview-playbook" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Lab How-To" class="md-header__button md-logo" aria-label="Lab How-To" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Lab How-To
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Echelle spectra
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="bh-dark" data-md-color-primary="custom" data-md-color-accent="yellow" aria-label="Switch to light mode" type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"></path></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="amber" data-md-color-accent="red" aria-label="Switch to dark mode" type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"></path></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/queezz/aklab-howto" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"></path></svg>
+  </div>
+  <div class="md-source__repository">
+    queezz/aklab-howto
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../software/installation-guide/" class="md-tabs__link">
+          
+  
+  
+  Software
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../hardware/KiCad/" class="md-tabs__link">
+          
+  
+  
+  Hardware
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  
+  Seminar
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Lab How-To" class="md-nav__button md-logo" aria-label="Lab How-To" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+
+    </a>
+    Lab How-To
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/queezz/aklab-howto" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"></path></svg>
+  </div>
+  <div class="md-source__repository">
+    queezz/aklab-howto
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2">
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Software
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Software
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software/installation-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Installation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2">
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Git
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Git
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software/git/intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Intro
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software/git/commits/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Commits
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software/git/versioning/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Versioning
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software/pypackage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    PyPackage
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software/venv/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Virtual Environments
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software/venv-troubles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Venv Troubles
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software/pihti-vacuum/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Flask Server
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software/poetry/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Poetry
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software/workflows/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Workflows
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3">
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Hardware
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Hardware
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hardware/KiCad/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    KiCad
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2">
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Control Unit
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Control Unit
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hardware/controlunit/control-unit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    About
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hardware/controlunit/high-precision-adda-board/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Waveshare AD/DA
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hardware/controlunit/y-corp-adc-board/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Y-corp ADC
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3">
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Sensors
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            Sensors
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hardware/sensors/wcs1800/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    WCS1800
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hardware/sensors/acs712/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ACS712
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hardware/RasPi-pinout/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    RasPi Pinouts
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hardware/instruments/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Instruments
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hardware/safety/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Safety
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Seminar
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Seminar
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Echelle spectra
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Echelle spectra
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-the-problem-why-your-current-workflow-hurts" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. The problem — why your current workflow hurts
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. The problem — why your current workflow hurts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#typical-anti-patterns-bs-we-keep-seeing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Typical anti-patterns (“BS”) we keep seeing
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-the-sane-project-shape-mix-notebooks-package" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. The sane project shape — mix notebooks + package
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. The sane project shape — mix notebooks + package">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#install-the-package-in-editable-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      Install the package in editable mode
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-daily-usage-pattern-what-students-should-do" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Daily usage pattern — what students should do
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-git-hygiene-small-readable-history" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Git hygiene — small, readable history
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-docs-when-it-stabilizes-mkdocs-minimal" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Docs when it stabilizes — mkdocs, minimal
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-side-by-side-bs-vs-possible" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Side-by-side — BS vs possible
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Side-by-side — BS vs possible">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#manual-notebook-soup-bs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Manual notebook soup (BS)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#package-first-possible" class="md-nav__link">
+    <span class="md-ellipsis">
+      Package-first (possible)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-message" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Message
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-minimal-pyprojecttoml-you-can-reuse" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Minimal pyproject.toml you can reuse
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#encouragement" class="md-nav__link">
+    <span class="md-ellipsis">
+      Encouragement
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-the-problem-why-your-current-workflow-hurts" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. The problem — why your current workflow hurts
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. The problem — why your current workflow hurts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#typical-anti-patterns-bs-we-keep-seeing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Typical anti-patterns (“BS”) we keep seeing
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-the-sane-project-shape-mix-notebooks-package" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. The sane project shape — mix notebooks + package
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. The sane project shape — mix notebooks + package">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#install-the-package-in-editable-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      Install the package in editable mode
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-daily-usage-pattern-what-students-should-do" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Daily usage pattern — what students should do
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-git-hygiene-small-readable-history" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Git hygiene — small, readable history
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-docs-when-it-stabilizes-mkdocs-minimal" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Docs when it stabilizes — mkdocs, minimal
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-side-by-side-bs-vs-possible" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Side-by-side — BS vs possible
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Side-by-side — BS vs possible">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#manual-notebook-soup-bs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Manual notebook soup (BS)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#package-first-possible" class="md-nav__link">
+    <span class="md-ellipsis">
+      Package-first (possible)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-message" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Message
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-minimal-pyprojecttoml-you-can-reuse" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Minimal pyproject.toml you can reuse
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#encouragement" class="md-nav__link">
+    <span class="md-ellipsis">
+      Encouragement
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="echelle-project-overview-playbook">Echelle Project: Overview &amp; Playbook<a class="headerlink" href="#echelle-project-overview-playbook" title="Permanent link">¶</a></h1>
+<h2 id="1-the-problem-why-your-current-workflow-hurts">1. The problem — why your current workflow hurts<a class="headerlink" href="#1-the-problem-why-your-current-workflow-hurts" title="Permanent link">¶</a></h2>
+<h3 id="typical-anti-patterns-bs-we-keep-seeing">Typical anti-patterns (“BS”) we keep seeing<a class="headerlink" href="#typical-anti-patterns-bs-we-keep-seeing" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># ❌ BS</span>
+<span class="n">sen10</span> <span class="o">=</span> <span class="n">S</span><span class="p">(</span><span class="n">cb_ylist</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span> <span class="n">sen11</span> <span class="o">=</span> <span class="n">S</span><span class="p">(</span><span class="n">cb_ylist</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span> <span class="o">...</span> <span class="n">sen23</span> <span class="o">=</span> <span class="n">S</span><span class="p">(</span><span class="n">cb_ylist</span><span class="p">[</span><span class="mi">13</span><span class="p">])</span>
+<span class="c1"># ✅ Do</span>
+<span class="n">sen_by_order</span> <span class="o">=</span> <span class="p">[</span><span class="n">S</span><span class="p">(</span><span class="n">wl</span><span class="p">)</span> <span class="k">for</span> <span class="n">wl</span> <span class="ow">in</span> <span class="n">cb_ylist</span><span class="p">]</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1"># ❌ BS</span>
+<span class="n">coef_10</span> <span class="o">=</span> <span class="n">sen10</span><span class="o">/</span><span class="p">(</span><span class="n">sphere</span><span class="p">[</span><span class="mi">10</span><span class="p">]</span><span class="o">-</span><span class="n">back</span><span class="p">[</span><span class="mi">10</span><span class="p">]);</span> <span class="n">coef_11</span> <span class="o">=</span> <span class="o">...</span>
+<span class="c1"># ✅ Do</span>
+<span class="n">coef_by_order</span> <span class="o">=</span> <span class="p">[</span><span class="n">sen</span><span class="o">/</span><span class="p">(</span><span class="n">s</span><span class="o">-</span><span class="n">b</span><span class="p">)</span> <span class="k">for</span> <span class="n">sen</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="n">b</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">sen_by_order</span><span class="p">,</span> <span class="n">sphere_list</span><span class="p">,</span> <span class="n">back_list</span><span class="p">)]</span>
+</code></pre></div>
+<ul>
+<li><strong>Calibration logic shoved into a notebook</strong> (polyfit, borders, stitching) → impossible to reuse/test.</li>
+<li><strong>Calibration data hardcoded in a notebook</strong> (e.g., wave/sen arrays) instead of a <strong>file with metadata</strong>:</li>
+</ul>
+<div class="highlight"><pre><span></span><code># data/calibration/sphere_2025-01-23.csv
+# instrument: Fujii Echelle A
+# sphere: Labsphere XYZ, SN12345
+# date: 2025-01-23
+# location: Room 301 dark lab
+# author: K. Student
+wavelength_nm,sensitivity_W_m2_sr_nm_per_count
+300,1.85e4
+310,2.8e4
+...
+</code></pre></div>
+<p>Then read with:</p>
+<div class="highlight"><pre><span></span><code><span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s2">","</span><span class="p">,</span> <span class="n">comments</span><span class="o">=</span><span class="s2">"#"</span><span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+</code></pre></div>
+<h2 id="2-the-sane-project-shape-mix-notebooks-package">2. The sane project shape — mix notebooks + package<a class="headerlink" href="#2-the-sane-project-shape-mix-notebooks-package" title="Permanent link">¶</a></h2>
+<p>Use <strong>notebooks for exploration</strong>, <strong>package for logic</strong>.</p>
+<div class="highlight"><pre><span></span><code>echelle-project/
+  pyproject.toml
+  src/echelle_pkg/                 # ← all reusable code lives here
+    __init__.py
+    calibration.py                 # sensitivity, borders, stitching
+    io.py                          # loaders
+    profiles.py                    # per-instrument settings
+  data/
+    calibration/                   # CSVs with comment headers
+  examples/                        # shareable demo notebooks
+    01_quickstart.ipynb
+    02_absolute_calibration.ipynb
+  local/                           # ignored scratch area (in .gitignore)
+    2025-09-poster/                # your day’s work, ad hoc plots
+  docs/                            # add after code steadies
+  .gitignore                       # includes /local/
+</code></pre></div>
+<h3 id="install-the-package-in-editable-mode">Install the package in editable mode<a class="headerlink" href="#install-the-package-in-editable-mode" title="Permanent link">¶</a></h3>
+<p>Choose venv or poetry; venv is fine.</p>
+<div class="highlight"><pre><span></span><code>python<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>~/.venvs/echelle
+<span class="nb">source</span><span class="w"> </span>~/.venvs/echelle/bin/activate<span class="w">  </span><span class="c1"># (Windows: Scripts/Activate.ps1)</span>
+python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>-U<span class="w"> </span>pip<span class="w"> </span>wheel
+pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </span><span class="s2">".[dev]"</span><span class="w">               </span><span class="c1"># uses pyproject.toml</span>
+</code></pre></div>
+<p>Poetry (if a student prefers):</p>
+<div class="highlight"><pre><span></span><code>poetry<span class="w"> </span>install
+poetry<span class="w"> </span>shell
+</code></pre></div>
+<p>Because it’s <strong>editable</strong>, you can work <strong>anywhere</strong> (e.g., <code>~/workbench/2025-09-poster/</code>) and still:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">echelle_pkg.calibration</span><span class="w"> </span><span class="kn">import</span> <span class="n">fit_sensitivity_poly</span><span class="p">,</span> <span class="n">stitch_orders</span>
+</code></pre></div>
+<h2 id="3-daily-usage-pattern-what-students-should-do">3. Daily usage pattern — what students should do<a class="headerlink" href="#3-daily-usage-pattern-what-students-should-do" title="Permanent link">¶</a></h2>
+<ul>
+<li><strong>Prototype in <code>local/</code></strong> or any external folder → import the installed package.</li>
+<li>Keep notebooks <strong>thin</strong>: plotting, quick checks, and calls like:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">echelle_pkg.profiles</span><span class="w"> </span><span class="kn">import</span> <span class="n">load_profile</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">echelle_pkg.calibration</span><span class="w"> </span><span class="kn">import</span> <span class="n">run_absolute_calibration</span>
+
+<span class="n">prof</span> <span class="o">=</span> <span class="n">load_profile</span><span class="p">(</span><span class="s2">"data/calibration/profiles/fujii-2025.json"</span><span class="p">)</span>
+<span class="n">factors</span> <span class="o">=</span> <span class="n">run_absolute_calibration</span><span class="p">(</span><span class="n">images</span><span class="p">,</span> <span class="n">profile</span><span class="o">=</span><span class="n">prof</span><span class="p">)</span>
+</code></pre></div>
+<ul>
+<li>New spectrometer / camera / processing?</li>
+</ul>
+<ol>
+<li><strong>Prototype</strong> in <code>local/</code></li>
+<li><strong>Wrap</strong> into a function/class in <code>src/echelle_pkg/</code></li>
+<li>Add/adjust a <strong>profile JSON</strong> (orders, pixel geometry, poly degree, file paths)</li>
+<li>Add a <strong>minimal test</strong> in <code>tests/</code></li>
+<li>Add a <strong>usage notebook</strong> in <code>examples/</code></li>
+</ol>
+<h2 id="4-git-hygiene-small-readable-history">4. Git hygiene — small, readable history<a class="headerlink" href="#4-git-hygiene-small-readable-history" title="Permanent link">¶</a></h2>
+<ul>
+<li><strong>Branches</strong> per task:
+  <code>git switch -c feat/abs-calibration-profiles</code></li>
+<li><strong>Commits</strong> are small and named for the change:
+  <code>feat(calib): add profile loader</code>
+  <code>fix(stitch): skip orders without λ-calibration</code>
+  <code>docs(calib): note sphere CSV header fields</code></li>
+<li><strong>Tags</strong> for stable points:
+  <code>git tag -a v0.3.0 -m "absolute calibration rework"</code></li>
+<li>You <strong>don’t</strong> have to push every commit. Push at the end of the day or when a unit of work is done.</li>
+</ul>
+<h2 id="5-docs-when-it-stabilizes-mkdocs-minimal">5. Docs when it stabilizes — mkdocs, minimal<a class="headerlink" href="#5-docs-when-it-stabilizes-mkdocs-minimal" title="Permanent link">¶</a></h2>
+<p>Add docs after the dust settles:</p>
+<ul>
+<li><code>docs/</code> with short pages:</li>
+</ul>
+<ul>
+<li><strong>Quickstart</strong> (install, one example)</li>
+<li><strong>Calibration data spec</strong> (CSV header, units, example)</li>
+<li><strong>Profiles</strong> (how orders/geometry are encoded)</li>
+<li><strong>API</strong> (one page, function signatures)</li>
+<li><code>mkdocs.yml</code> nav that links examples notebooks (rendered or linked).</li>
+</ul>
+<h2 id="6-side-by-side-bs-vs-possible">6. Side-by-side — BS vs possible<a class="headerlink" href="#6-side-by-side-bs-vs-possible" title="Permanent link">¶</a></h2>
+<h3 id="manual-notebook-soup-bs">Manual notebook soup (BS)<a class="headerlink" href="#manual-notebook-soup-bs" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># fit poly, hand-pick orders, repeat slices, concatenate, sort...</span>
+<span class="n">sen_10</span> <span class="o">=</span> <span class="n">S</span><span class="p">(</span><span class="n">cb_ylist</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span> <span class="n">sen_11</span> <span class="o">=</span> <span class="n">S</span><span class="p">(</span><span class="n">cb_ylist</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span> <span class="o">...</span>
+<span class="n">coef_10</span> <span class="o">=</span> <span class="n">sen_10</span><span class="o">/</span><span class="p">(</span><span class="n">sphere</span><span class="p">[</span><span class="mi">10</span><span class="p">]</span><span class="o">-</span><span class="n">back</span><span class="p">[</span><span class="mi">10</span><span class="p">]);</span> <span class="o">...</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">raman</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">171</span><span class="p">:</span><span class="mi">1749</span><span class="p">],</span> <span class="n">raman</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">188</span><span class="p">:</span><span class="mi">1431</span><span class="p">],</span> <span class="o">...</span><span class="p">))</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">cb10</span><span class="p">[</span><span class="mi">171</span><span class="p">:</span><span class="mi">1749</span><span class="p">],</span> <span class="n">cb11</span><span class="p">[</span><span class="mi">188</span><span class="p">:</span><span class="mi">1431</span><span class="p">],</span> <span class="o">...</span><span class="p">))</span>
+</code></pre></div>
+<h3 id="package-first-possible">Package-first (possible)<a class="headerlink" href="#package-first-possible" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># src/echelle_pkg/calibration.py</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">sensitivity_from_csv</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">deg</span><span class="o">=</span><span class="mi">6</span><span class="p">):</span>
+    <span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s2">","</span><span class="p">,</span> <span class="n">comments</span><span class="o">=</span><span class="s2">"#"</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">poly1d</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">polyfit</span><span class="p">(</span><span class="n">arr</span><span class="p">[:,</span><span class="mi">0</span><span class="p">],</span> <span class="n">arr</span><span class="p">[:,</span><span class="mi">1</span><span class="p">],</span> <span class="n">deg</span><span class="p">))</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">coefficients</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">background</span><span class="p">,</span> <span class="n">S</span><span class="p">,</span> <span class="n">orders</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="c1"># auto-borders + skip NaN-λ orders inside</span>
+    <span class="n">x</span><span class="p">,</span> <span class="n">s</span> <span class="o">=</span> <span class="n">stitch_orders</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">orders</span><span class="o">=</span><span class="n">orders</span><span class="p">)</span>
+    <span class="n">_</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">stitch_orders</span><span class="p">(</span><span class="n">background</span><span class="p">,</span> <span class="n">orders</span><span class="o">=</span><span class="n">orders</span><span class="p">)</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">s</span> <span class="o">-</span> <span class="n">b</span>
+    <span class="k">return</span> <span class="n">x</span><span class="p">,</span> <span class="n">S</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">clip</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="mf">1e-12</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+
+<span class="c1"># examples/02_absolute_calibration.ipynb</span>
+<span class="n">S</span> <span class="o">=</span> <span class="n">sensitivity_from_csv</span><span class="p">(</span><span class="s2">"data/calibration/sphere_2025-01-23.csv"</span><span class="p">,</span> <span class="n">deg</span><span class="o">=</span><span class="mi">6</span><span class="p">)</span>
+<span class="n">x_nm</span><span class="p">,</span> <span class="n">coef</span> <span class="o">=</span> <span class="n">coefficients</span><span class="p">(</span><span class="n">sphere_img</span><span class="p">,</span> <span class="n">back_img</span><span class="p">,</span> <span class="n">S</span><span class="p">,</span> <span class="n">orders</span><span class="o">=</span><span class="p">[</span><span class="mi">10</span><span class="p">,</span><span class="mi">11</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span><span class="mi">13</span><span class="p">,</span><span class="mi">14</span><span class="p">,</span><span class="mi">15</span><span class="p">,</span><span class="mi">16</span><span class="p">,</span><span class="mi">17</span><span class="p">,</span><span class="mi">18</span><span class="p">,</span><span class="mi">19</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">21</span><span class="p">,</span><span class="mi">22</span><span class="p">])</span>
+</code></pre></div>
+<h2 id="7-message">7. Message<a class="headerlink" href="#7-message" title="Permanent link">¶</a></h2>
+<ul>
+<li><strong>Notebooks are for exploration and visualization.</strong>
+  All reusable logic must live in <code>src/echelle_pkg/</code>.</li>
+<li><strong>Calibration data is a file with a header</strong>, not literals in a cell.
+  If it isn’t in <code>data/calibration/…csv</code> with a comment header, it doesn’t exist.</li>
+<li><strong>Instrument differences go into a profile JSON</strong>, not into copied code.</li>
+<li><strong>Commit small, often;</strong> tag stable points; push when a unit of work is complete.</li>
+<li><strong>If you wrote the same line twice, you need a loop or a function.</strong></li>
+</ul>
+<h2 id="8-minimal-pyprojecttoml-you-can-reuse">8. Minimal <code>pyproject.toml</code> you can reuse<a class="headerlink" href="#8-minimal-pyprojecttoml-you-can-reuse" title="Permanent link">¶</a></h2>
+<div class="highlight"><pre><span></span><code><span class="k">[build-system]</span>
+<span class="n">requires</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">"setuptools&gt;=69"</span><span class="p">,</span><span class="w"> </span><span class="s2">"wheel"</span><span class="p">]</span>
+<span class="n">build-backend</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"setuptools.build_meta"</span>
+
+<span class="k">[project]</span>
+<span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"echelle-pkg"</span>
+<span class="n">version</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"0.1.0"</span>
+<span class="n">requires-python</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"&gt;=3.11"</span>
+<span class="n">dependencies</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">"numpy"</span><span class="p">,</span><span class="w"> </span><span class="s2">"scipy"</span><span class="p">,</span><span class="w"> </span><span class="s2">"matplotlib"</span><span class="p">,</span><span class="w"> </span><span class="s2">"tifffile"</span><span class="p">,</span><span class="w"> </span><span class="s2">"pillow"</span><span class="p">]</span>
+
+<span class="k">[project.optional-dependencies]</span>
+<span class="n">dev</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">"pytest"</span><span class="p">,</span><span class="w"> </span><span class="s2">"ruff"</span><span class="p">,</span><span class="w"> </span><span class="s2">"black"</span><span class="p">]</span>
+
+<span class="k">[project.scripts]</span>
+<span class="n">echelle-cli</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"echelle_pkg.cli:main"</span>
+
+<span class="k">[tool.setuptools.packages.find]</span>
+<span class="n">where</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">"src"</span><span class="p">]</span>
+<span class="n">include</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">"echelle_pkg*"</span><span class="p">]</span>
+</code></pre></div>
+<h2 id="encouragement">Encouragement<a class="headerlink" href="#encouragement" title="Permanent link">¶</a></h2>
+<blockquote>
+<p><strong>شُوَيَّة شُوَيَّة تبني جبل</strong></p>
+<p><em>Shuyyat shuyyat tabni jabal</em> — Little by little, you build a mountain.</p>
+</blockquote>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tracking", "content.code.copy", "navigation.tabs", "content.image.zoom"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>
