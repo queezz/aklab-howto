@@ -77,11 +77,6 @@ nav:
       - Flask Server: software/pihti-vacuum.md
       - Poetry: software/poetry.md
       - Workflows: software/workflows.md
-  - Analysis:
-      - Pandas: analysis/pandas.md
-      - Plotting: analysis/plotting.md
-      - Notebooks: analysis/notebooks.md
-      - Stats: analysis/stats.md
   - Hardware:
       - KiCad: hardware/KiCad.md
       - Control Unit:
@@ -94,12 +89,5 @@ nav:
       - RasPi Pinouts: hardware/RasPi-pinout.md
       - Instruments: hardware/instruments.md
       - Safety: hardware/safety.md
-  - Lab:
-      - File Naming: lab/file-naming.md
-      - Reproducibility: lab/reproducibility.md
-      - Experiment Workflows: lab/experiment-workflows.md
-  - Cheats Sheets:
-      - Git: cheatsheets/git.md
-      - Python: cheatsheets/python.md
-      - Linux: cheatsheets/linux.md
-      - Hardware: cheatsheets/hardware.md
+  - Seminar:
+      - Echelle spectra: seminar/echelle-spectra.md
