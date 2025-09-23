@@ -63,3 +63,9 @@ top
 This starts an activity monitor in the terminal.
 
 
+## Video How-To
+
+<video controls playsinline preload="metadata" width="800" style="max-width:100%">
+  <source src="../start-flask-server.mp4#t=0.001" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
