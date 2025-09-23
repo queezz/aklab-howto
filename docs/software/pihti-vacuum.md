@@ -1,11 +1,18 @@
 # PIHTI Vacuum Flask Server
 
 ## Access the Diagram
-[Open Web Interface (Local Net)](http://10.249.254.8:5000/){ .md-button target=_blank }
+[Open Web Interface (Local Net)](http://10.249.254.24:5000/){ .md-button target=_blank }
 
 [queezz/pihtivacuum](https://github.com/queezz/pihtivacuum){ .md-button target=_blank }
 
 ---
+
+## Video How-To
+
+<video controls playsinline preload="metadata" width="800" style="max-width:100%">
+  <source src="../start-flask-server.mp4#t=0.001" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 ## Starting the Server
 
@@ -63,9 +70,3 @@ top
 This starts an activity monitor in the terminal.
 
 
-## Video How-To
-
-<video controls playsinline preload="metadata" width="800" style="max-width:100%">
-  <source src="../start-flask-server.mp4#t=0.001" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
