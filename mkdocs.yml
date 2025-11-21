@@ -78,6 +78,8 @@ nav:
       - Poetry: software/poetry.md
       - Workflows: software/workflows.md
   - Hardware:
+      - Equipment: 
+        - Tig Welder: hardware/equipment/tig-welder.md
       - KiCad: hardware/KiCad.md
       - Control Unit:
         - About : hardware/controlunit/control-unit.md
