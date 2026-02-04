@@ -20,6 +20,11 @@ python scaffold.py my-new-project --author "Your Name" --email you@example.com -
   ```bash
   mkdocs serve
   ```
+  Or 
+  ```bash
+  mkdocs serve --livereload
+  ```
+
 - Build the site for distribution:
   ```bash
   mkdocs build
