@@ -73,6 +73,7 @@ Some are standalone utilities, others are parts of a larger ecosystem.
 ## 📝 Notes on scope and intent
 
 These docs are:
+
 - 🚧 incomplete by design
 - 🕰️ written during active work
 - ✏️ occasionally rough or unfinished
