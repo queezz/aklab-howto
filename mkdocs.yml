@@ -64,34 +64,37 @@ repo_name: queezz/aklab-howto
 
 # MARK: NAV
 nav:
-  - Home: 
-    - Overview: index.md
-    - Software & tools: other-tools.md
-  - Software:
-      - Installation: software/installation-guide.md
-      - Git:
-        - Intro: software/git/intro.md
-        - Commits: software/git/commits.md
-        - Versioning: software/git/versioning.md
-      - PyPackage: software/pypackage.md
-      - Virtual Environments: software/venv.md
+  - Home:
+      - 🧭 Overview: index.md
+      - 🧰 Software & tools: other-tools.md
+
+  - 💻 Software:
+      - ⚙️ Installation: software/installation-guide.md
+      - 🐙 Git:
+          - 📘 Intro: software/git/intro.md
+          - ✍️ Commits: software/git/commits.md
+          - 🏷️ Versioning: software/git/versioning.md
+      - 📦 PyPackage: software/pypackage.md
+      - 🐍 Virtual Environments: software/venv.md
       - Venv Troubles: software/venv-troubles.md
-      - Flask Server: software/pihti-vacuum.md
-      - Poetry: software/poetry.md
-      - Workflows: software/workflows.md
-  - Hardware:
-      - Equipment: 
-        - Tig Welder: hardware/equipment/tig-welder.md
-      - KiCad: hardware/KiCad.md
+      - 🌐 Flask Server: software/pihti-vacuum.md
+      - 🎼 Poetry: software/poetry.md
+      - 🔁 Workflows: software/workflows.md
+
+  - 🛠️ Hardware:
+      - Equipment:
+          - 🔥 TIG Welder: hardware/equipment/tig-welder.md
+      - 🧩 KiCad: hardware/KiCad.md
       - Control Unit:
-        - About : hardware/controlunit/control-unit.md
-        - Waveshare AD/DA: hardware/controlunit/high-precision-adda-board.md
-        - Y-corp ADC: hardware/controlunit/y-corp-adc-board.md
+          - ℹ️ About: hardware/controlunit/control-unit.md
+          - 🎚️ Waveshare AD/DA: hardware/controlunit/high-precision-adda-board.md
+          - 📊 Y-corp ADC: hardware/controlunit/y-corp-adc-board.md
       - Sensors:
-        - WCS1800: hardware/sensors/wcs1800.md
-        - ACS712: hardware/sensors/acs712.md
-      - RasPi Pinouts: hardware/RasPi-pinout.md
-      - Instruments: hardware/instruments.md
-      - Safety: hardware/safety.md
-  - Seminar:
+          - WCS1800: hardware/sensors/wcs1800.md
+          - ACS712: hardware/sensors/acs712.md
+      - 🧷 RasPi Pinouts: hardware/RasPi-pinout.md
+      - 🔬 Instruments: hardware/instruments.md
+      - 🦺 Safety: hardware/safety.md
+
+  - 🎓 Seminar:
       - Echelle spectra: seminar/echelle-spectra.md

@@ -3,7 +3,7 @@
 These notes collect **things I actively use, build, or teach** in the lab.  
 They are not meant to be complete or polished documentation.
 
-This is a **living workspace**.
+This is a **living workspace**:
 
 - 🟢 I add notes when I touch something
 - 🟡 I do **not** go back to inventory everything
@@ -48,7 +48,8 @@ It documents **current practice**, not history.
 Material for student-facing seminars and guided discussions.
 
 At the moment:
-- ▶️ one active seminar
+
+- ▶️ one active seminar [🧪 Scientific Python: Reproducible Project Workflows](./seminar/echelle-spectra.md)
 
 This section grows only when a seminar is running.
 
