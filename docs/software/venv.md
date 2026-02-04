@@ -35,6 +35,22 @@ python3 -m venv .venv
 source .venv/bin/activate
 ```
 
+### 1.5 Create and Activaet (external)
+
+**macOS / Linux (bash)**
+
+Create
+
+```bash
+python3 -m venv "$HOME/.venvs/explainers"
+```
+Activate 
+
+```bash
+source ~/.venvs/explainers/bin/activate
+```
+
+
 ### 2. Upgrade pip
 
 ```bash

@@ -64,7 +64,9 @@ repo_name: queezz/aklab-howto
 
 # MARK: NAV
 nav:
-  - Home: index.md
+  - Home: 
+    - Overview: index.md
+    - Software & tools: other-tools.md
   - Software:
       - Installation: software/installation-guide.md
       - Git:
