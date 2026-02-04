@@ -12,7 +12,7 @@ python scaffold.py my-new-project --author "Your Name" --email you@example.com -
 - Prerequisites: Python 3.11+, MkDocs, and MkDocs Material theme.
 - Install documentation tooling:
   ```bash
-  pip install mkdocs mkdocs-material pymdown-extensions mdx_truly_sane_lists
+pip install mkdocs mkdocs-material pymdown-extensions mdx_truly_sane_lists mkdocs-glightbox
   ```
 - Run locally:
   ```bash
