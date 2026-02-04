@@ -11,8 +11,10 @@ python scaffold.py my-new-project --author "Your Name" --email you@example.com -
 ## Building docs
 - Prerequisites: Python 3.11+, MkDocs, and MkDocs Material theme.
 - Install documentation tooling:
+
+
   ```bash
-pip install mkdocs mkdocs-material pymdown-extensions mdx_truly_sane_lists mkdocs-glightbox
+  pip install mkdocs mkdocs-material pymdown-extensions mdx_truly_sane_lists mkdocs-glightbox
   ```
 - Run locally:
   ```bash
