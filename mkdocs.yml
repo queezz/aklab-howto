@@ -86,6 +86,8 @@ nav:
   - 🛠️ Hardware:
       - Equipment:
           - 🔥 TIG Welder: hardware/equipment/tig-welder.md
+          - 🔌 Kikusui PWR401L: hardware/equipment/kikusui-pwr.md
+          - 📈 Ulvac QMS: hardware/equipment/ulvac-qms.md
       - 🧩 KiCad: hardware/KiCad.md
       - Control Unit:
           - ℹ️ About: hardware/controlunit/control-unit.md
