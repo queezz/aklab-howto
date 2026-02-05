@@ -81,7 +81,7 @@ Reversing → extreme tungsten overheating and evaporation.
 ## Accessories to Consider
 
 * Ball flow meter (argon)
-* #5–#7 cups
+* \#5–\#7 cups
 * 1.6 mm and 2.4 mm tungsten rods
 * Filler rods (ER70S-2, SUS308L)
 * Auto-darkening helmet
