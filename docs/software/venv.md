@@ -1,4 +1,4 @@
-# Virtual Environments (venv) — Quick Intro
+# venv — quick intro
 
 ## What is a venv?
 

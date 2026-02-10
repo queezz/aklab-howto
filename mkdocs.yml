@@ -70,17 +70,18 @@ nav:
       - 🧭 Overview: index.md
       - 🧰 Software & tools: other-tools.md
 
-  - 💻 Software:
+  - 💻 Python Dev:
       - ⚙️ Installation: software/installation-guide.md
       - 🐙 Git:
           - 📘 Intro: software/git/intro.md
           - ✍️ Commits: software/git/commits.md
           - 🏷️ Versioning: software/git/versioning.md
       - 📦 PyPackage: software/pypackage.md
-      - 🐍 Virtual Environments: software/venv.md
-      - Venv Troubles: software/venv-troubles.md
+      - 🐍 Virtual Environments: 
+          - about: software/venv.md
+          - troubles: software/venv-troubles.md
+          - 🎼 Poetry: software/poetry.md
       - 🌐 Flask Server: software/pihti-vacuum.md
-      - 🎼 Poetry: software/poetry.md
       - 🔁 Workflows: software/workflows.md
 
   - 🛠️ Hardware:
