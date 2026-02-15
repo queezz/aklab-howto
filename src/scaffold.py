@@ -386,6 +386,15 @@ def main() -> None:
 
     write(root / ".github" / "workflows" / "ci.yml", GH_CI, overwrite=args.overwrite)
 
+    if args.here and args.git and (root / "scaffold.py").exists():
+        gitignore = root / ".gitignore"
+        content = gitignore.read_text(encoding="utf-8") if gitignore.exists() else ""
+        if "scaffold.py" not in content.splitlines():
+            with gitignore.open("a", encoding="utf-8") as f:
+                if content and not content.endswith("\n"):
+                    f.write("\n")
+                f.write("scaffold.py\n")
+
     if args.git:
         if not (root / ".git").exists():
             run(["git", "init", "-b", "main"], cwd=root)
