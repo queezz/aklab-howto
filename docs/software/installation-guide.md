@@ -1,112 +1,64 @@
-# Installation Guide
+# `scaffold.py` usage
 
-Follow these steps to install the package into a virtual environment.
+This script is a **one-shot project scaffolding tool**. It is not installed. You download it and run it directly.
 
-## 1. Create a virtual environment
+---
 
-Let's call it "explainers".
-Local:
-```powershell
-python -m venv explainers
-```
+## Workflow
 
-Or in central `~/.venvs/`:
-```powershell
-python -m venv "$env:USERPROFILE/.venvs/explainers"
-```
-
-Activate your environment:
-
-```powershell
-& "$env:USERPROFILE/.venvs/explainers/Scripts/Activate.ps1"
-```
-
-## 2. Update pip
-
-```powershell
-python -m pip install -U pip
-```
-
-## 3. Install this package (editable mode)
-
-```powershell
-python -m pip install -e ".[dev]"
-```
-
-
-
-## Usage
-For this, you don't need to install the package, just copy the scaffolding.py to your folder and run it.
+### 1: Go to your new project dir
 
 ```bash
-python scaffold.py NAME [--author AUTHOR] [--email EMAIL]
-                    [--desc DESCRIPTION]
-                    [--repo-url URL]
-                    [--license MIT]
-                    [--git] [--docs] [--overwrite]
+cd ~/work/your-new-project
 ```
 
-### Arguments
+The project will be created relative to your current directory (or relative to the path you pass with `--path`).
 
-* `name` (required) — project name (used for folder + package)
-* `--author` — project author (default: `Your Name`)
-* `--email` — author email (default: `you@example.com`)
-* `--desc` — short description (default: `"A short description."`)
-* `--repo-url` — repository URL (default: `https://github.com/your/repo`)
-* `--license` — license type (currently only `MIT`)
-* `--git` — initialize Git repo and make first commit
-* `--docs` — include MkDocs configuration and docs folder
-* `--overwrite` — overwrite existing files if present
-
----
-
-## Example
-
-Scaffold a new project called `ramanechelle` with Git and Docs enabled:
+### 2: Download the `scaffold.py`
 
 ```bash
-python .\scaffold.py  --author "John Doe" --desc "Echelle for Raman" --docs "ramanechelle"
+curl -o scaffold.py \
+  https://raw.githubusercontent.com/queezz/aklab-howto/master/src/scaffold.py
 ```
+
+No Git clone, no installation — just a single file.
+
+### 3: Project properties
+
+This scaffold defines the following project properties:
+
+- **Creation path** — `--path` option; default is the current directory (`.`). The project is created at `<path>/<name>`.
+- **Project name** — Used for the folder name, `pyproject.toml`, and the package under `src/<package_name>`.
+- **Documentation** — `--docs` enables MkDocs structure (docs folder, mkdocs.yml, GitHub Pages workflow).
+- **Git integration** — `--git` initializes a Git repository and includes the MkDocs build recipe in CI.
+
+### 4: Run the scaffold
+
+One canonical example:
+
+```bash
+python scaffold.py my-new-project \
+  --author "Montbell" \
+  --desc "How to hike" \
+  --docs \
+  --git
+```
+
+This creates `./my-new-project` with a ready-to-use structure.
 
 ---
 
-## Output Structure
+## Command-line options
 
-Generated project tree (with `--docs`):
-
-```
-project-name/
-├── pyproject.toml
-├── README.md
-├── LICENSE
-├── .gitignore
-├── .pre-commit-config.yaml
-├── pyrightconfig.json
-├── .vscode/settings.json
-├── src/
-│   └── project_name/
-│       ├── __init__.py
-│       ├── _version.py
-│       └── hello.py
-├── tests/
-│   └── test_hello.py
-├── docs/
-│   ├── index.md
-│   ├── reference.md
-│   └── stylesheets/extra.css
-├── mkdocs.yml
-└── .github/workflows/
-    ├── ci.yml
-    └── docs.yml
-```
-
----
-
-## Next Steps
-
-* Customize `README.md` and `pyproject.toml` with project details.
-* Add your own modules under `src/<project_name>/`.
-* Expand test suite under `tests/`.
-* Deploy docs with `mkdocs gh-deploy` if using GitHub Pages.
-
-
+| Option | Description |
+|--------|-------------|
+| `name` | Project name (positional, required) |
+| `--path PATH` | Where to create the project (default: current directory `.`) |
+| `--author TEXT` | Project author (default: `Your Name`) |
+| `--email TEXT` | Author email (default: `you@example.com`) |
+| `--desc TEXT` | Short description (default: `A short description.`) |
+| `--repo-url URL` | Repository URL (default: `https://github.com/your/repo`) |
+| `--license {MIT}` | License type (default: `MIT`) |
+| `--git` | Initialize Git repo and make first commit |
+| `--docs` | Include MkDocs configuration and docs folder |
+| `--overwrite` | Overwrite existing files if present |

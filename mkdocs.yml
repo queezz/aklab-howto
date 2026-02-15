@@ -71,7 +71,7 @@ nav:
       - 🧰 Software & tools: other-tools.md
 
   - 💻 Python Dev:
-      - ⚙️ Installation: software/installation-guide.md
+      - ⚙️ Scaffold: software/installation-guide.md
       - 🐙 Git:
           - 📘 Intro: software/git/intro.md
           - ✍️ Commits: software/git/commits.md
