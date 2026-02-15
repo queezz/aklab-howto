@@ -1833,8 +1833,9 @@
 <h3 id="3-project-properties">3: Project properties<a class="headerlink" href="#3-project-properties" title="Permanent link">¶</a></h3>
 <p>This scaffold defines the following project properties:</p>
 <ul>
-<li><strong>Creation path</strong> — <code>--path</code> option; default is the current directory (<code>.</code>). The project is created at <code>&lt;path&gt;/&lt;name&gt;</code>.</li>
-<li><strong>Project name</strong> — Used for the folder name, <code>pyproject.toml</code>, and the package under <code>src/&lt;package_name&gt;</code>.</li>
+<li><strong>Creation path</strong> — <code>--path</code> option; default is the current directory (<code>.</code>). The project is created at <code>&lt;path&gt;/&lt;name&gt;</code>. With <code>--here</code>, files go into <code>&lt;path&gt;</code> itself (no subdirectory).</li>
+<li><strong>In-place mode</strong> — <code>--here</code> scaffolds into the target directory. Allowed only if the directory is empty or contains only <code>scaffold.py</code>, <code>.gitignore</code>, or <code>README.md</code>. With <code>--git</code>, <code>scaffold.py</code> is added to <code>.gitignore</code> so you can download → run once → leave the script out of the repo.</li>
+<li><strong>Project name</strong> — Used for the folder name (unless <code>--here</code>), <code>pyproject.toml</code>, and the package under <code>src/&lt;package_name&gt;</code>.</li>
 <li><strong>Documentation</strong> — <code>--docs</code> enables MkDocs structure (docs folder, mkdocs.yml, GitHub Pages workflow).</li>
 <li><strong>Git integration</strong> — <code>--git</code> initializes a Git repository and includes the MkDocs build recipe in CI.</li>
 </ul>
@@ -1847,6 +1848,12 @@
 <span class="w">  </span>--git
 </code></pre></div>
 <p>This creates <code>./my-new-project</code> with a ready-to-use structure.</p>
+<p><strong>In-place (download, run, then delete script):</strong></p>
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-o<span class="w"> </span>scaffold.py<span class="w"> </span>https://raw.githubusercontent.com/queezz/aklab-howto/master/src/scaffold.py
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>python<span class="w"> </span>scaffold.py<span class="w"> </span>my-new-project<span class="w"> </span>--here<span class="w"> </span>--docs<span class="w"> </span>--git
+</code></pre></div>
+<p>This scaffolds into the current directory; <code>.gitignore</code> will include <code>scaffold.py</code>.</p>
 <hr>
 <h2 id="command-line-options">Command-line options<a class="headerlink" href="#command-line-options" title="Permanent link">¶</a></h2>
 <table>
@@ -1864,6 +1871,10 @@
 <tr>
 <td><code>--path PATH</code></td>
 <td>Where to create the project (default: current directory <code>.</code>)</td>
+</tr>
+<tr>
+<td><code>--here</code></td>
+<td>Scaffold into the target directory (no <code>&lt;name&gt;</code> subdirectory)</td>
 </tr>
 <tr>
 <td><code>--author TEXT</code></td>
