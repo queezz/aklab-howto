@@ -351,9 +351,15 @@ def main() -> None:
     module = slugify(project)
     base = Path(args.path).expanduser().resolve() if args.path is not None else Path.cwd()
     root = base if args.here else base / project
-    if args.here and root.exists() and any(root.iterdir()):
-        print("Target directory is not empty. Refusing to scaffold in-place.", file=sys.stderr)
-        sys.exit(1)
+    if args.here and root.exists():
+        allowed = {"scaffold.py", ".gitignore", "README.md"}
+        existing = {
+            p.name for p in root.iterdir()
+            if not p.name.startswith(".") or p.name == ".gitignore"
+        }
+        if existing - allowed:
+            print("Target directory contains existing files. Refusing to scaffold in-place.", file=sys.stderr)
+            sys.exit(1)
     root.mkdir(parents=True, exist_ok=True)
     year = str(datetime.now().year)
 
