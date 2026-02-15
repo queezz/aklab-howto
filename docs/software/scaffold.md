@@ -27,8 +27,9 @@ No Git clone, no installation — just a single file.
 
 This scaffold defines the following project properties:
 
-- **Creation path** — `--path` option; default is the current directory (`.`). The project is created at `<path>/<name>`.
-- **Project name** — Used for the folder name, `pyproject.toml`, and the package under `src/<package_name>`.
+- **Creation path** — `--path` option; default is the current directory (`.`). The project is created at `<path>/<name>`. With `--here`, files go into `<path>` itself (no subdirectory).
+- **In-place mode** — `--here` scaffolds into the target directory. Allowed only if the directory is empty or contains only `scaffold.py`, `.gitignore`, or `README.md`. With `--git`, `scaffold.py` is added to `.gitignore` so you can download → run once → leave the script out of the repo.
+- **Project name** — Used for the folder name (unless `--here`), `pyproject.toml`, and the package under `src/<package_name>`.
 - **Documentation** — `--docs` enables MkDocs structure (docs folder, mkdocs.yml, GitHub Pages workflow).
 - **Git integration** — `--git` initializes a Git repository and includes the MkDocs build recipe in CI.
 
@@ -46,6 +47,18 @@ python scaffold.py my-new-project \
 
 This creates `./my-new-project` with a ready-to-use structure.
 
+**In-place (download, run, then delete script):**
+
+```bash
+curl -o scaffold.py https://raw.githubusercontent.com/queezz/aklab-howto/master/src/scaffold.py
+```
+
+```bash
+python scaffold.py my-new-project --here --docs --git
+```
+
+This scaffolds into the current directory; `.gitignore` will include `scaffold.py`.
+
 ---
 
 ## Command-line options
@@ -54,6 +67,7 @@ This creates `./my-new-project` with a ready-to-use structure.
 |--------|-------------|
 | `name` | Project name (positional, required) |
 | `--path PATH` | Where to create the project (default: current directory `.`) |
+| `--here` | Scaffold into the target directory (no `<name>` subdirectory) |
 | `--author TEXT` | Project author (default: `Your Name`) |
 | `--email TEXT` | Author email (default: `you@example.com`) |
 | `--desc TEXT` | Short description (default: `A short description.`) |
