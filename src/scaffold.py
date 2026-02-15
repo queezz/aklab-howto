@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 from __future__ import annotations
-import argparse, re, subprocess
+import argparse, re, subprocess, sys
 from pathlib import Path
 from datetime import datetime
 from string import Template
@@ -341,6 +341,7 @@ def main() -> None:
     p.add_argument("--repo-url", dest="repo_url", default="https://github.com/your/repo")
     p.add_argument("--license", choices=["MIT"], default="MIT")
     p.add_argument("--path", type=Path, default=None, help="Directory to create the project in (default: current directory)")
+    p.add_argument("--here", action="store_true", help="Scaffold into the target directory itself (no subdirectory)")
     p.add_argument("--git", action="store_true")
     p.add_argument("--docs", action="store_true")
     p.add_argument("--overwrite", action="store_true")
@@ -349,7 +350,10 @@ def main() -> None:
     project = args.name.strip()
     module = slugify(project)
     base = Path(args.path).expanduser().resolve() if args.path is not None else Path.cwd()
-    root = base / project
+    root = base if args.here else base / project
+    if args.here and root.exists() and any(root.iterdir()):
+        print("Target directory is not empty. Refusing to scaffold in-place.", file=sys.stderr)
+        sys.exit(1)
     root.mkdir(parents=True, exist_ok=True)
     year = str(datetime.now().year)
 
