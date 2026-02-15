@@ -340,6 +340,7 @@ def main() -> None:
     p.add_argument("--desc", default="A short description.")
     p.add_argument("--repo-url", dest="repo_url", default="https://github.com/your/repo")
     p.add_argument("--license", choices=["MIT"], default="MIT")
+    p.add_argument("--path", type=Path, default=None, help="Directory to create the project in (default: current directory)")
     p.add_argument("--git", action="store_true")
     p.add_argument("--docs", action="store_true")
     p.add_argument("--overwrite", action="store_true")
@@ -347,7 +348,9 @@ def main() -> None:
 
     project = args.name.strip()
     module = slugify(project)
-    root = Path(project).resolve()
+    base = Path(args.path).expanduser().resolve() if args.path is not None else Path.cwd()
+    root = base / project
+    root.mkdir(parents=True, exist_ok=True)
     year = str(datetime.now().year)
 
     write(root / "pyproject.toml", tmpl(PYPROJECT, project=project, desc=args.desc, author=args.author, email=args.email, repo_url=args.repo_url), overwrite=args.overwrite)
