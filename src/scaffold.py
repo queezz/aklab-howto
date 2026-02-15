@@ -366,7 +366,11 @@ def main() -> None:
     write(root / "pyproject.toml", tmpl(PYPROJECT, project=project, desc=args.desc, author=args.author, email=args.email, repo_url=args.repo_url), overwrite=args.overwrite)
     write(root / "README.md", tmpl(README, project=project, desc=args.desc), overwrite=args.overwrite)
     write(root / "LICENSE", tmpl(MIT, project=project, author=args.author, year=year), overwrite=args.overwrite)
-    write(root / ".gitignore", GITIGNORE, overwrite=args.overwrite)
+    gitignore_content = GITIGNORE
+    if args.here and args.git and (root / "scaffold.py").exists():
+        if "scaffold.py" not in gitignore_content.splitlines():
+            gitignore_content = gitignore_content.rstrip() + "\nscaffold.py\n"
+    write(root / ".gitignore", gitignore_content, overwrite=args.overwrite)
     write(root / "pyrightconfig.json", PYRIGHT, overwrite=args.overwrite)
     write(root / ".pre-commit-config.yaml", PRECOMMIT, overwrite=args.overwrite)
 
@@ -385,15 +389,6 @@ def main() -> None:
         write(root / ".github" / "workflows" / "docs.yml", GH_PAGES, overwrite=args.overwrite)
 
     write(root / ".github" / "workflows" / "ci.yml", GH_CI, overwrite=args.overwrite)
-
-    if args.here and args.git and (root / "scaffold.py").exists():
-        gitignore = root / ".gitignore"
-        content = gitignore.read_text(encoding="utf-8") if gitignore.exists() else ""
-        if "scaffold.py" not in content.splitlines():
-            with gitignore.open("a", encoding="utf-8") as f:
-                if content and not content.endswith("\n"):
-                    f.write("\n")
-                f.write("scaffold.py\n")
 
     if args.git:
         if not (root / ".git").exists():
