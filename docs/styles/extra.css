@@ -1,17 +1,3 @@
-table.repo-table {
-  table-layout: fixed;
-}
-
-table.repo-table th:first-child,
-table.repo-table td:first-child {
-  width: 9.5rem;
-  vertical-align: top;
-}
-
-table.repo-table td:first-child .md-button {
-  width: 100%;
-  box-sizing: border-box;
-  white-space: normal;
-  text-align: center;
-  padding: 0.4rem 0.5rem;
-}
+.red { color: #ff5252; }
+.green { color: #69f0ae; }
+.gray { color: #9e9e9e; }
