@@ -18,24 +18,26 @@ The FT232H is used to generate the **heater control signal**.
 
 Typical signal chain:
 
-```
-Thermocouple
-   ↓
-NI-9211
-   ↓
-USB
-   ↓
-Windows
-   ↓
-TemperatureControl (Python)
-   ↓
-FT232H GPIO
-   ↓
-PWM
-   ↓
-SSR
-   ↓
-Heater
+```mermaid
+flowchart TD
+    TC[Thermocouple]
+    NI[NI-9211]
+    USB[USB]
+    WIN[Windows]
+    PY[TemperatureControl (Python)]
+    FT[FT232H GPIO]
+    PWM[PWM]
+    SSR[SSR]
+    H[Heater]
+
+    TC --> NI
+    NI --> USB
+    USB --> WIN
+    WIN --> PY
+    PY --> FT
+    FT --> PWM
+    PWM --> SSR
+    SSR --> H
 ```
 
 
