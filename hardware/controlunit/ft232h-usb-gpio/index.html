@@ -6,10 +6,10 @@
       
       
       
-        <link rel="prev" href="../control-unit/">
+        <link rel="prev" href="../y-corp-adc-board/">
       
       
-        <link rel="next" href="../y-corp-adc-board/">
+        <link rel="next" href="../../sensors/wcs1800/">
       
       
         
@@ -20,7 +20,7 @@
     
     
       
-        <title>🎚️ Waveshare AD/DA - AK Lab How-To</title>
+        <title>🔌 FT232H GPIO - AK Lab How-To</title>
       
     
     
@@ -85,7 +85,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#high-precision-adda-module" class="md-skip">
+        <a href="#ft232h-usb-gpio-interface" class="md-skip">
           Skip to content
         </a>
       
@@ -118,7 +118,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              🎚️ Waveshare AD/DA
+              🔌 FT232H GPIO
             
           </span>
         </div>
@@ -1236,37 +1236,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    🎚️ Waveshare AD/DA
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../high-precision-adda-board/" class="md-nav__link">
         
   
   
@@ -1282,70 +1255,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#about" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        About
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#whats-on-the-board" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        What's on the board
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#pins" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Pins
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#dimensions" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Dimensions
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1383,10 +1292,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../ft232h-usb-gpio/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🔌 FT232H GPIO
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1402,6 +1338,59 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#role-in-the-control-loop" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Role in the control loop
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related-software-modules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Related software modules
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Notes
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1732,10 +1721,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#about" class="md-nav__link">
+  <a href="#role-in-the-control-loop" class="md-nav__link">
     <span class="md-ellipsis">
       
-        About
+        Role in the control loop
       
     </span>
   </a>
@@ -1743,10 +1732,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#whats-on-the-board" class="md-nav__link">
+  <a href="#related-software-modules" class="md-nav__link">
     <span class="md-ellipsis">
       
-        What's on the board
+        Related software modules
       
     </span>
   </a>
@@ -1754,21 +1743,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#pins" class="md-nav__link">
+  <a href="#notes" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Pins
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#dimensions" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Dimensions
+        Notes
       
     </span>
   </a>
@@ -1795,110 +1773,60 @@
   
 
 
-<h1 id="high-precision-adda-module">High Precision AD/DA module<a class="headerlink" href="#high-precision-adda-module" title="Permanent link">¶</a></h1>
-<h2 id="about">About<a class="headerlink" href="#about" title="Permanent link">¶</a></h2>
-<p><a class="md-button" href="https://www.waveshare.com/wiki/High-Precision_AD/DA_Board" rel="noopener" target="_blank">Dev Wiki</a>
-<a class="md-button" href="https://www.switch-science.com/products/7539?srsltid=AfmBOoov_O4_5KQ-dzdoikI8PUBTkQR9psVJ4mIv1gOg4gdYmNRye9Ep" rel="noopener" target="_blank">Switch Science Shop</a>
-<a class="md-button" href="https://www.waveshare.com/high-precision-ad-da-board.htm" rel="noopener" target="_blank">Waveshare Shop</a></p>
-<p>Raspberry Pi High-Precision AD/DA Expansion Board</p>
-<h2 id="whats-on-the-board">What's on the board<a class="headerlink" href="#whats-on-the-board" title="Permanent link">¶</a></h2>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../images/High-Precision-AD-DA-Board-intro.jpg" data-desc-position="bottom"><img alt="High precision AD/DA board" src="../../../images/High-Precision-AD-DA-Board-intro.jpg" width="500"></a></p>
-<ol>
-<li>Raspberry Pi GPIO interface : for connecting with the Pi</li>
-<li>AD/DA input/output : screw terminals</li>
-<li>AD input : pinheaders, the pinout is compatible with Waveshare sensor interface standard, easy to connect various analog sensor modules</li>
-<li>7.68M crystal</li>
-<li>LM285-2.5 : provides reference voltage for the ADC chip</li>
-<li>Photo resistor</li>
-<li>LED output indicator</li>
-<li>10K potentiometer</li>
-<li>DAC8552 : 16bit high-precision DAC, 2ch</li>
-<li>Power indicator</li>
-<li>ADS1256 : 24bit high-precision ADC, 8ch (4ch differential input)</li>
-<li>ADC testing jumper</li>
-<li>DAC testing jumper</li>
-<li>Power selection jumper</li>
-<li>ADC reference ground configuration : when AD single inputted, the AINCOM is reference terminal, can be connected to GND or external reference voltage</li>
-</ol>
-<h2 id="pins">Pins<a class="headerlink" href="#pins" title="Permanent link">¶</a></h2>
-<table>
-<thead>
-<tr>
-<th>PIN</th>
-<th>SYMBOL</th>
-<th>DESCRIPTION</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1, 17</td>
-<td>3.3V</td>
-<td>Power supply (3.3V)</td>
-</tr>
-<tr>
-<td>2, 4</td>
-<td>5V</td>
-<td>Power supply (5V)</td>
-</tr>
-<tr>
-<td>3, 5, 7, 8, 10, 18, 22, 24, 26, 27, 28, 29, 32, 36, 38, 40</td>
-<td>NC</td>
-<td>NC</td>
-</tr>
-<tr>
-<td>6, 9, 14, 20, 25, 30, 34, 39</td>
-<td>GND</td>
-<td>Ground</td>
-</tr>
-<tr>
-<td>11</td>
-<td>DRDY</td>
-<td>ADS1256 data ready output, low active</td>
-</tr>
-<tr>
-<td>12</td>
-<td>RESET</td>
-<td>ADS1256 reset input</td>
-</tr>
-<tr>
-<td>13</td>
-<td>PDWN</td>
-<td>ADS1256 sync/power off input, low active</td>
-</tr>
-<tr>
-<td>15</td>
-<td>CS0</td>
-<td>ADS1256 chip select, low active</td>
-</tr>
-<tr>
-<td>16</td>
-<td>CS1</td>
-<td>DAC8552 chip select, low active</td>
-</tr>
-<tr>
-<td>19</td>
-<td>DIN</td>
-<td>SPI data input</td>
-</tr>
-<tr>
-<td>21</td>
-<td>DOUT</td>
-<td>SPI data output</td>
-</tr>
-<tr>
-<td>23</td>
-<td>SCK</td>
-<td>SPI clock</td>
-</tr>
-<tr>
-<td>31, 33, 35, 37</td>
-<td>GPIO</td>
-<td>Extend to sensor interface</td>
-</tr>
-</tbody>
-</table>
-<h2 id="dimensions">Dimensions<a class="headerlink" href="#dimensions" title="Permanent link">¶</a></h2>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../images/High-Precision-AD-DA-Board-size.jpg" data-desc-position="bottom"><img alt="High precision AD/DA board" src="../../../images/High-Precision-AD-DA-Board-size.jpg" width="360"></a></p>
+<h1 id="ft232h-usb-gpio-interface">FT232H USB GPIO Interface<a class="headerlink" href="#ft232h-usb-gpio-interface" title="Permanent link">¶</a></h1>
+<p><a class="md-button" href="https://www.adafruit.com/product/2264" rel="noopener" target="_blank">Adafruit page</a>
+<a class="md-button" href="https://learn.adafruit.com/adafruit-ft232h-breakout/downloads" rel="noopener" target="_blank">PCB files</a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../ft232h.jpg" data-desc-position="bottom"><img alt="FT232H" src="../ft232h.jpg" width="360"></a></p>
+<p>The FT232H breakout is used as a <strong>GPIO output interface</strong> when running the temperature control loop on a Windows workstation.</p>
+<p>In this setup, temperature is measured using a <strong>National Instruments NI-9211 thermocouple module</strong>, which requires the control software to run on Windows with NI drivers.</p>
+<p>Since Windows machines do not provide native GPIO, a USB-GPIO bridge is required to drive the heater control hardware.</p>
+<p>For this purpose the system uses an <strong>Adafruit FT232H breakout</strong>.</p>
+<h2 id="role-in-the-control-loop">Role in the control loop<a class="headerlink" href="#role-in-the-control-loop" title="Permanent link">¶</a></h2>
+<p>The FT232H is used to generate the <strong>heater control signal</strong>.</p>
+<p>Typical signal chain:</p>
+<pre class="mermaid"><code>flowchart TD
+
+subgraph Measurement
+    TC["Thermocouple"]
+    NI["NI-9211"]
+end
+
+subgraph Software
+    WIN["Windows"]
+    PY["TemperatureControl (Python)"]
+end
+
+subgraph Actuation
+    FT["FT232H GPIO"]
+    SSR["SSR"]
+    H["Heater"]
+end
+
+TC --&gt; NI
+NI --&gt; WIN
+WIN --&gt; PY
+PY --&gt; FT
+FT --&gt; SSR
+SSR --&gt; H
+
+classDef sensor fill:#243322,stroke:#6ce3a1
+classDef software fill:#1e2a3a,stroke:#6cb3ff
+classDef actuator fill:#3a2a1e,stroke:#ffb86c
+
+class TC,NI sensor
+class WIN,PY software
+class FT,SSR,H actuator</code></pre>
+<h2 id="related-software-modules">Related software modules<a class="headerlink" href="#related-software-modules" title="Permanent link">¶</a></h2>
+<p><a class="md-button" href="https://github.com/queezz/TemperatureControl" rel="noopener" target="_blank">TemperatureControl</a>
+<a class="md-button" href="https://github.com/queezz/TemperatureControl/blob/main/src/temperature_control/sensors/ni9211.py" rel="noopener" target="_blank">NI9211.py</a>
+<a class="md-button" href="https://github.com/queezz/TemperatureControl/blob/main/src/temperature_control/sensors/ft232h.py" rel="noopener" target="_blank">ft232h.py</a></p>
+<h2 id="notes">Notes<a class="headerlink" href="#notes" title="Permanent link">¶</a></h2>
+<p>The FT232H is mainly used as a <strong>simple GPIO bridge</strong> for heater control.</p>
+<p>While this architecture introduces several layers:</p>
+<div class="highlight"><pre><span></span><code>NI → USB → Windows → Python → FT232H → SSR → heater
+</code></pre></div>
+<p>it provides reliable thermocouple measurements using the <strong>NI-9211 isolated input hardware</strong>.</p>
+<p>Future work may include building a dedicated <strong>isolated thermocouple acquisition board</strong> to remove the NI dependency.</p>
 
 
 
