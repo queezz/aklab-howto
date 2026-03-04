@@ -35,7 +35,12 @@ markdown_extensions:
   - def_list
   - footnotes
   - pymdownx.details
-  - pymdownx.superfences
+  - pymdownx.tabbed
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.arithmatex:   # for LaTeX
       generic: true  
   - mdx_truly_sane_lists:
@@ -44,7 +49,6 @@ markdown_extensions:
       permalink: true
   - pymdownx.arithmatex:
       generic: true
-  - pymdownx.superfences
   - pymdownx.highlight
   - pymdownx.critic
   - pymdownx.details
@@ -57,6 +61,7 @@ markdown_extensions:
 extra_javascript:
   - javascripts/mathjax.js
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  - https://unpkg.com/mermaid@10/dist/mermaid.min.js
 extra_css:
   - styles/brand.css
   - styles/extra.css
