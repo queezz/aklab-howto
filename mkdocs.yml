@@ -95,6 +95,7 @@ nav:
           - ℹ️ About: hardware/controlunit/control-unit.md
           - 🎚️ Waveshare AD/DA: hardware/controlunit/high-precision-adda-board.md
           - 📊 Y-corp ADC: hardware/controlunit/y-corp-adc-board.md
+          - 🔌 FT232H GPIO: hardware/controlunit/ft232h-usb-gpio.md
       - Sensors:
           - WCS1800: hardware/sensors/wcs1800.md
           - ACS712: hardware/sensors/acs712.md
