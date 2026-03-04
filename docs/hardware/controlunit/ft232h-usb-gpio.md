@@ -20,26 +20,38 @@ Typical signal chain:
 
 ```mermaid
 flowchart TD
-    TC[Thermocouple]
-    NI[NI-9211]
-    USB[USB]
-    WIN[Windows]
-    PY[TemperatureControl (Python)]
-    FT[FT232H GPIO]
-    PWM[PWM]
-    SSR[SSR]
-    H[Heater]
 
-    TC --> NI
-    NI --> USB
-    USB --> WIN
-    WIN --> PY
-    PY --> FT
-    FT --> PWM
-    PWM --> SSR
-    SSR --> H
+subgraph Measurement
+    TC["Thermocouple"]
+    NI["NI-9211"]
+end
+
+subgraph Software
+    WIN["Windows"]
+    PY["TemperatureControl (Python)"]
+end
+
+subgraph Actuation
+    FT["FT232H GPIO"]
+    SSR["SSR"]
+    H["Heater"]
+end
+
+TC --> NI
+NI --> WIN
+WIN --> PY
+PY --> FT
+FT --> SSR
+SSR --> H
+
+classDef sensor fill:#243322,stroke:#6ce3a1
+classDef software fill:#1e2a3a,stroke:#6cb3ff
+classDef actuator fill:#3a2a1e,stroke:#ffb86c
+
+class TC,NI sensor
+class WIN,PY software
+class FT,SSR,H actuator
 ```
-
 
 ## Related software modules
 
