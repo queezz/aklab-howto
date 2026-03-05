@@ -108,5 +108,8 @@ nav:
       - 🔬 Instruments: hardware/instruments.md
       - 🦺 Safety: hardware/safety.md
 
+  - 🧪 Lab:
+      - 🌀 TMP Restoration: lab/tmp-restoration.md
+
   - 🎓 Seminar:
       - Echelle spectra: seminar/echelle-spectra.md
