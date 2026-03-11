@@ -1,13 +1,11 @@
 # FDM Plastics Reference
 
 ## PLA
+
+
 Polylactic Acid — polyester from lactic acid  
-repeat unit `(C3H4O2)n`
+repeat unit `(C3H4O2)n`  
 https://pubchem.ncbi.nlm.nih.gov/compound/612
-
-
-<div id="pla_viewer" class="molecule-viewer"></div>
-
 
 | Property | Value | FDM parameter | Typical |
 |---|---|---|---|
@@ -17,9 +15,16 @@ https://pubchem.ncbi.nlm.nih.gov/compound/612
 | Strength | ~50–60 MPa | Enclosure | Not required |
 
 
+<div class="molecule-block">
+<div id="pla_viewer" class="molecule-viewer"></div>
+</div>
+
 <script>
 document.addEventListener("DOMContentLoaded", function () {
-  let viewer = $3Dmol.createViewer("pla_viewer",{backgroundColor:"gray"});
+   let viewer = $3Dmol.createViewer(
+    document.getElementById("pla_viewer"),
+    { backgroundColor: "white" }
+    );
   $3Dmol.download("cid:612", viewer, {}, function() {
     viewer.setStyle({}, {stick:{}});
     viewer.zoomTo();
@@ -38,8 +43,6 @@ document.addEventListener("DOMContentLoaded", function () {
 **Use**
 
 prototypes, visual parts, detailed models
-
----
 
 ## PETG
 Polyethylene Terephthalate Glycol-modified — glycol-modified PET polyester  
