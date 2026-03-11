@@ -122,3 +122,38 @@
   .md-typeset .admonition.note    { border-color: #8ab4ff; }
 
 }
+
+
+/* ===== Tables — dark theme box like light mode ===== */
+
+[data-md-color-scheme="bh-dark"] .md-typeset table {
+  background-color: rgba(255,255,255,.03);
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+[data-md-color-scheme="bh-dark"] .md-typeset thead {
+  background-color: rgba(255,255,255,.05);
+}
+
+[data-md-color-scheme="bh-dark"] .md-typeset tbody tr {
+  border-top: 1px solid rgba(255,255,255,.06);
+}
+
+[data-md-color-scheme="bh-dark"] .md-typeset td,
+[data-md-color-scheme="bh-dark"] .md-typeset th {
+  border: none;
+}
+
+[data-md-color-scheme="bh-dark"] .md-typeset tbody tr:hover {
+  background: linear-gradient(
+    to right,
+    rgba(255,255,255,.06),
+    rgba(255,255,255,.03)
+  );
+}
+
+[data-md-color-scheme="bh-dark"] .md-typeset tbody tr:nth-child(even) {
+  background-color: rgba(255,255,255,.02);
+}
