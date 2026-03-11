@@ -8,8 +8,11 @@ Polylactic Acid — polyester from lactic acid
 C<sub>3</sub>H<sub>6</sub>O<sub>3</sub>
 </span>, CH3CHOHCOOH
 	
-
 [:material-flask-outline: PLA on PubChem](https://pubchem.ncbi.nlm.nih.gov/compound/612){ .md-button .md-button--primary target=_blank}
+[:material-wikipedia: PLA](https://en.wikipedia.org/wiki/Polylactic_acid){ .md-button .md-button--primary target=_blank}
+[:material-printer-3d: PLA on Prusa](https://help.prusa3d.com/article/pla_2062){ .md-button .md-button--primary target=_blank}
+
+
 <div class="molecule-block">
 <div class="molecule-viewer" data-cid="612"></div>
 </div>
@@ -46,6 +49,8 @@ C<sub>18</sub>H<sub>14</sub>O<sub>8</sub>
 </span>
 
 [:material-flask-outline: PETG on PubChem](https://pubchem.ncbi.nlm.nih.gov/compound/19046907){ .md-button .md-button--primary target=_blank}
+[:material-printer-3d: PETG on Prusa](https://help.prusa3d.com/article/petg_2059){ .md-button .md-button--primary target=_blank}
+
 
 <div class="molecule-block">
 <div class="molecule-viewer" data-cid="19046907"></div>
@@ -84,6 +89,8 @@ Terpolymer is made of three monomers, see [ABS monomer components](#abs-monomer-
 </span>, CH2=CH–Ph + CH2=CH–CH=CH2 + CH2=CH–CN
 
 [:material-flask-outline: ABS on PubChem](https://pubchem.ncbi.nlm.nih.gov/compound/24756){ .md-button .md-button--primary target=_blank}
+[:material-wikipedia: ABS](https://en.wikipedia.org/wiki/Acrylonitrile_butadiene_styrene){ .md-button .md-button--primary target=_blank}
+[:material-printer-3d: ABS on Prusa](https://help.prusa3d.com/article/abs_2058){ .md-button .md-button--primary target=_blank}
 
 
 | Property | Value | FDM parameter | Typical |
@@ -115,7 +122,8 @@ Acrylonitrile Styrene Acrylate — weather-resistant ABS-like terpolymer
 (C<sub>8</sub>H<sub>8</sub> · C<sub>3</sub>H<sub>3</sub>N · C<sub>4</sub>H<sub>6</sub>O<sub>2</sub>)<sub>n</sub>
 </span>, CH2=CH–Ph + CH2=CH–CN + CH2=CH–COO–R
 
-
+[:material-wikipedia: ASA](https://en.wikipedia.org/wiki/Acrylonitrile_styrene_acrylate){ .md-button .md-button--primary target=_blank}
+[:material-printer-3d: ASA on Prusa](https://help.prusa3d.com/article/asa_1809){ .md-button .md-button--primary target=_blank}
 
 | Property | Value | FDM parameter | Typical |
 |---|---|---|---|
@@ -148,18 +156,29 @@ C<sub>10</sub>H<sub>8</sub>O<sub>4</sub>
 </span>, C6H4(CO2CH2CH2O)2
 
 [:material-flask-outline: PET on PubChem](https://pubchem.ncbi.nlm.nih.gov/compound/18721140){ .md-button .md-button--primary target=_blank}
+[:material-wikipedia: PET](https://en.wikipedia.org/wiki/Polyethylene_terephthalate){ .md-button .md-button--primary target=_blank}
 
 <div class="molecule-block">
 <div class="molecule-viewer" data-cid="18721140"></div>
 </div>
 
 !!! info "Relation to PETG"
+
     **PETG** is a modified form of **PET**.
 
-    PET already contains **ethylene glycol** in its backbone.  
-    In **[PETG](#petg)** an additional glycol-type modifier is introduced during polymerization.
+    PET already contains **ethylene glycol** in its backbone.
 
-    This reduces crystallinity and makes PETG **more amorphous, tougher, and easier to process**, which is why PETG works well for FDM printing.
+    In **PETG**, part of the ethylene glycol is replaced by
+    **cyclohexanedimethanol (CHDM)**.  
+    The bulky cyclohexane ring disrupts chain packing and reduces
+    crystallization, making the polymer **amorphous and easier to process**.
+
+    <div class="molecule-block">
+    <div class="molecule-viewer" data-cid="250594"></div>
+    </div>
+
+    CHDM is therefore the key monomer responsible for the **G in PETG
+    (glycol-modified PET)**.
 
 | Property | Value | FDM parameter | Typical |
 |---|---|---|---|
@@ -183,13 +202,15 @@ bottles, fibers (polyester), films, engineering plastics, packaging
 
 ---
 
-## ABS monomers
+## ABS, ASA monomers
 
 ABS is a **terpolymer** produced by polymerizing three monomers:
 
 - acrylonitrile — provides chemical resistance and stiffness  
 - butadiene — provides toughness and impact resistance  
 - styrene — provides rigidity and easy processing
+- 
+ASA has butyl acrylate instaed of butadiene
 
 ---
 
@@ -231,4 +252,15 @@ C<sub>4</sub>H<sub>6</sub>
 
 <div class="molecule-block">
 <div class="molecule-viewer" data-cid="7845"></div>
+</div>
+
+### Butyl Acrylate
+<span style="color:#4FC3F7; font-weight:600;">
+C<sub>7</sub>H<sub>12</sub>O<sub>2</sub>
+</span>
+
+[:material-flask-outline: Butyl Acrylate on PubChem](https://pubchem.ncbi.nlm.nih.gov/compound/8846){ .md-button .md-button--primary target=_blank}
+
+<div class="molecule-block">
+<div class="molecule-viewer" data-cid="8846"></div>
 </div>
