@@ -100,3 +100,25 @@
   content: " + ";
   color: var(--md-default-fg-color--light);
 }
+
+/* ===== Admonitions (dark scheme) ===== */
+
+[data-md-color-scheme="bh-dark"] {
+
+  .md-typeset .admonition,
+  .md-typeset details {
+    background-color: rgba(255,255,255,.04);
+    color: var(--md-default-fg-color);
+    border: 1px solid rgba(255,255,255,.12);
+  }
+
+  .md-typeset .admonition-title {
+    background-color: rgba(255,255,255,.06);
+  }
+
+  .md-typeset .admonition.info    { border-color: #66b3ff; }
+  .md-typeset .admonition.warning { border-color: #ffb84d; }
+  .md-typeset .admonition.tip     { border-color: #66ffa8; }
+  .md-typeset .admonition.note    { border-color: #8ab4ff; }
+
+}
