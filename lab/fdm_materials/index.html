@@ -1733,6 +1733,56 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#abs-monomer-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ABS monomer components
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ABS monomer components">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#acrylonitrile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Acrylonitrile
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#styrene" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Styrene
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-butadiene" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1,3-Butadiene
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1904,6 +1954,56 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#abs-monomer-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ABS monomer components
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ABS monomer components">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#acrylonitrile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Acrylonitrile
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#styrene" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Styrene
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-butadiene" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1,3-Butadiene
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1996,9 +2096,33 @@ document.addEventListener("DOMContentLoaded", function () {
 </ul>
 <p><strong>Use</strong></p>
 <p>prototypes, visual parts, detailed models</p>
+<hr>
 <h2 id="petg">PETG<a class="headerlink" href="#petg" title="Permanent link">¶</a></h2>
-<p>Polyethylene Terephthalate Glycol-modified — glycol-modified PET polyester<br>
-repeat unit approximately <code>(C10H8O4)n</code></p>
+<p>Polyethylene Terephthalate Glycol-modified — glycol-modified PET polyester  </p>
+<p><span style="color:#4FC3F7; font-weight:600;">
+C<sub>10</sub>H<sub>8</sub>O<sub>4</sub>
+</span>, C6H4(CO2CH2CH2O)2</p>
+<p><a class="md-button md-button--primary" href="https://pubchem.ncbi.nlm.nih.gov/compound/3034479" target="_blank"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 19a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1c0-.21-.07-.41-.18-.57L13 8.35V4h-2v4.35L5.18 18.43c-.11.16-.18.36-.18.57m1 3a3 3 0 0 1-3-3c0-.6.18-1.16.5-1.63L9 7.81V6a1 1 0 0 1-1-1V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v1a1 1 0 0 1-1 1v1.81l5.5 9.56c.32.47.5 1.03.5 1.63a3 3 0 0 1-3 3zm7-6 1.34-1.34L16.27 18H7.73l2.66-4.61zm-.5-4a.5.5 0 0 1 .5.5.5.5 0 0 1-.5.5.5.5 0 0 1-.5-.5.5.5 0 0 1 .5-.5"></path></svg></span> PETG on PubChem</a></p>
+<div class="molecule-block">
+<div id="petg_viewer" class="molecule-viewer"></div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+   let viewer = $3Dmol.createViewer(
+    document.getElementById("petg_viewer"),
+    { backgroundColor: "rgba(226,196,161,0.718)" }
+    );
+  $3Dmol.download("cid:7222", viewer, {}, function() {
+    viewer.setStyle({}, {
+        stick: {radius: 0.15},
+        sphere: {scale: 0.25}});
+    viewer.zoomTo();
+    viewer.render();
+  });
+});
+</script>
+
 <table>
 <thead>
 <tr>
@@ -2048,8 +2172,32 @@ repeat unit approximately <code>(C10H8O4)n</code></p>
 <p>functional parts, brackets, containers, moderately outdoor parts</p>
 <hr>
 <h2 id="abs">ABS<a class="headerlink" href="#abs" title="Permanent link">¶</a></h2>
-<p>Acrylonitrile Butadiene Styrene — engineering thermoplastic terpolymer<br>
-(acrylonitrile + butadiene + styrene)</p>
+<p>Acrylonitrile Butadiene Styrene — engineering thermoplastic terpolymer. 
+Terpolymer is made of three monomers, see <a href="#abs-monomer-components">ABS monomer components</a>.</p>
+<p><span style="color:#4FC3F7; font-weight:600;">
+(C<sub>8</sub>H<sub>8</sub> · C<sub>4</sub>H<sub>6</sub> · C<sub>3</sub>H<sub>3</sub>N)<sub>n</sub>
+</span>, CH2=CH–Ph + CH2=CH–CH=CH2 + CH2=CH–CN</p>
+<p><a class="md-button md-button--primary" href="https://pubchem.ncbi.nlm.nih.gov/compound/24756" target="_blank"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 19a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1c0-.21-.07-.41-.18-.57L13 8.35V4h-2v4.35L5.18 18.43c-.11.16-.18.36-.18.57m1 3a3 3 0 0 1-3-3c0-.6.18-1.16.5-1.63L9 7.81V6a1 1 0 0 1-1-1V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v1a1 1 0 0 1-1 1v1.81l5.5 9.56c.32.47.5 1.03.5 1.63a3 3 0 0 1-3 3zm7-6 1.34-1.34L16.27 18H7.73l2.66-4.61zm-.5-4a.5.5 0 0 1 .5.5.5.5 0 0 1-.5.5.5.5 0 0 1-.5-.5.5.5 0 0 1 .5-.5"></path></svg></span> ABS on PubChem</a></p>
+<div class="molecule-block">
+<div id="abs_viewer" class="molecule-viewer"></div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+   let viewer = $3Dmol.createViewer(
+    document.getElementById("abs_viewer"),
+    { backgroundColor: "rgba(226,196,161,0.718)" }
+    );
+  $3Dmol.download("cid:7501", viewer, {}, function() {
+    viewer.setStyle({}, {
+        stick: {radius: 0.15},
+        sphere: {scale: 0.25}});
+    viewer.zoomTo();
+    viewer.render();
+  });
+});
+</script>
+
 <table>
 <thead>
 <tr>
@@ -2098,8 +2246,10 @@ repeat unit approximately <code>(C10H8O4)n</code></p>
 <p>mechanical parts, enclosures, tools, prototypes requiring heat resistance</p>
 <hr>
 <h2 id="asa">ASA<a class="headerlink" href="#asa" title="Permanent link">¶</a></h2>
-<p>Acrylonitrile Styrene Acrylate — weather-resistant ABS-like terpolymer<br>
-(acrylonitrile + styrene + acrylate rubber)</p>
+<p>Acrylonitrile Styrene Acrylate — weather-resistant ABS-like terpolymer  </p>
+<p><span style="color:#4FC3F7; font-weight:600;">
+(C<sub>8</sub>H<sub>8</sub> · C<sub>3</sub>H<sub>3</sub>N · C<sub>4</sub>H<sub>6</sub>O<sub>2</sub>)<sub>n</sub>
+</span>, CH2=CH–Ph + CH2=CH–CN + CH2=CH–COO–R</p>
 <table>
 <thead>
 <tr>
@@ -2146,6 +2296,91 @@ repeat unit approximately <code>(C10H8O4)n</code></p>
 </ul>
 <p><strong>Use</strong></p>
 <p>outdoor parts, enclosures, mechanical components, automotive-like parts</p>
+<hr>
+<h2 id="abs-monomer-components">ABS monomer components<a class="headerlink" href="#abs-monomer-components" title="Permanent link">¶</a></h2>
+<p>ABS is a <strong>terpolymer</strong> produced by polymerizing three monomers:</p>
+<ul>
+<li>acrylonitrile — provides chemical resistance and stiffness  </li>
+<li>butadiene — provides toughness and impact resistance  </li>
+<li>styrene — provides rigidity and easy processing</li>
+</ul>
+<hr>
+<h3 id="acrylonitrile">Acrylonitrile<a class="headerlink" href="#acrylonitrile" title="Permanent link">¶</a></h3>
+<p><span style="color:#4FC3F7; font-weight:600;">
+C<sub>3</sub>H<sub>3</sub>N
+</span>, CH2=CH–CN</p>
+<p><a class="md-button md-button--primary" href="https://pubchem.ncbi.nlm.nih.gov/compound/7855" target="_blank"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 19a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1c0-.21-.07-.41-.18-.57L13 8.35V4h-2v4.35L5.18 18.43c-.11.16-.18.36-.18.57m1 3a3 3 0 0 1-3-3c0-.6.18-1.16.5-1.63L9 7.81V6a1 1 0 0 1-1-1V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v1a1 1 0 0 1-1 1v1.81l5.5 9.56c.32.47.5 1.03.5 1.63a3 3 0 0 1-3 3zm7-6 1.34-1.34L16.27 18H7.73l2.66-4.61zm-.5-4a.5.5 0 0 1 .5.5.5.5 0 0 1-.5.5.5.5 0 0 1-.5-.5.5.5 0 0 1 .5-.5"></path></svg></span> Acrylonitrile on PubChem</a></p>
+<div class="molecule-block">
+<div id="acrylonitrile_viewer" class="molecule-viewer"></div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+   let viewer = $3Dmol.createViewer(
+    document.getElementById("acrylonitrile_viewer"),
+    { backgroundColor: "rgba(226,196,161,0.718)" }
+    );
+  $3Dmol.download("cid:7855", viewer, {}, function() {
+    viewer.setStyle({}, {
+        stick: {radius: 0.15},
+        sphere: {scale: 0.25}});
+    viewer.zoomTo();
+    viewer.render();
+  });
+});
+</script>
+
+<hr>
+<h3 id="styrene">Styrene<a class="headerlink" href="#styrene" title="Permanent link">¶</a></h3>
+<p><span style="color:#4FC3F7; font-weight:600;">
+C<sub>8</sub>H<sub>8</sub>
+</span>, C6H5–CH=CH2</p>
+<p><a class="md-button md-button--primary" href="https://pubchem.ncbi.nlm.nih.gov/compound/7501" target="_blank"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 19a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1c0-.21-.07-.41-.18-.57L13 8.35V4h-2v4.35L5.18 18.43c-.11.16-.18.36-.18.57m1 3a3 3 0 0 1-3-3c0-.6.18-1.16.5-1.63L9 7.81V6a1 1 0 0 1-1-1V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v1a1 1 0 0 1-1 1v1.81l5.5 9.56c.32.47.5 1.03.5 1.63a3 3 0 0 1-3 3zm7-6 1.34-1.34L16.27 18H7.73l2.66-4.61zm-.5-4a.5.5 0 0 1 .5.5.5.5 0 0 1-.5.5.5.5 0 0 1-.5-.5.5.5 0 0 1 .5-.5"></path></svg></span> Styrene on PubChem</a></p>
+<div class="molecule-block">
+<div id="styrene_viewer" class="molecule-viewer"></div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+   let viewer = $3Dmol.createViewer(
+    document.getElementById("styrene_viewer"),
+    { backgroundColor: "rgba(226,196,161,0.718)" }
+    );
+  $3Dmol.download("cid:7501", viewer, {}, function() {
+    viewer.setStyle({}, {
+        stick: {radius: 0.15},
+        sphere: {scale: 0.25}});
+    viewer.zoomTo();
+    viewer.render();
+  });
+});
+</script>
+
+<hr>
+<h3 id="13-butadiene">1,3-Butadiene<a class="headerlink" href="#13-butadiene" title="Permanent link">¶</a></h3>
+<p><span style="color:#4FC3F7; font-weight:600;">
+C<sub>4</sub>H<sub>6</sub>
+</span>, CH2=CH–CH=CH2</p>
+<p><a class="md-button md-button--primary" href="https://pubchem.ncbi.nlm.nih.gov/compound/7845" target="_blank"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 19a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1c0-.21-.07-.41-.18-.57L13 8.35V4h-2v4.35L5.18 18.43c-.11.16-.18.36-.18.57m1 3a3 3 0 0 1-3-3c0-.6.18-1.16.5-1.63L9 7.81V6a1 1 0 0 1-1-1V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v1a1 1 0 0 1-1 1v1.81l5.5 9.56c.32.47.5 1.03.5 1.63a3 3 0 0 1-3 3zm7-6 1.34-1.34L16.27 18H7.73l2.66-4.61zm-.5-4a.5.5 0 0 1 .5.5.5.5 0 0 1-.5.5.5.5 0 0 1-.5-.5.5.5 0 0 1 .5-.5"></path></svg></span> 1,3-Butadiene on PubChem</a></p>
+<div class="molecule-block">
+<div id="butadiene_viewer" class="molecule-viewer"></div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+   let viewer = $3Dmol.createViewer(
+    document.getElementById("butadiene_viewer"),
+    { backgroundColor: "rgba(226,196,161,0.718)" }
+    );
+  $3Dmol.download("cid:7845", viewer, {}, function() {
+    viewer.setStyle({}, {
+        stick: {radius: 0.15},
+        sphere: {scale: 0.25}});
+    viewer.zoomTo();
+    viewer.render();
+  });
+});
+</script>
 
 
 
