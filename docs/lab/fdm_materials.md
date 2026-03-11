@@ -50,9 +50,38 @@ document.addEventListener("DOMContentLoaded", function () {
 
 prototypes, visual parts, detailed models
 
+---
+
 ## PETG
+
 Polyethylene Terephthalate Glycol-modified — glycol-modified PET polyester  
-repeat unit approximately `(C10H8O4)n`
+
+<span style="color:#4FC3F7; font-weight:600;">
+C<sub>10</sub>H<sub>8</sub>O<sub>4</sub>
+</span>, C6H4(CO2CH2CH2O)2
+
+[:material-flask-outline: PETG on PubChem](https://pubchem.ncbi.nlm.nih.gov/compound/612){ .md-button .md-button--primary target=_blank}
+
+<div class="molecule-block">
+<div id="petg_viewer" class="molecule-viewer"></div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+   let viewer = $3Dmol.createViewer(
+    document.getElementById("petg_viewer"),
+    { backgroundColor: "rgba(226,196,161,0.718)" }
+    );
+  $3Dmol.download("cid:7222", viewer, {}, function() {
+    viewer.setStyle({}, {
+        stick: {radius: 0.15},
+        sphere: {scale: 0.25}});
+    viewer.zoomTo();
+    viewer.render();
+  });
+});
+</script>
+
 
 | Property | Value | FDM parameter | Typical |
 |---|---|---|---|
@@ -77,8 +106,34 @@ functional parts, brackets, containers, moderately outdoor parts
 ---
 
 ## ABS
+
 Acrylonitrile Butadiene Styrene — engineering thermoplastic terpolymer  
-(acrylonitrile + butadiene + styrene)
+
+<span style="color:#4FC3F7; font-weight:600;">
+(C<sub>8</sub>H<sub>8</sub> · C<sub>4</sub>H<sub>6</sub> · C<sub>3</sub>H<sub>3</sub>N)<sub>n</sub>
+</span>, CH2=CH–Ph + CH2=CH–CH=CH2 + CH2=CH–CN
+
+[:material-flask-outline: ABS on PubChem](https://pubchem.ncbi.nlm.nih.gov/compound/612){ .md-button .md-button--primary target=_blank}
+
+<div class="molecule-block">
+<div id="abs_viewer" class="molecule-viewer"></div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+   let viewer = $3Dmol.createViewer(
+    document.getElementById("abs_viewer"),
+    { backgroundColor: "rgba(226,196,161,0.718)" }
+    );
+  $3Dmol.download("cid:7501", viewer, {}, function() {
+    viewer.setStyle({}, {
+        stick: {radius: 0.15},
+        sphere: {scale: 0.25}});
+    viewer.zoomTo();
+    viewer.render();
+  });
+});
+</script>
 
 | Property | Value | FDM parameter | Typical |
 |---|---|---|---|
@@ -102,8 +157,34 @@ mechanical parts, enclosures, tools, prototypes requiring heat resistance
 ---
 
 ## ASA
+
 Acrylonitrile Styrene Acrylate — weather-resistant ABS-like terpolymer  
-(acrylonitrile + styrene + acrylate rubber)
+
+<span style="color:#4FC3F7; font-weight:600;">
+(C<sub>8</sub>H<sub>8</sub> · C<sub>3</sub>H<sub>3</sub>N · C<sub>4</sub>H<sub>6</sub>O<sub>2</sub>)<sub>n</sub>
+</span>, CH2=CH–Ph + CH2=CH–CN + CH2=CH–COO–R
+
+[:material-flask-outline: ASA on PubChem](https://pubchem.ncbi.nlm.nih.gov/compound/612){ .md-button .md-button--primary target=_blank}
+
+<div class="molecule-block">
+<div id="asa_viewer" class="molecule-viewer"></div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+   let viewer = $3Dmol.createViewer(
+    document.getElementById("asa_viewer"),
+    { backgroundColor: "rgba(226,196,161,0.718)" }
+    );
+  $3Dmol.download("cid:5280535", viewer, {}, function() {
+    viewer.setStyle({}, {
+        stick: {radius: 0.15},
+        sphere: {scale: 0.25}});
+    viewer.zoomTo();
+    viewer.render();
+  });
+});
+</script>
 
 | Property | Value | FDM parameter | Typical |
 |---|---|---|---|
