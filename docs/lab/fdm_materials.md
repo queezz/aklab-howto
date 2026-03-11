@@ -60,7 +60,7 @@ Polyethylene Terephthalate Glycol-modified — glycol-modified PET polyester
 C<sub>10</sub>H<sub>8</sub>O<sub>4</sub>
 </span>, C6H4(CO2CH2CH2O)2
 
-[:material-flask-outline: PETG on PubChem](https://pubchem.ncbi.nlm.nih.gov/compound/612){ .md-button .md-button--primary target=_blank}
+[:material-flask-outline: PETG on PubChem](https://pubchem.ncbi.nlm.nih.gov/compound/3034479){ .md-button .md-button--primary target=_blank}
 
 <div class="molecule-block">
 <div id="petg_viewer" class="molecule-viewer"></div>
@@ -107,13 +107,14 @@ functional parts, brackets, containers, moderately outdoor parts
 
 ## ABS
 
-Acrylonitrile Butadiene Styrene — engineering thermoplastic terpolymer  
+Acrylonitrile Butadiene Styrene — engineering thermoplastic terpolymer. 
+Terpolymer is made of three monomers, see [ABS monomer components](#abs-monomer-components).
 
 <span style="color:#4FC3F7; font-weight:600;">
 (C<sub>8</sub>H<sub>8</sub> · C<sub>4</sub>H<sub>6</sub> · C<sub>3</sub>H<sub>3</sub>N)<sub>n</sub>
 </span>, CH2=CH–Ph + CH2=CH–CH=CH2 + CH2=CH–CN
 
-[:material-flask-outline: ABS on PubChem](https://pubchem.ncbi.nlm.nih.gov/compound/612){ .md-button .md-button--primary target=_blank}
+[:material-flask-outline: ABS on PubChem](https://pubchem.ncbi.nlm.nih.gov/compound/24756){ .md-button .md-button--primary target=_blank}
 
 <div class="molecule-block">
 <div id="abs_viewer" class="molecule-viewer"></div>
@@ -164,27 +165,7 @@ Acrylonitrile Styrene Acrylate — weather-resistant ABS-like terpolymer
 (C<sub>8</sub>H<sub>8</sub> · C<sub>3</sub>H<sub>3</sub>N · C<sub>4</sub>H<sub>6</sub>O<sub>2</sub>)<sub>n</sub>
 </span>, CH2=CH–Ph + CH2=CH–CN + CH2=CH–COO–R
 
-[:material-flask-outline: ASA on PubChem](https://pubchem.ncbi.nlm.nih.gov/compound/612){ .md-button .md-button--primary target=_blank}
 
-<div class="molecule-block">
-<div id="asa_viewer" class="molecule-viewer"></div>
-</div>
-
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-   let viewer = $3Dmol.createViewer(
-    document.getElementById("asa_viewer"),
-    { backgroundColor: "rgba(226,196,161,0.718)" }
-    );
-  $3Dmol.download("cid:5280535", viewer, {}, function() {
-    viewer.setStyle({}, {
-        stick: {radius: 0.15},
-        sphere: {scale: 0.25}});
-    viewer.zoomTo();
-    viewer.render();
-  });
-});
-</script>
 
 | Property | Value | FDM parameter | Typical |
 |---|---|---|---|
@@ -204,3 +185,103 @@ document.addEventListener("DOMContentLoaded", function () {
 **Use**
 
 outdoor parts, enclosures, mechanical components, automotive-like parts
+
+---
+
+## ABS monomer components
+
+ABS is a **terpolymer** produced by polymerizing three monomers:
+
+- acrylonitrile — provides chemical resistance and stiffness  
+- butadiene — provides toughness and impact resistance  
+- styrene — provides rigidity and easy processing
+
+---
+
+### Acrylonitrile
+
+<span style="color:#4FC3F7; font-weight:600;">
+C<sub>3</sub>H<sub>3</sub>N
+</span>, CH2=CH–CN
+
+[:material-flask-outline: Acrylonitrile on PubChem](https://pubchem.ncbi.nlm.nih.gov/compound/7855){ .md-button .md-button--primary target=_blank}
+
+<div class="molecule-block">
+<div id="acrylonitrile_viewer" class="molecule-viewer"></div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+   let viewer = $3Dmol.createViewer(
+    document.getElementById("acrylonitrile_viewer"),
+    { backgroundColor: "rgba(226,196,161,0.718)" }
+    );
+  $3Dmol.download("cid:7855", viewer, {}, function() {
+    viewer.setStyle({}, {
+        stick: {radius: 0.15},
+        sphere: {scale: 0.25}});
+    viewer.zoomTo();
+    viewer.render();
+  });
+});
+</script>
+
+---
+
+### Styrene
+
+<span style="color:#4FC3F7; font-weight:600;">
+C<sub>8</sub>H<sub>8</sub>
+</span>, C6H5–CH=CH2
+
+[:material-flask-outline: Styrene on PubChem](https://pubchem.ncbi.nlm.nih.gov/compound/7501){ .md-button .md-button--primary target=_blank}
+
+<div class="molecule-block">
+<div id="styrene_viewer" class="molecule-viewer"></div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+   let viewer = $3Dmol.createViewer(
+    document.getElementById("styrene_viewer"),
+    { backgroundColor: "rgba(226,196,161,0.718)" }
+    );
+  $3Dmol.download("cid:7501", viewer, {}, function() {
+    viewer.setStyle({}, {
+        stick: {radius: 0.15},
+        sphere: {scale: 0.25}});
+    viewer.zoomTo();
+    viewer.render();
+  });
+});
+</script>
+
+---
+
+### 1,3-Butadiene
+
+<span style="color:#4FC3F7; font-weight:600;">
+C<sub>4</sub>H<sub>6</sub>
+</span>, CH2=CH–CH=CH2
+
+[:material-flask-outline: 1,3-Butadiene on PubChem](https://pubchem.ncbi.nlm.nih.gov/compound/7845){ .md-button .md-button--primary target=_blank}
+
+<div class="molecule-block">
+<div id="butadiene_viewer" class="molecule-viewer"></div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+   let viewer = $3Dmol.createViewer(
+    document.getElementById("butadiene_viewer"),
+    { backgroundColor: "rgba(226,196,161,0.718)" }
+    );
+  $3Dmol.download("cid:7845", viewer, {}, function() {
+    viewer.setStyle({}, {
+        stick: {radius: 0.15},
+        sphere: {scale: 0.25}});
+    viewer.zoomTo();
+    viewer.render();
+  });
+});
+</script>
