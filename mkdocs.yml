@@ -62,6 +62,7 @@ extra_javascript:
   - javascripts/mathjax.js
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
   - https://unpkg.com/mermaid@10/dist/mermaid.min.js
+  - https://3dmol.org/build/3Dmol-min.js
 extra_css:
   - styles/brand.css
   - styles/extra.css
@@ -110,6 +111,7 @@ nav:
 
   - 🧪 Lab:
       - 🌀 TMP Restoration: lab/tmp-restoration.md
+      - FDM Materials: lab/fdm_materials.md
 
   - 🎓 Seminar:
       - Echelle spectra: seminar/echelle-spectra.md
