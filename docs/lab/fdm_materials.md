@@ -11,24 +11,8 @@ C<sub>3</sub>H<sub>6</sub>O<sub>3</sub>
 
 [:material-flask-outline: PLA on PubChem](https://pubchem.ncbi.nlm.nih.gov/compound/612){ .md-button .md-button--primary target=_blank}
 <div class="molecule-block">
-<div id="pla_viewer" class="molecule-viewer"></div>
+<div class="molecule-viewer" data-cid="612"></div>
 </div>
-
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-   let viewer = $3Dmol.createViewer(
-    document.getElementById("pla_viewer"),
-    { backgroundColor: "rgba(226,196,161,0.718)" }
-    );
-  $3Dmol.download("cid:612", viewer, {}, function() {
-    viewer.setStyle({}, {
-        stick: {radius: 0.15},
-        sphere: {scale: 0.25}});
-    viewer.zoomTo();
-    viewer.render();
-  });
-});
-</script>
 
 | Property | Value | FDM parameter | Typical |
 |---|---|---|---|
@@ -63,24 +47,8 @@ C<sub>10</sub>H<sub>8</sub>O<sub>4</sub>
 [:material-flask-outline: PETG on PubChem](https://pubchem.ncbi.nlm.nih.gov/compound/3034479){ .md-button .md-button--primary target=_blank}
 
 <div class="molecule-block">
-<div id="petg_viewer" class="molecule-viewer"></div>
+<div class="molecule-viewer" data-cid="7222"></div>
 </div>
-
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-   let viewer = $3Dmol.createViewer(
-    document.getElementById("petg_viewer"),
-    { backgroundColor: "rgba(226,196,161,0.718)" }
-    );
-  $3Dmol.download("cid:7222", viewer, {}, function() {
-    viewer.setStyle({}, {
-        stick: {radius: 0.15},
-        sphere: {scale: 0.25}});
-    viewer.zoomTo();
-    viewer.render();
-  });
-});
-</script>
 
 
 | Property | Value | FDM parameter | Typical |
@@ -117,24 +85,8 @@ Terpolymer is made of three monomers, see [ABS monomer components](#abs-monomer-
 [:material-flask-outline: ABS on PubChem](https://pubchem.ncbi.nlm.nih.gov/compound/24756){ .md-button .md-button--primary target=_blank}
 
 <div class="molecule-block">
-<div id="abs_viewer" class="molecule-viewer"></div>
+<div class="molecule-viewer" data-cid="7501"></div>
 </div>
-
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-   let viewer = $3Dmol.createViewer(
-    document.getElementById("abs_viewer"),
-    { backgroundColor: "rgba(226,196,161,0.718)" }
-    );
-  $3Dmol.download("cid:7501", viewer, {}, function() {
-    viewer.setStyle({}, {
-        stick: {radius: 0.15},
-        sphere: {scale: 0.25}});
-    viewer.zoomTo();
-    viewer.render();
-  });
-});
-</script>
 
 | Property | Value | FDM parameter | Typical |
 |---|---|---|---|
@@ -207,24 +159,8 @@ C<sub>3</sub>H<sub>3</sub>N
 [:material-flask-outline: Acrylonitrile on PubChem](https://pubchem.ncbi.nlm.nih.gov/compound/7855){ .md-button .md-button--primary target=_blank}
 
 <div class="molecule-block">
-<div id="acrylonitrile_viewer" class="molecule-viewer"></div>
+<div class="molecule-viewer" data-cid="7855"></div>
 </div>
-
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-   let viewer = $3Dmol.createViewer(
-    document.getElementById("acrylonitrile_viewer"),
-    { backgroundColor: "rgba(226,196,161,0.718)" }
-    );
-  $3Dmol.download("cid:7855", viewer, {}, function() {
-    viewer.setStyle({}, {
-        stick: {radius: 0.15},
-        sphere: {scale: 0.25}});
-    viewer.zoomTo();
-    viewer.render();
-  });
-});
-</script>
 
 ---
 
@@ -237,24 +173,8 @@ C<sub>8</sub>H<sub>8</sub>
 [:material-flask-outline: Styrene on PubChem](https://pubchem.ncbi.nlm.nih.gov/compound/7501){ .md-button .md-button--primary target=_blank}
 
 <div class="molecule-block">
-<div id="styrene_viewer" class="molecule-viewer"></div>
+<div class="molecule-viewer" data-cid="7501"></div>
 </div>
-
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-   let viewer = $3Dmol.createViewer(
-    document.getElementById("styrene_viewer"),
-    { backgroundColor: "rgba(226,196,161,0.718)" }
-    );
-  $3Dmol.download("cid:7501", viewer, {}, function() {
-    viewer.setStyle({}, {
-        stick: {radius: 0.15},
-        sphere: {scale: 0.25}});
-    viewer.zoomTo();
-    viewer.render();
-  });
-});
-</script>
 
 ---
 
@@ -267,21 +187,5 @@ C<sub>4</sub>H<sub>6</sub>
 [:material-flask-outline: 1,3-Butadiene on PubChem](https://pubchem.ncbi.nlm.nih.gov/compound/7845){ .md-button .md-button--primary target=_blank}
 
 <div class="molecule-block">
-<div id="butadiene_viewer" class="molecule-viewer"></div>
+<div class="molecule-viewer" data-cid="7845"></div>
 </div>
-
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-   let viewer = $3Dmol.createViewer(
-    document.getElementById("butadiene_viewer"),
-    { backgroundColor: "rgba(226,196,161,0.718)" }
-    );
-  $3Dmol.download("cid:7845", viewer, {}, function() {
-    viewer.setStyle({}, {
-        stick: {radius: 0.15},
-        sphere: {scale: 0.25}});
-    viewer.zoomTo();
-    viewer.render();
-  });
-});
-</script>
