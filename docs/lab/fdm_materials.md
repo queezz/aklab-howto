@@ -4,8 +4,31 @@
 
 
 Polylactic Acid — polyester from lactic acid  
-repeat unit `(C3H4O2)n`  
-https://pubchem.ncbi.nlm.nih.gov/compound/612
+<span style="color:#4FC3F7; font-weight:600;">
+C<sub>3</sub>H<sub>6</sub>O<sub>3</sub>
+</span>, CH3CHOHCOOH
+	
+
+[:material-flask-outline: PLA on PubChem](https://pubchem.ncbi.nlm.nih.gov/compound/612){ .md-button .md-button--primary target=_blank}
+<div class="molecule-block">
+<div id="pla_viewer" class="molecule-viewer"></div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+   let viewer = $3Dmol.createViewer(
+    document.getElementById("pla_viewer"),
+    { backgroundColor: "rgba(226,196,161,0.718)" }
+    );
+  $3Dmol.download("cid:612", viewer, {}, function() {
+    viewer.setStyle({}, {
+        stick: {radius: 0.15},
+        sphere: {scale: 0.25}});
+    viewer.zoomTo();
+    viewer.render();
+  });
+});
+</script>
 
 | Property | Value | FDM parameter | Typical |
 |---|---|---|---|
@@ -15,23 +38,6 @@ https://pubchem.ncbi.nlm.nih.gov/compound/612
 | Strength | ~50–60 MPa | Enclosure | Not required |
 
 
-<div class="molecule-block">
-<div id="pla_viewer" class="molecule-viewer"></div>
-</div>
-
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-   let viewer = $3Dmol.createViewer(
-    document.getElementById("pla_viewer"),
-    { backgroundColor: "white" }
-    );
-  $3Dmol.download("cid:612", viewer, {}, function() {
-    viewer.setStyle({}, {stick:{}});
-    viewer.zoomTo();
-    viewer.render();
-  });
-});
-</script>
 
 **Notes**
 
