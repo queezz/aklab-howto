@@ -16,7 +16,7 @@
       
       
       <link rel="icon" href="../assets/favicon.svg">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.5">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
@@ -529,10 +529,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#utilities-data-tools" class="md-nav__link">
+  <a href="#analysis" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🗂️ Utilities &amp; data tools
+        🔬 Analysis
       
     </span>
   </a>
@@ -540,10 +540,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#instrumentation-hardware-control" class="md-nav__link">
+  <a href="#helper-tools" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🔌 Instrumentation &amp; hardware control
+        🧰 Helper tools
       
     </span>
   </a>
@@ -551,10 +551,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#modeling-spectroscopy-plasma-physics" class="md-nav__link">
+  <a href="#hardware-control" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🧪 Modeling, spectroscopy &amp; plasma physics
+        🔌 Hardware &amp; control
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#older-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        👴🏻 Older tools
       
     </span>
   </a>
@@ -1861,10 +1872,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#utilities-data-tools" class="md-nav__link">
+  <a href="#analysis" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🗂️ Utilities &amp; data tools
+        🔬 Analysis
       
     </span>
   </a>
@@ -1872,10 +1883,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#instrumentation-hardware-control" class="md-nav__link">
+  <a href="#helper-tools" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🔌 Instrumentation &amp; hardware control
+        🧰 Helper tools
       
     </span>
   </a>
@@ -1883,10 +1894,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#modeling-spectroscopy-plasma-physics" class="md-nav__link">
+  <a href="#hardware-control" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🧪 Modeling, spectroscopy &amp; plasma physics
+        🔌 Hardware &amp; control
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#older-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        👴🏻 Older tools
       
     </span>
   </a>
@@ -1925,7 +1947,42 @@
 
 
 <h1 id="software-repositories">🧰 Software Repositories<a class="headerlink" href="#software-repositories" title="Permanent link">¶</a></h1>
-<h2 id="utilities-data-tools">🗂️ Utilities &amp; data tools<a class="headerlink" href="#utilities-data-tools" title="Permanent link">¶</a></h2>
+<h2 id="analysis">🔬 Analysis<a class="headerlink" href="#analysis" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Tool</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><a class="md-button md-button--small" href="https://github.com/queezz/lhd-data" target="_blank"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3C7.58 3 4 4.79 4 7s3.58 4 8 4 8-1.79 8-4-3.58-4-8-4M4 9v3c0 2.21 3.58 4 8 4s8-1.79 8-4V9c0 2.21-3.58 4-8 4s-8-1.79-8-4m0 5v3c0 2.21 3.58 4 8 4s8-1.79 8-4v-3c0 2.21-3.58 4-8 4s-8-1.79-8-4"></path></svg></span> lhd-data</a></td>
+<td style="text-align: left;">Python tools for downloading and plotting LHD data, xarray-based with CLI.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a class="md-button md-button--small" href="https://github.com/queezz/echelle_spectra" target="_blank"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 19v1h18v2H2V2h2v15c3 0 6-2 8.1-5.6 3-5 6.3-7.4 9.9-7.4v2c-2.8 0-5.5 2.1-8.1 6.5C11.3 16.6 7.7 19 4 19"></path></svg></span> echelle spectra</a></td>
+<td style="text-align: left;">Data loading, calibration, stitching, and analysis helpers for échelle spectrometers.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a class="md-button md-button--small" href="https://github.com/queezz/bh-molecule" target="_blank"><span style="color: #9ed659;"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.27 10 9 7h5.42l1.16-2-.08-.5A1.5 1.5 0 0 1 17 3a1.5 1.5 0 0 1 1.5 1.5c0 .71-.5 1.31-1.17 1.46l-.96 1.67L17.73 10l.86-1.5-.09-.5A1.5 1.5 0 0 1 20 6.5 1.5 1.5 0 0 1 21.5 8c0 .71-.5 1.3-1.15 1.46L18.89 12l1.73 3c.77.07 1.38.71 1.38 1.5a1.5 1.5 0 0 1-1.5 1.5 1.5 1.5 0 0 1-1.5-1.5v-.26L17.73 14l-1.36 2.37.96 1.67a1.5 1.5 0 0 1 1.17 1.46A1.5 1.5 0 0 1 17 21a1.5 1.5 0 0 1-1.5-1.5l.08-.5-1.16-2h-3.84l-1.16 2 .08.5A1.5 1.5 0 0 1 8 21a1.5 1.5 0 0 1-1.5-1.5c0-.71.5-1.31 1.17-1.46l.96-1.67L4.38 9C3.61 8.93 3 8.29 3 7.5A1.5 1.5 0 0 1 4.5 6 1.5 1.5 0 0 1 6 7.5v.26zm2.88-1-1.73 3 1.73 3h4.7l1.73-3-1.73-3z"></path></svg></span> bh-molecule</span></a></td>
+<td style="text-align: left;">Tools and notes for modeling and analyzing BH molecular spectra.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a class="md-button md-button--small" href="https://github.com/queezz/fulcheranalyzer" target="_blank"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m16 11.78 4.24-7.33 1.73 1-5.23 9.05-6.51-3.75L5.46 19H22v2H2V3h2v14.54L9.5 8z"></path></svg></span> fulcher analyzer</a></td>
+<td style="text-align: left;">Analysis tools for Fulcher-α emission using corona-type models.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a class="md-button md-button--small" href="https://github.com/queezz/sputtering" target="_blank"><span style="color: #497ded;"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 11a1 1 0 0 1 1 1 1 1 0 0 1-1 1 1 1 0 0 1-1-1 1 1 0 0 1 1-1M4.22 4.22C5.65 2.79 8.75 3.43 12 5.56c3.25-2.13 6.35-2.77 7.78-1.34s.79 4.53-1.34 7.78c2.13 3.25 2.77 6.35 1.34 7.78s-4.53.79-7.78-1.34c-3.25 2.13-6.35 2.77-7.78 1.34S3.43 15.25 5.56 12C3.43 8.75 2.79 5.65 4.22 4.22m11.32 4.24c.61.62 1.17 1.25 1.69 1.88 1.38-2.13 1.88-3.96 1.13-4.7-.74-.75-2.57-.25-4.7 1.13.63.52 1.26 1.08 1.88 1.69m-7.08 7.08c-.61-.62-1.17-1.25-1.69-1.88-1.38 2.13-1.88 3.96-1.13 4.7.74.75 2.57.25 4.7-1.13-.63-.52-1.26-1.08-1.88-1.69m-2.82-9.9c-.75.74-.25 2.57 1.13 4.7.52-.63 1.08-1.26 1.69-1.88.62-.61 1.25-1.17 1.88-1.69-2.13-1.38-3.96-1.88-4.7-1.13m4.24 8.48c.7.7 1.42 1.34 2.12 1.91.7-.57 1.42-1.21 2.12-1.91s1.34-1.42 1.91-2.12c-.57-.7-1.21-1.42-1.91-2.12S12.7 8.54 12 7.97c-.7.57-1.42 1.21-2.12 1.91S8.54 11.3 7.97 12c.57.7 1.21 1.42 1.91 2.12m8.48 4.24c.75-.74.25-2.57-1.13-4.7-.52.63-1.08 1.26-1.69 1.88-.62.61-1.25 1.17-1.88 1.69 2.13 1.38 3.96 1.88 4.7 1.13"></path></svg></span> sputtering </span></a></td>
+<td style="text-align: left;">Notes, scripts, and summaries related to sputtering physics and SRIM simulations.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a class="md-button md-button--small" href="https://github.com/queezz/PermeationFit" target="_blank"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 2H4c-1.11 0-2 .89-2 2v16c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V4c0-1.11-.89-2-2-2m-8 2 3 3h-2v2h-2V7H9m-2 8-3-3 3-3v2h2v2H7m5 7-3-3h2v-2h2v2h2m2-2v-2h-2v-2h2V9l3 3"></path></svg></span> permeation fit</a></td>
+<td style="text-align: left;">Educational hydrogen permeation fitting tool with simple transport models. Recently refactored and planned for future extensions.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="helper-tools">🧰 Helper tools<a class="headerlink" href="#helper-tools" title="Permanent link">¶</a></h2>
 <table>
 <thead>
 <tr>
@@ -1943,21 +2000,12 @@
 <td style="text-align: left;">Simple FITS inspection and visualization utilities for astronomy data.</td>
 </tr>
 <tr>
-<td style="text-align: left;"><a class="md-button md-button--small" href="https://github.com/queezz/echelle_spectra" target="_blank"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33s1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2"></path></svg></span>echelle_spectra</a></td>
-<td style="text-align: left;">Data loading, calibration, stitching, and analysis helpers for échelle spectrometers.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><a class="md-button md-button--small" href="https://github.com/queezz/SpectraExamples" target="_blank"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33s1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2"></path></svg></span> SpectraExamples</a></td>
+<td style="text-align: left;"><a class="md-button md-button--small" href="https://github.com/queezz/SpectraExamples" target="_blank"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33s1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2"></path></svg></span> Spectra-4b4</a></td>
 <td style="text-align: left;">Seminar-style repository for B4 students: loading data, plotting it, and basic analysis patterns.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><a class="md-button md-button--small" href="https://github.com/queezz/numerical-tests" target="_blank"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33s1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2"></path></svg></span> numerical-tests</a></td>
-<td style="text-align: left;">Old but useful experiments with simple numerical methods and differential equations.</td>
 </tr>
 </tbody>
 </table>
-<hr>
-<h2 id="instrumentation-hardware-control">🔌 Instrumentation &amp; hardware control<a class="headerlink" href="#instrumentation-hardware-control" title="Permanent link">¶</a></h2>
+<h2 id="hardware-control">🔌 Hardware &amp; control<a class="headerlink" href="#hardware-control" title="Permanent link">¶</a></h2>
 <table>
 <thead>
 <tr>
@@ -1991,7 +2039,7 @@
 <td style="text-align: left;">Motion control logic for motorized stages used in diagnostics and deposition setups.</td>
 </tr>
 <tr>
-<td style="text-align: left;"><a class="md-button md-button--small" href="https://github.com/queezz/TemperatureControl" target="_blank"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33s1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2"></path></svg></span> Temperature Control</a></td>
+<td style="text-align: left;"><a class="md-button md-button--small" href="https://github.com/queezz/TemperatureControl" target="_blank"><span style="color: #ff3c3c;"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 13V5a3 3 0 0 0-6 0v8a5 5 0 1 0 6 0m-3-9a1 1 0 0 1 1 1v3h-2V5a1 1 0 0 1 1-1"></path></svg></span></span>  Temperature Control</a></td>
 <td style="text-align: left;">Temperature control logic for permeation membranes using GPIO and NI thermocouples.</td>
 </tr>
 <tr>
@@ -2008,8 +2056,7 @@
 </tr>
 </tbody>
 </table>
-<hr>
-<h2 id="modeling-spectroscopy-plasma-physics">🧪 Modeling, spectroscopy &amp; plasma physics<a class="headerlink" href="#modeling-spectroscopy-plasma-physics" title="Permanent link">¶</a></h2>
+<h2 id="older-tools">👴🏻 Older tools<a class="headerlink" href="#older-tools" title="Permanent link">¶</a></h2>
 <table>
 <thead>
 <tr>
@@ -2019,22 +2066,6 @@
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;"><a class="md-button md-button--small" href="https://github.com/queezz/bh-molecule" target="_blank"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33s1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2"></path></svg></span> bh-molecule</a></td>
-<td style="text-align: left;">Tools and notes for modeling and analyzing BH molecular spectra.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><a class="md-button md-button--small" href="https://github.com/queezz/fulcheranalyzer" target="_blank"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33s1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2"></path></svg></span> fulcheranalyzer</a></td>
-<td style="text-align: left;">Analysis tools for Fulcher-α emission using corona-type models.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><a class="md-button md-button--small" href="https://github.com/queezz/sputtering" target="_blank"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33s1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2"></path></svg></span> sputtering</a></td>
-<td style="text-align: left;">Notes, scripts, and summaries related to sputtering physics and SRIM simulations.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><a class="md-button md-button--small" href="https://github.com/queezz/PermeationFit" target="_blank"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 2H4c-1.11 0-2 .89-2 2v16c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V4c0-1.11-.89-2-2-2m-8 2 3 3h-2v2h-2V7H9m-2 8-3-3 3-3v2h2v2H7m5 7-3-3h2v-2h2v2h2m2-2v-2h-2v-2h2V9l3 3"></path></svg></span> Permeation Fit</a></td>
-<td style="text-align: left;">Older but reasonably package-like implementation of a simple hydrogen permeation model. Useful for fitting experimental permeation data and sanity-checking transport assumptions.</td>
-</tr>
-<tr>
 <td style="text-align: left;"><a class="md-button md-button--small" href="https://github.com/queezz/Diffusion" target="_blank"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33s1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2"></path></svg></span> Diffusion</a></td>
 <td style="text-align: left;">Early attempt at solving simple permeation problems (Fick’s law, no traps). Kept for reference.</td>
 </tr>
@@ -2042,9 +2073,12 @@
 <td style="text-align: left;"><a class="md-button md-button--small" href="https://github.com/queezz/AXUV" target="_blank"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33s1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2"></path></svg></span> AXUV</a></td>
 <td style="text-align: left;">Standalone GUI package developed to process AXUV diode data from QUEST tokamak experiments.</td>
 </tr>
+<tr>
+<td style="text-align: left;"><a class="md-button md-button--small" href="https://github.com/queezz/numerical-tests" target="_blank"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33s1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2"></path></svg></span> numerical-tests</a></td>
+<td style="text-align: left;">Old but useful experiments with simple numerical methods and differential equations.</td>
+</tr>
 </tbody>
 </table>
-<hr>
 <h2 id="meta-integration">🧩 Meta &amp; integration<a class="headerlink" href="#meta-integration" title="Permanent link">¶</a></h2>
 <table>
 <thead>
