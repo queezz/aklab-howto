@@ -4,11 +4,14 @@
 
 | Tool | Description |
 | :--- | :--- |
+| [:material-database: lhd-data](https://github.com/queezz/lhd-data){ .md-button .md-button--small target=_blank } | Python tools for downloading and plotting LHD data, xarray-based with CLI. |
 | [:material-github: texkeeper](https://github.com/queezz/texkeeper){ .md-button .md-button--small target=_blank } | Minimal CLI helper for initializing, cleaning, and compiling LaTeX projects. IDE-agnostic by design. |
 | [:material-telescope: fits-viewer](https://github.com/queezz/fits-viewer){ .md-button .md-button--small target=_blank } | Simple FITS inspection and visualization utilities for astronomy data. |
 | [:material-github:echelle_spectra](https://github.com/queezz/echelle_spectra){ .md-button .md-button--small target=_blank } | Data loading, calibration, stitching, and analysis helpers for échelle spectrometers. |
 | [:material-github: SpectraExamples](https://github.com/queezz/SpectraExamples){ .md-button .md-button--small target=_blank } | Seminar-style repository for B4 students: loading data, plotting it, and basic analysis patterns. |
-| [:material-github: numerical-tests](https://github.com/queezz/numerical-tests){ .md-button .md-button--small target=_blank } | Old but useful experiments with simple numerical methods and differential equations. |
+| [:material-github: bh-molecule](https://github.com/queezz/bh-molecule){ .md-button .md-button--small target=_blank } | Tools and notes for modeling and analyzing BH molecular spectra. |
+| [:material-github: fulcheranalyzer](https://github.com/queezz/fulcheranalyzer){ .md-button .md-button--small target=_blank } | Analysis tools for Fulcher-α emission using corona-type models. |
+| [:material-github: sputtering](https://github.com/queezz/sputtering){ .md-button .md-button--small target=_blank } | Notes, scripts, and summaries related to sputtering physics and SRIM simulations. |
 
 ---
 
@@ -29,16 +32,14 @@
 
 ---
 
-## 🧪 Modeling, spectroscopy & plasma physics
+## 🧪 Older tools
 
 | Tool | Description |
 | :--- | :--- |
-| [:material-github: bh-molecule](https://github.com/queezz/bh-molecule){ .md-button .md-button--small target=_blank } | Tools and notes for modeling and analyzing BH molecular spectra. |
-| [:material-github: fulcheranalyzer](https://github.com/queezz/fulcheranalyzer){ .md-button .md-button--small target=_blank } | Analysis tools for Fulcher-α emission using corona-type models. |
-| [:material-github: sputtering](https://github.com/queezz/sputtering){ .md-button .md-button--small target=_blank } | Notes, scripts, and summaries related to sputtering physics and SRIM simulations. |
 | [:material-fit-to-page: Permeation Fit](https://github.com/queezz/PermeationFit){ .md-button .md-button--small target=_blank } | Older but reasonably package-like implementation of a simple hydrogen permeation model. Useful for fitting experimental permeation data and sanity-checking transport assumptions. |
 | [:material-github: Diffusion](https://github.com/queezz/Diffusion){ .md-button .md-button--small target=_blank } | Early attempt at solving simple permeation problems (Fick’s law, no traps). Kept for reference. |
 | [:material-github: AXUV](https://github.com/queezz/AXUV){ .md-button .md-button--small target=_blank } | Standalone GUI package developed to process AXUV diode data from QUEST tokamak experiments. |
+| [:material-github: numerical-tests](https://github.com/queezz/numerical-tests){ .md-button .md-button--small target=_blank } | Old but useful experiments with simple numerical methods and differential equations. |
 
 ---
 
