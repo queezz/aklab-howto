@@ -1975,7 +1975,7 @@
 <p>Commits are not just for you — they are the history your collaborators (and your future self) will read. A clean history makes debugging and reviewing easier.</p>
 <h2 id="conventional-commits-lite">Conventional Commits (lite)<a class="headerlink" href="#conventional-commits-lite" title="Permanent link">¶</a></h2>
 <p>Use a short, structured format:</p>
-<div class="highlight"><pre><span></span><code>&lt;type&gt;(&lt;scope&gt;): &lt;subject&gt;
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>&lt;type&gt;(&lt;scope&gt;): &lt;subject&gt;
 </code></pre></div>
 <p>Examples:</p>
 <ul>
@@ -1995,40 +1995,40 @@
 <li>Commit body (optional): explain <em>why</em>, not just <em>what</em>.</li>
 <li>Breaking changes →</li>
 </ul>
-<p></p><div class="highlight"><pre><span></span><code>BREAKING CHANGE: old flag removed; use --foo instead
+<p></p><div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>BREAKING CHANGE: old flag removed; use --foo instead
 </code></pre></div>
 * Reference issues/PRs → <code>Fixes #123</code>.<p></p>
 <h2 id="daily-flow">Daily flow<a class="headerlink" href="#daily-flow" title="Permanent link">¶</a></h2>
-<div class="highlight"><pre><span></span><code><span class="c1"># work in small commits</span>
-git<span class="w"> </span>add<span class="w"> </span>-A
-git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">"feat(venv): add explainer draft"</span>
-git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">"fix(venv): typos"</span>
-git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">"docs(venv): reorder sections"</span>
-
-<span class="c1"># clean up before pushing</span>
-git<span class="w"> </span>rebase<span class="w"> </span>-i<span class="w"> </span>HEAD~3<span class="w">   </span><span class="c1"># squash/fixup</span>
-git<span class="w"> </span>push
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># work in small commits</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>git<span class="w"> </span>add<span class="w"> </span>-A
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">"feat(venv): add explainer draft"</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">"fix(venv): typos"</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">"docs(venv): reorder sections"</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="c1"># clean up before pushing</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>git<span class="w"> </span>rebase<span class="w"> </span>-i<span class="w"> </span>HEAD~3<span class="w">   </span><span class="c1"># squash/fixup</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>git<span class="w"> </span>push
 </code></pre></div>
 <h2 id="squash-amend">Squash &amp; Amend<a class="headerlink" href="#squash-amend" title="Permanent link">¶</a></h2>
 <ul>
 <li><strong>Amend last commit</strong>:</li>
 </ul>
-<p></p><div class="highlight"><pre><span></span><code>git<span class="w"> </span>add<span class="w"> </span>&lt;files&gt;
-git<span class="w"> </span>commit<span class="w"> </span>--amend
+<p></p><div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>git<span class="w"> </span>add<span class="w"> </span>&lt;files&gt;
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>git<span class="w"> </span>commit<span class="w"> </span>--amend
 </code></pre></div>
 * <strong>Squash multiple commits</strong>:<p></p>
-<p></p><div class="highlight"><pre><span></span><code>git<span class="w"> </span>rebase<span class="w"> </span>-i<span class="w"> </span>HEAD~N
+<p></p><div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>git<span class="w"> </span>rebase<span class="w"> </span>-i<span class="w"> </span>HEAD~N
 </code></pre></div>
 * <strong>Fixup autosquash</strong>:<p></p>
-<div class="highlight"><pre><span></span><code>git<span class="w"> </span>commit<span class="w"> </span>--fixup<span class="o">=</span>&lt;sha&gt;
-git<span class="w"> </span>rebase<span class="w"> </span>-i<span class="w"> </span>--autosquash<span class="w"> </span>HEAD~N
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>git<span class="w"> </span>commit<span class="w"> </span>--fixup<span class="o">=</span>&lt;sha&gt;
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>git<span class="w"> </span>rebase<span class="w"> </span>-i<span class="w"> </span>--autosquash<span class="w"> </span>HEAD~N
 </code></pre></div>
 <hr>
 <h2 id="roll-back-recent">Roll back recent<a class="headerlink" href="#roll-back-recent" title="Permanent link">¶</a></h2>
-<p></p><div class="highlight"><pre><span></span><code>git<span class="w"> </span>reset<span class="w"> </span>--soft<span class="w"> </span>HEAD~1
+<p></p><div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>git<span class="w"> </span>reset<span class="w"> </span>--soft<span class="w"> </span>HEAD~1
 </code></pre></div>
 Roll back one local commit and keep All edits:
-<div class="highlight"><pre><span></span><code>git<span class="w"> </span>reset<span class="w"> </span>--mixed<span class="w"> </span>HEAD~1
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>git<span class="w"> </span>reset<span class="w"> </span>--mixed<span class="w"> </span>HEAD~1
 </code></pre></div><p></p>
 <p>--soft:
 Removes the commit, but leaves all changes staged (in the index, as if you had already run git add).
@@ -2059,6 +2059,12 @@ Removes the commit and throws away the changes completely.
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
         
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden="">
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Back to top
+</button>
+        
       </main>
       
         <footer class="md-footer">
@@ -2088,7 +2094,7 @@ Removes the commit and throws away the changes completely.
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tracking", "content.code.copy", "navigation.tabs", "content.image.zoom"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.top", "content.code.copy", "content.image.zoom"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>

@@ -2015,7 +2015,7 @@
 
 <h2 id="starting-the-server">Starting the Server<a class="headerlink" href="#starting-the-server" title="Permanent link">¶</a></h2>
 <p>If the server is not running, SSH into the Raspberry Pi and start it with:</p>
-<div class="highlight"><pre><span></span><code>nohup<span class="w"> </span>python<span class="w"> </span>~/pihtivacuum/server.py<span class="w"> </span><span class="p">&amp;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>nohup<span class="w"> </span>python<span class="w"> </span>~/pihtivacuum/server.py<span class="w"> </span><span class="p">&amp;</span>
 </code></pre></div>
 <p>This will run the script in the background.
 You can disconnect from SSH by pressing <kbd>Ctrl</kbd>+<kbd>D</kbd>.</p>
@@ -2024,24 +2024,24 @@ You can disconnect from SSH by pressing <kbd>Ctrl</kbd>+<kbd>D</kbd>.</p>
 <ol>
 <li>Show running processes:</li>
 </ol>
-<div class="highlight"><pre><span></span><code>ps
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>ps
 </code></pre></div>
 <ol>
 <li>Find the corresponding Python process ID (PID).</li>
 <li>Kill it:</li>
 </ol>
-<div class="highlight"><pre><span></span><code><span class="nb">kill</span><span class="w"> </span>-9<span class="w"> </span>&lt;PID&gt;
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nb">kill</span><span class="w"> </span>-9<span class="w"> </span>&lt;PID&gt;
 </code></pre></div>
 <p>Example:</p>
-<div class="highlight"><pre><span></span><code><span class="nb">kill</span><span class="w"> </span>-9<span class="w"> </span><span class="m">20390</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nb">kill</span><span class="w"> </span>-9<span class="w"> </span><span class="m">20390</span>
 </code></pre></div>
 <hr>
 <h2 id="checking-if-the-server-is-running">Checking if the Server is Running<a class="headerlink" href="#checking-if-the-server-is-running" title="Permanent link">¶</a></h2>
 <h3 id="using-netstat">Using <code>netstat</code><a class="headerlink" href="#using-netstat" title="Permanent link">¶</a></h3>
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>netstat<span class="w"> </span>-tuln<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span><span class="m">5000</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>sudo<span class="w"> </span>netstat<span class="w"> </span>-tuln<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span><span class="m">5000</span>
 </code></pre></div>
 <h3 id="using-top">Using <code>top</code><a class="headerlink" href="#using-top" title="Permanent link">¶</a></h3>
-<div class="highlight"><pre><span></span><code>top
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>top
 </code></pre></div>
 <p>This starts an activity monitor in the terminal.</p>
 
@@ -2063,6 +2063,12 @@ You can disconnect from SSH by pressing <kbd>Ctrl</kbd>+<kbd>D</kbd>.</p>
           
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden="">
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Back to top
+</button>
         
       </main>
       
@@ -2093,7 +2099,7 @@ You can disconnect from SSH by pressing <kbd>Ctrl</kbd>+<kbd>D</kbd>.</p>
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.tracking", "content.code.copy", "navigation.tabs", "content.image.zoom"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.top", "content.code.copy", "content.image.zoom"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>

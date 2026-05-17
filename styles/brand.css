@@ -29,8 +29,6 @@
     /* ===== Code ===== */
   
     --md-code-fg-color: rgba(255,255,240,.95);
-    --md-typeset-code-color: var(--md-code-fg-color);
-    --md-typeset-code-bg: rgba(255,255,255,.08);
   
     --md-code-hl-operator-color: #f0f0d0;
     --md-code-hl-keyword-color: #f4c542;
@@ -66,17 +64,18 @@
   }
   
   
-  /* =========================================================
-     Code
-     ========================================================= */
-  
+/* =========================================================
+   Code
+   ========================================================= */
+
+  /* inline code */
   [data-md-color-scheme="bh-dark"] .md-typeset code {
-    background-color: var(--md-typeset-code-bg);
-    color: var(--md-typeset-code-color);
+    background-color: rgba(255,255,255,.08);
+    color: var(--md-code-fg-color);
   }
-  
-  [data-md-color-scheme="bh-dark"] .md-typeset pre > code,
-  [data-md-color-scheme="bh-dark"] pre code {
+
+  /* fenced / block code — keep tighter dark background */
+  [data-md-color-scheme="bh-dark"] .md-typeset pre > code {
     background-color: var(--md-code-bg-color);
     color: var(--md-code-fg-color);
   }

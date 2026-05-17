@@ -2159,77 +2159,77 @@
 <h1 id="echelle-project-overview-playbook">Echelle Project: Overview &amp; Playbook<a class="headerlink" href="#echelle-project-overview-playbook" title="Permanent link">¶</a></h1>
 <h2 id="1-the-problem-why-your-current-workflow-hurts">1. The problem — why your current workflow hurts<a class="headerlink" href="#1-the-problem-why-your-current-workflow-hurts" title="Permanent link">¶</a></h2>
 <h3 id="typical-anti-patterns-bs-we-keep-seeing">Typical anti-patterns (“BS”) we keep seeing<a class="headerlink" href="#typical-anti-patterns-bs-we-keep-seeing" title="Permanent link">¶</a></h3>
-<div class="highlight"><pre><span></span><code><span class="c1"># ❌ BS</span>
-<span class="n">sen10</span> <span class="o">=</span> <span class="n">S</span><span class="p">(</span><span class="n">cb_ylist</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span> <span class="n">sen11</span> <span class="o">=</span> <span class="n">S</span><span class="p">(</span><span class="n">cb_ylist</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span> <span class="o">...</span> <span class="n">sen23</span> <span class="o">=</span> <span class="n">S</span><span class="p">(</span><span class="n">cb_ylist</span><span class="p">[</span><span class="mi">13</span><span class="p">])</span>
-<span class="c1"># ✅ Do</span>
-<span class="n">sen_by_order</span> <span class="o">=</span> <span class="p">[</span><span class="n">S</span><span class="p">(</span><span class="n">wl</span><span class="p">)</span> <span class="k">for</span> <span class="n">wl</span> <span class="ow">in</span> <span class="n">cb_ylist</span><span class="p">]</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># ❌ BS</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">sen10</span> <span class="o">=</span> <span class="n">S</span><span class="p">(</span><span class="n">cb_ylist</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span> <span class="n">sen11</span> <span class="o">=</span> <span class="n">S</span><span class="p">(</span><span class="n">cb_ylist</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span> <span class="o">...</span> <span class="n">sen23</span> <span class="o">=</span> <span class="n">S</span><span class="p">(</span><span class="n">cb_ylist</span><span class="p">[</span><span class="mi">13</span><span class="p">])</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="c1"># ✅ Do</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="n">sen_by_order</span> <span class="o">=</span> <span class="p">[</span><span class="n">S</span><span class="p">(</span><span class="n">wl</span><span class="p">)</span> <span class="k">for</span> <span class="n">wl</span> <span class="ow">in</span> <span class="n">cb_ylist</span><span class="p">]</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="c1"># ❌ BS</span>
-<span class="n">coef_10</span> <span class="o">=</span> <span class="n">sen10</span><span class="o">/</span><span class="p">(</span><span class="n">sphere</span><span class="p">[</span><span class="mi">10</span><span class="p">]</span><span class="o">-</span><span class="n">back</span><span class="p">[</span><span class="mi">10</span><span class="p">]);</span> <span class="n">coef_11</span> <span class="o">=</span> <span class="o">...</span>
-<span class="c1"># ✅ Do</span>
-<span class="n">coef_by_order</span> <span class="o">=</span> <span class="p">[</span><span class="n">sen</span><span class="o">/</span><span class="p">(</span><span class="n">s</span><span class="o">-</span><span class="n">b</span><span class="p">)</span> <span class="k">for</span> <span class="n">sen</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="n">b</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">sen_by_order</span><span class="p">,</span> <span class="n">sphere_list</span><span class="p">,</span> <span class="n">back_list</span><span class="p">)]</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># ❌ BS</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">coef_10</span> <span class="o">=</span> <span class="n">sen10</span><span class="o">/</span><span class="p">(</span><span class="n">sphere</span><span class="p">[</span><span class="mi">10</span><span class="p">]</span><span class="o">-</span><span class="n">back</span><span class="p">[</span><span class="mi">10</span><span class="p">]);</span> <span class="n">coef_11</span> <span class="o">=</span> <span class="o">...</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="c1"># ✅ Do</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="n">coef_by_order</span> <span class="o">=</span> <span class="p">[</span><span class="n">sen</span><span class="o">/</span><span class="p">(</span><span class="n">s</span><span class="o">-</span><span class="n">b</span><span class="p">)</span> <span class="k">for</span> <span class="n">sen</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="n">b</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">sen_by_order</span><span class="p">,</span> <span class="n">sphere_list</span><span class="p">,</span> <span class="n">back_list</span><span class="p">)]</span>
 </code></pre></div>
 <ul>
 <li><strong>Calibration logic shoved into a notebook</strong> (polyfit, borders, stitching) → impossible to reuse/test.</li>
 <li><strong>Calibration data hardcoded in a notebook</strong> (e.g., wave/sen arrays) instead of a <strong>file with metadata</strong>:</li>
 </ul>
-<div class="highlight"><pre><span></span><code># data/calibration/sphere_2025-01-23.csv
-# instrument: Fujii Echelle A
-# sphere: Labsphere XYZ, SN12345
-# date: 2025-01-23
-# location: Room 301 dark lab
-# author: K. Student
-wavelength_nm,sensitivity_W_m2_sr_nm_per_count
-300,1.85e4
-310,2.8e4
-...
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a># data/calibration/sphere_2025-01-23.csv
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a># instrument: Fujii Echelle A
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a># sphere: Labsphere XYZ, SN12345
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a># date: 2025-01-23
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a># location: Room 301 dark lab
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a># author: K. Student
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>wavelength_nm,sensitivity_W_m2_sr_nm_per_count
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>300,1.85e4
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>310,2.8e4
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>...
 </code></pre></div>
 <p>Then read with:</p>
-<div class="highlight"><pre><span></span><code><span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s2">","</span><span class="p">,</span> <span class="n">comments</span><span class="o">=</span><span class="s2">"#"</span><span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s2">","</span><span class="p">,</span> <span class="n">comments</span><span class="o">=</span><span class="s2">"#"</span><span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
 </code></pre></div>
 <h2 id="2-the-sane-project-shape-mix-notebooks-package">2. The sane project shape — mix notebooks + package<a class="headerlink" href="#2-the-sane-project-shape-mix-notebooks-package" title="Permanent link">¶</a></h2>
 <p>Use <strong>notebooks for exploration</strong>, <strong>package for logic</strong>.</p>
-<div class="highlight"><pre><span></span><code>echelle-project/
-  pyproject.toml
-  src/echelle_pkg/                 # ← all reusable code lives here
-    __init__.py
-    calibration.py                 # sensitivity, borders, stitching
-    io.py                          # loaders
-    profiles.py                    # per-instrument settings
-  data/
-    calibration/                   # CSVs with comment headers
-  examples/                        # shareable demo notebooks
-    01_quickstart.ipynb
-    02_absolute_calibration.ipynb
-  local/                           # ignored scratch area (in .gitignore)
-    2025-09-poster/                # your day’s work, ad hoc plots
-  docs/                            # add after code steadies
-  .gitignore                       # includes /local/
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>echelle-project/
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>  pyproject.toml
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>  src/echelle_pkg/                 # ← all reusable code lives here
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>    __init__.py
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>    calibration.py                 # sensitivity, borders, stitching
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>    io.py                          # loaders
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>    profiles.py                    # per-instrument settings
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>  data/
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>    calibration/                   # CSVs with comment headers
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>  examples/                        # shareable demo notebooks
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>    01_quickstart.ipynb
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>    02_absolute_calibration.ipynb
+<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>  local/                           # ignored scratch area (in .gitignore)
+<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>    2025-09-poster/                # your day’s work, ad hoc plots
+<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>  docs/                            # add after code steadies
+<a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>  .gitignore                       # includes /local/
 </code></pre></div>
 <h3 id="install-the-package-in-editable-mode">Install the package in editable mode<a class="headerlink" href="#install-the-package-in-editable-mode" title="Permanent link">¶</a></h3>
 <p>Choose venv or poetry; venv is fine.</p>
-<div class="highlight"><pre><span></span><code>python<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>~/.venvs/echelle
-<span class="nb">source</span><span class="w"> </span>~/.venvs/echelle/bin/activate<span class="w">  </span><span class="c1"># (Windows: Scripts/Activate.ps1)</span>
-python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>-U<span class="w"> </span>pip<span class="w"> </span>wheel
-pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </span><span class="s2">".[dev]"</span><span class="w">               </span><span class="c1"># uses pyproject.toml</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>python<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>~/.venvs/echelle
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="nb">source</span><span class="w"> </span>~/.venvs/echelle/bin/activate<span class="w">  </span><span class="c1"># (Windows: Scripts/Activate.ps1)</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>-U<span class="w"> </span>pip<span class="w"> </span>wheel
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </span><span class="s2">".[dev]"</span><span class="w">               </span><span class="c1"># uses pyproject.toml</span>
 </code></pre></div>
 <p>Poetry (if a student prefers):</p>
-<div class="highlight"><pre><span></span><code>poetry<span class="w"> </span>install
-poetry<span class="w"> </span>shell
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>poetry<span class="w"> </span>install
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>poetry<span class="w"> </span>shell
 </code></pre></div>
 <p>Because it’s <strong>editable</strong>, you can work <strong>anywhere</strong> (e.g., <code>~/workbench/2025-09-poster/</code>) and still:</p>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">echelle_pkg.calibration</span><span class="w"> </span><span class="kn">import</span> <span class="n">fit_sensitivity_poly</span><span class="p">,</span> <span class="n">stitch_orders</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">echelle_pkg.calibration</span><span class="w"> </span><span class="kn">import</span> <span class="n">fit_sensitivity_poly</span><span class="p">,</span> <span class="n">stitch_orders</span>
 </code></pre></div>
 <h2 id="3-daily-usage-pattern-what-students-should-do">3. Daily usage pattern — what students should do<a class="headerlink" href="#3-daily-usage-pattern-what-students-should-do" title="Permanent link">¶</a></h2>
 <ul>
 <li><strong>Prototype in <code>local/</code></strong> or any external folder → import the installed package.</li>
 <li>Keep notebooks <strong>thin</strong>: plotting, quick checks, and calls like:</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">echelle_pkg.profiles</span><span class="w"> </span><span class="kn">import</span> <span class="n">load_profile</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">echelle_pkg.calibration</span><span class="w"> </span><span class="kn">import</span> <span class="n">run_absolute_calibration</span>
-
-<span class="n">prof</span> <span class="o">=</span> <span class="n">load_profile</span><span class="p">(</span><span class="s2">"data/calibration/profiles/fujii-2025.json"</span><span class="p">)</span>
-<span class="n">factors</span> <span class="o">=</span> <span class="n">run_absolute_calibration</span><span class="p">(</span><span class="n">images</span><span class="p">,</span> <span class="n">profile</span><span class="o">=</span><span class="n">prof</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">echelle_pkg.profiles</span><span class="w"> </span><span class="kn">import</span> <span class="n">load_profile</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">echelle_pkg.calibration</span><span class="w"> </span><span class="kn">import</span> <span class="n">run_absolute_calibration</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="n">prof</span> <span class="o">=</span> <span class="n">load_profile</span><span class="p">(</span><span class="s2">"data/calibration/profiles/fujii-2025.json"</span><span class="p">)</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="n">factors</span> <span class="o">=</span> <span class="n">run_absolute_calibration</span><span class="p">(</span><span class="n">images</span><span class="p">,</span> <span class="n">profile</span><span class="o">=</span><span class="n">prof</span><span class="p">)</span>
 </code></pre></div>
 <ul>
 <li>New spectrometer / camera / processing?</li>
@@ -2267,28 +2267,28 @@ poetry<span class="w"> </span>shell
 </ul>
 <h2 id="6-side-by-side-bs-vs-possible">6. Side-by-side — BS vs possible<a class="headerlink" href="#6-side-by-side-bs-vs-possible" title="Permanent link">¶</a></h2>
 <h3 id="manual-notebook-soup-bs">Manual notebook soup (BS)<a class="headerlink" href="#manual-notebook-soup-bs" title="Permanent link">¶</a></h3>
-<div class="highlight"><pre><span></span><code><span class="c1"># fit poly, hand-pick orders, repeat slices, concatenate, sort...</span>
-<span class="n">sen_10</span> <span class="o">=</span> <span class="n">S</span><span class="p">(</span><span class="n">cb_ylist</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span> <span class="n">sen_11</span> <span class="o">=</span> <span class="n">S</span><span class="p">(</span><span class="n">cb_ylist</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span> <span class="o">...</span>
-<span class="n">coef_10</span> <span class="o">=</span> <span class="n">sen_10</span><span class="o">/</span><span class="p">(</span><span class="n">sphere</span><span class="p">[</span><span class="mi">10</span><span class="p">]</span><span class="o">-</span><span class="n">back</span><span class="p">[</span><span class="mi">10</span><span class="p">]);</span> <span class="o">...</span>
-<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">raman</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">171</span><span class="p">:</span><span class="mi">1749</span><span class="p">],</span> <span class="n">raman</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">188</span><span class="p">:</span><span class="mi">1431</span><span class="p">],</span> <span class="o">...</span><span class="p">))</span>
-<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">cb10</span><span class="p">[</span><span class="mi">171</span><span class="p">:</span><span class="mi">1749</span><span class="p">],</span> <span class="n">cb11</span><span class="p">[</span><span class="mi">188</span><span class="p">:</span><span class="mi">1431</span><span class="p">],</span> <span class="o">...</span><span class="p">))</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="c1"># fit poly, hand-pick orders, repeat slices, concatenate, sort...</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="n">sen_10</span> <span class="o">=</span> <span class="n">S</span><span class="p">(</span><span class="n">cb_ylist</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span> <span class="n">sen_11</span> <span class="o">=</span> <span class="n">S</span><span class="p">(</span><span class="n">cb_ylist</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span> <span class="o">...</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="n">coef_10</span> <span class="o">=</span> <span class="n">sen_10</span><span class="o">/</span><span class="p">(</span><span class="n">sphere</span><span class="p">[</span><span class="mi">10</span><span class="p">]</span><span class="o">-</span><span class="n">back</span><span class="p">[</span><span class="mi">10</span><span class="p">]);</span> <span class="o">...</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">raman</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">171</span><span class="p">:</span><span class="mi">1749</span><span class="p">],</span> <span class="n">raman</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">188</span><span class="p">:</span><span class="mi">1431</span><span class="p">],</span> <span class="o">...</span><span class="p">))</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">cb10</span><span class="p">[</span><span class="mi">171</span><span class="p">:</span><span class="mi">1749</span><span class="p">],</span> <span class="n">cb11</span><span class="p">[</span><span class="mi">188</span><span class="p">:</span><span class="mi">1431</span><span class="p">],</span> <span class="o">...</span><span class="p">))</span>
 </code></pre></div>
 <h3 id="package-first-possible">Package-first (possible)<a class="headerlink" href="#package-first-possible" title="Permanent link">¶</a></h3>
-<div class="highlight"><pre><span></span><code><span class="c1"># src/echelle_pkg/calibration.py</span>
-<span class="k">def</span><span class="w"> </span><span class="nf">sensitivity_from_csv</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">deg</span><span class="o">=</span><span class="mi">6</span><span class="p">):</span>
-    <span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s2">","</span><span class="p">,</span> <span class="n">comments</span><span class="o">=</span><span class="s2">"#"</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">poly1d</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">polyfit</span><span class="p">(</span><span class="n">arr</span><span class="p">[:,</span><span class="mi">0</span><span class="p">],</span> <span class="n">arr</span><span class="p">[:,</span><span class="mi">1</span><span class="p">],</span> <span class="n">deg</span><span class="p">))</span>
-
-<span class="k">def</span><span class="w"> </span><span class="nf">coefficients</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">background</span><span class="p">,</span> <span class="n">S</span><span class="p">,</span> <span class="n">orders</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-    <span class="c1"># auto-borders + skip NaN-λ orders inside</span>
-    <span class="n">x</span><span class="p">,</span> <span class="n">s</span> <span class="o">=</span> <span class="n">stitch_orders</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">orders</span><span class="o">=</span><span class="n">orders</span><span class="p">)</span>
-    <span class="n">_</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">stitch_orders</span><span class="p">(</span><span class="n">background</span><span class="p">,</span> <span class="n">orders</span><span class="o">=</span><span class="n">orders</span><span class="p">)</span>
-    <span class="n">y</span> <span class="o">=</span> <span class="n">s</span> <span class="o">-</span> <span class="n">b</span>
-    <span class="k">return</span> <span class="n">x</span><span class="p">,</span> <span class="n">S</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">clip</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="mf">1e-12</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
-
-<span class="c1"># examples/02_absolute_calibration.ipynb</span>
-<span class="n">S</span> <span class="o">=</span> <span class="n">sensitivity_from_csv</span><span class="p">(</span><span class="s2">"data/calibration/sphere_2025-01-23.csv"</span><span class="p">,</span> <span class="n">deg</span><span class="o">=</span><span class="mi">6</span><span class="p">)</span>
-<span class="n">x_nm</span><span class="p">,</span> <span class="n">coef</span> <span class="o">=</span> <span class="n">coefficients</span><span class="p">(</span><span class="n">sphere_img</span><span class="p">,</span> <span class="n">back_img</span><span class="p">,</span> <span class="n">S</span><span class="p">,</span> <span class="n">orders</span><span class="o">=</span><span class="p">[</span><span class="mi">10</span><span class="p">,</span><span class="mi">11</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span><span class="mi">13</span><span class="p">,</span><span class="mi">14</span><span class="p">,</span><span class="mi">15</span><span class="p">,</span><span class="mi">16</span><span class="p">,</span><span class="mi">17</span><span class="p">,</span><span class="mi">18</span><span class="p">,</span><span class="mi">19</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">21</span><span class="p">,</span><span class="mi">22</span><span class="p">])</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="c1"># src/echelle_pkg/calibration.py</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="k">def</span><span class="w"> </span><span class="nf">sensitivity_from_csv</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">deg</span><span class="o">=</span><span class="mi">6</span><span class="p">):</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>    <span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s2">","</span><span class="p">,</span> <span class="n">comments</span><span class="o">=</span><span class="s2">"#"</span><span class="p">)</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">poly1d</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">polyfit</span><span class="p">(</span><span class="n">arr</span><span class="p">[:,</span><span class="mi">0</span><span class="p">],</span> <span class="n">arr</span><span class="p">[:,</span><span class="mi">1</span><span class="p">],</span> <span class="n">deg</span><span class="p">))</span>
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="k">def</span><span class="w"> </span><span class="nf">coefficients</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">background</span><span class="p">,</span> <span class="n">S</span><span class="p">,</span> <span class="n">orders</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>    <span class="c1"># auto-borders + skip NaN-λ orders inside</span>
+<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>    <span class="n">x</span><span class="p">,</span> <span class="n">s</span> <span class="o">=</span> <span class="n">stitch_orders</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">orders</span><span class="o">=</span><span class="n">orders</span><span class="p">)</span>
+<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a>    <span class="n">_</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">stitch_orders</span><span class="p">(</span><span class="n">background</span><span class="p">,</span> <span class="n">orders</span><span class="o">=</span><span class="n">orders</span><span class="p">)</span>
+<a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a>    <span class="n">y</span> <span class="o">=</span> <span class="n">s</span> <span class="o">-</span> <span class="n">b</span>
+<a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a>    <span class="k">return</span> <span class="n">x</span><span class="p">,</span> <span class="n">S</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">clip</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="mf">1e-12</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a>
+<a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a><span class="c1"># examples/02_absolute_calibration.ipynb</span>
+<a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a><span class="n">S</span> <span class="o">=</span> <span class="n">sensitivity_from_csv</span><span class="p">(</span><span class="s2">"data/calibration/sphere_2025-01-23.csv"</span><span class="p">,</span> <span class="n">deg</span><span class="o">=</span><span class="mi">6</span><span class="p">)</span>
+<a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a><span class="n">x_nm</span><span class="p">,</span> <span class="n">coef</span> <span class="o">=</span> <span class="n">coefficients</span><span class="p">(</span><span class="n">sphere_img</span><span class="p">,</span> <span class="n">back_img</span><span class="p">,</span> <span class="n">S</span><span class="p">,</span> <span class="n">orders</span><span class="o">=</span><span class="p">[</span><span class="mi">10</span><span class="p">,</span><span class="mi">11</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span><span class="mi">13</span><span class="p">,</span><span class="mi">14</span><span class="p">,</span><span class="mi">15</span><span class="p">,</span><span class="mi">16</span><span class="p">,</span><span class="mi">17</span><span class="p">,</span><span class="mi">18</span><span class="p">,</span><span class="mi">19</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">21</span><span class="p">,</span><span class="mi">22</span><span class="p">])</span>
 </code></pre></div>
 <h2 id="7-message">7. Message<a class="headerlink" href="#7-message" title="Permanent link">¶</a></h2>
 <ul>
@@ -2301,25 +2301,25 @@ poetry<span class="w"> </span>shell
 <li><strong>If you wrote the same line twice, you need a loop or a function.</strong></li>
 </ul>
 <h2 id="8-minimal-pyprojecttoml-you-can-reuse">8. Minimal <code>pyproject.toml</code> you can reuse<a class="headerlink" href="#8-minimal-pyprojecttoml-you-can-reuse" title="Permanent link">¶</a></h2>
-<div class="highlight"><pre><span></span><code><span class="k">[build-system]</span>
-<span class="n">requires</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">"setuptools&gt;=69"</span><span class="p">,</span><span class="w"> </span><span class="s2">"wheel"</span><span class="p">]</span>
-<span class="n">build-backend</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"setuptools.build_meta"</span>
-
-<span class="k">[project]</span>
-<span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"echelle-pkg"</span>
-<span class="n">version</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"0.1.0"</span>
-<span class="n">requires-python</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"&gt;=3.11"</span>
-<span class="n">dependencies</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">"numpy"</span><span class="p">,</span><span class="w"> </span><span class="s2">"scipy"</span><span class="p">,</span><span class="w"> </span><span class="s2">"matplotlib"</span><span class="p">,</span><span class="w"> </span><span class="s2">"tifffile"</span><span class="p">,</span><span class="w"> </span><span class="s2">"pillow"</span><span class="p">]</span>
-
-<span class="k">[project.optional-dependencies]</span>
-<span class="n">dev</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">"pytest"</span><span class="p">,</span><span class="w"> </span><span class="s2">"ruff"</span><span class="p">,</span><span class="w"> </span><span class="s2">"black"</span><span class="p">]</span>
-
-<span class="k">[project.scripts]</span>
-<span class="n">echelle-cli</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"echelle_pkg.cli:main"</span>
-
-<span class="k">[tool.setuptools.packages.find]</span>
-<span class="n">where</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">"src"</span><span class="p">]</span>
-<span class="n">include</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">"echelle_pkg*"</span><span class="p">]</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="k">[build-system]</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="n">requires</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">"setuptools&gt;=69"</span><span class="p">,</span><span class="w"> </span><span class="s2">"wheel"</span><span class="p">]</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="n">build-backend</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"setuptools.build_meta"</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="k">[project]</span>
+<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"echelle-pkg"</span>
+<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="n">version</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"0.1.0"</span>
+<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="n">requires-python</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"&gt;=3.11"</span>
+<a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a><span class="n">dependencies</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">"numpy"</span><span class="p">,</span><span class="w"> </span><span class="s2">"scipy"</span><span class="p">,</span><span class="w"> </span><span class="s2">"matplotlib"</span><span class="p">,</span><span class="w"> </span><span class="s2">"tifffile"</span><span class="p">,</span><span class="w"> </span><span class="s2">"pillow"</span><span class="p">]</span>
+<a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a>
+<a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a><span class="k">[project.optional-dependencies]</span>
+<a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a><span class="n">dev</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">"pytest"</span><span class="p">,</span><span class="w"> </span><span class="s2">"ruff"</span><span class="p">,</span><span class="w"> </span><span class="s2">"black"</span><span class="p">]</span>
+<a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a>
+<a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a><span class="k">[project.scripts]</span>
+<a id="__codelineno-11-15" name="__codelineno-11-15" href="#__codelineno-11-15"></a><span class="n">echelle-cli</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"echelle_pkg.cli:main"</span>
+<a id="__codelineno-11-16" name="__codelineno-11-16" href="#__codelineno-11-16"></a>
+<a id="__codelineno-11-17" name="__codelineno-11-17" href="#__codelineno-11-17"></a><span class="k">[tool.setuptools.packages.find]</span>
+<a id="__codelineno-11-18" name="__codelineno-11-18" href="#__codelineno-11-18"></a><span class="n">where</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">"src"</span><span class="p">]</span>
+<a id="__codelineno-11-19" name="__codelineno-11-19" href="#__codelineno-11-19"></a><span class="n">include</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">"echelle_pkg*"</span><span class="p">]</span>
 </code></pre></div>
 <h2 id="encouragement">Encouragement<a class="headerlink" href="#encouragement" title="Permanent link">¶</a></h2>
 <blockquote>
@@ -2345,6 +2345,12 @@ poetry<span class="w"> </span>shell
           
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden="">
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Back to top
+</button>
         
       </main>
       
@@ -2375,7 +2381,7 @@ poetry<span class="w"> </span>shell
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.tracking", "content.code.copy", "navigation.tabs", "content.image.zoom"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.top", "content.code.copy", "content.image.zoom"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
