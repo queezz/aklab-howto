@@ -16,10 +16,20 @@ The project will be created relative to your current directory (or relative to t
 
 ### 2: Download the `scaffold.py`
 
-```bash
-curl -o scaffold.py \
-  https://raw.githubusercontent.com/queezz/aklab-howto/master/src/scaffold.py
-```
+=== "macOS / Linux"
+
+    ```bash
+    curl -o scaffold.py \
+      https://raw.githubusercontent.com/queezz/aklab-howto/master/src/scaffold.py
+    ```
+
+=== "Windows (PowerShell)"
+
+    ```powershell
+    Invoke-WebRequest `
+      -Uri https://raw.githubusercontent.com/queezz/aklab-howto/master/src/scaffold.py `
+      -OutFile scaffold.py
+    ```
 
 No Git clone, no installation — just a single file.
 
@@ -37,25 +47,43 @@ This scaffold defines the following project properties:
 
 One canonical example:
 
-```bash
-python scaffold.py my-new-project \
-  --author "Montbell" \
-  --desc "How to hike" \
-  --docs \
-  --git
-```
+=== "macOS / Linux"
+
+    ```bash
+    python scaffold.py my-new-project \
+      --author "Montbell" \
+      --desc "How to hike" \
+      --docs \
+      --git
+    ```
+
+=== "Windows (PowerShell)"
+
+    ```powershell
+    python scaffold.py my-new-project `
+      --author "Montbell" `
+      --desc "How to hike" `
+      --docs `
+      --git
+    ```
 
 This creates `./my-new-project` with a ready-to-use structure.
 
 **In-place (download, run, then delete script):**
 
-```bash
-curl -o scaffold.py https://raw.githubusercontent.com/queezz/aklab-howto/master/src/scaffold.py
-```
+=== "macOS / Linux"
 
-```bash
-python scaffold.py my-new-project --here --docs --git
-```
+    ```bash
+    curl -o scaffold.py https://raw.githubusercontent.com/queezz/aklab-howto/master/src/scaffold.py
+    python scaffold.py my-new-project --here --docs --git
+    ```
+
+=== "Windows (PowerShell)"
+
+    ```powershell
+    Invoke-WebRequest -Uri https://raw.githubusercontent.com/queezz/aklab-howto/master/src/scaffold.py -OutFile scaffold.py
+    python scaffold.py my-new-project --here --docs --git
+    ```
 
 This scaffolds into the current directory; `.gitignore` will include `scaffold.py`.
 
