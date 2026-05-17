@@ -784,10 +784,54 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#minimal-pyprojecttoml" class="md-nav__link">
+  <a href="#package-structure" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Minimal pyproject.toml
+        Package structure
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pyprojecttoml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        pyproject.toml
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#environments" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Environments
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-venv-is-usually-enough" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why venv is usually enough
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#editable-install" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Editable install
       
     </span>
   </a>
@@ -798,7 +842,18 @@
   <a href="#git-dependency-pep-508" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Git dependency (PEP 508)
+        Git dependency — PEP 508
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#console-scripts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Console scripts
       
     </span>
   </a>
@@ -1839,10 +1894,54 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#minimal-pyprojecttoml" class="md-nav__link">
+  <a href="#package-structure" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Minimal pyproject.toml
+        Package structure
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pyprojecttoml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        pyproject.toml
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#environments" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Environments
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-venv-is-usually-enough" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why venv is usually enough
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#editable-install" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Editable install
       
     </span>
   </a>
@@ -1853,7 +1952,18 @@
   <a href="#git-dependency-pep-508" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Git dependency (PEP 508)
+        Git dependency — PEP 508
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#console-scripts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Console scripts
       
     </span>
   </a>
@@ -1881,34 +1991,104 @@
 
 
 <h1 id="python-package">Python Package<a class="headerlink" href="#python-package" title="Permanent link">¶</a></h1>
-<p>Overview of Python basics, environments, and packaging used in this handbook.</p>
-<p>Key topics:
-- Python basics and syntax
-- Dependency management
-- Project scaffolding and packaging</p>
-<h2 id="minimal-pyprojecttoml">Minimal <code>pyproject.toml</code><a class="headerlink" href="#minimal-pyprojecttoml" title="Permanent link">¶</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">[project]</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"yourpkg"</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">version</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"0.1.0"</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="n">requires-python</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"&gt;=3.11"</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="n">dependencies</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">"numpy&gt;=1.26"</span><span class="p">]</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="k">[project.urls]</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="n">Repository</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"https://github.com/you/yourpkg"</span>
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="k">[project.optional-dependencies]</span>
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="n">dev</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">  </span><span class="s2">"mkdocs&gt;=1.6"</span><span class="p">,</span>
-<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">  </span><span class="s2">"mkdocs-material&gt;=9.5"</span><span class="p">,</span>
-<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">  </span><span class="s2">"pymdown-extensions&gt;=10.0"</span><span class="p">,</span>
-<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">  </span><span class="s2">"mdx_truly_sane_lists&gt;=1.0"</span><span class="p">,</span>
-<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="p">]</span>
+<p>A Python package is a folder of Python code that can be installed, imported, tested, and reused in a controlled way.</p>
+<p>For lab work this is useful even for small tools. A package can hold analysis helpers, device-control utilities, plotting functions, file converters, or command-line scripts. Once the code is packaged, it can be installed into a virtual environment, used from notebooks, tested automatically, and shared with other machines or collaborators.</p>
+<h2 id="package-structure">Package structure<a class="headerlink" href="#package-structure" title="Permanent link">¶</a></h2>
+<p>A common modern layout:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>your-project/
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>├── pyproject.toml
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>├── README.md
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>├── src/
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>│   └── yourpkg/
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>│       ├── __init__.py
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>│       └── core.py
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>└── tests/
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    └── test_core.py
 </code></pre></div>
-<h2 id="git-dependency-pep-508">Git dependency (PEP 508)<a class="headerlink" href="#git-dependency-pep-508" title="Permanent link">¶</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">[project]</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">dependencies</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">  </span><span class="s2">"specdata @ git+https://github.com/you/specdata@v0.2.0"</span><span class="p">,</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="p">]</span>
+<p><code>yourpkg</code> is the actual Python package. This is the name used in imports:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">yourpkg</span>
+</code></pre></div>
+<p>The outer project folder is the repository — it may contain docs, tests, notebooks, and configuration. The package itself lives under <code>src/</code>.</p>
+<p>Using <code>src/</code> helps avoid a common mistake: accidentally importing code directly from the project folder instead of importing the installed package. This makes tests and real use behave more similarly.</p>
+<h2 id="pyprojecttoml"><code>pyproject.toml</code><a class="headerlink" href="#pyprojecttoml" title="Permanent link">¶</a></h2>
+<p><code>pyproject.toml</code> describes the package: its name, version, required Python version, runtime dependencies, optional dev dependencies, CLI entry points, and build-system info.</p>
+<p>A minimal example:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">[project]</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"yourpkg"</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="n">version</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"0.1.0"</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="n">description</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Short description of the package"</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="n">readme</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"README.md"</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="n">requires-python</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"&gt;=3.11"</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="n">dependencies</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">  </span><span class="s2">"numpy&gt;=1.26"</span><span class="p">,</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="p">]</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="k">[project.urls]</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="n">Repository</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"https://github.com/you/yourpkg"</span>
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="k">[project.optional-dependencies]</span>
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="n">dev</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="w">  </span><span class="s2">"pytest&gt;=8"</span><span class="p">,</span>
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="w">  </span><span class="s2">"ruff&gt;=0.6"</span><span class="p">,</span>
+<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a><span class="w">  </span><span class="s2">"mkdocs&gt;=1.6"</span><span class="p">,</span>
+<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a><span class="w">  </span><span class="s2">"mkdocs-material&gt;=9.6"</span><span class="p">,</span>
+<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a><span class="w">  </span><span class="s2">"pymdown-extensions&gt;=10.0"</span><span class="p">,</span>
+<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a><span class="w">  </span><span class="s2">"mdx_truly_sane_lists&gt;=1.3"</span><span class="p">,</span>
+<a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a><span class="p">]</span>
+</code></pre></div>
+<p>The most useful result: the whole project installs with one command:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </span><span class="s2">".[dev]"</span>
+</code></pre></div>
+<h2 id="environments">Environments<a class="headerlink" href="#environments" title="Permanent link">¶</a></h2>
+<p>An environment is an isolated Python installation with its own installed packages — a standard <code>venv</code>, a Conda environment, or another tool-managed environment.</p>
+<p>The package itself does not care which one is used. <code>pyproject.toml</code> describes what is needed; the environment provides a clean place to install those requirements.</p>
+<p>Benefits:</p>
+<ul>
+<li>different projects can use different dependency versions</li>
+<li>the system Python stays clean</li>
+<li>setup can be repeated on another machine</li>
+<li>collaborators can install the same project identically</li>
+<li>scripts, notebooks, and tests all use the same installation</li>
+</ul>
+<h2 id="why-venv-is-usually-enough">Why <code>venv</code> is usually enough<a class="headerlink" href="#why-venv-is-usually-enough" title="Permanent link">¶</a></h2>
+<p>For single-user lab tools and ordinary Python packages, <code>venv</code> is the simplest choice. It is built into Python, lightweight, easy to delete, and works directly with <code>pip</code> and <code>pyproject.toml</code>.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">macOS / Linux</label><label for="__tabbed_1_2">Windows (PowerShell)</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>python<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>~/.venvs/yourpkg
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="nb">source</span><span class="w"> </span>~/.venvs/yourpkg/bin/activate
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </span><span class="s2">".[dev]"</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">python</span> <span class="n">-m</span> <span class="n">venv</span> <span class="s2">"$env:USERPROFILE/.venvs/yourpkg"</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="p">&amp;</span> <span class="s2">"$env:USERPROFILE/.venvs/yourpkg/Scripts/Activate.ps1"</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="n">python</span> <span class="n">-m</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">-e</span> <span class="s2">".[dev]"</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<p>Conda is useful when the project depends on complex binary scientific libraries, non-Python dependencies, GPU stacks, or packages that are easier to install from Conda channels. For a small package, <code>venv</code> is usually enough.</p>
+<h2 id="editable-install">Editable install<a class="headerlink" href="#editable-install" title="Permanent link">¶</a></h2>
+<p>During development, use an editable install:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </span><span class="s2">".[dev]"</span>
+</code></pre></div>
+<p>The <code>-e</code> flag means Python imports the package from the working directory. After editing the source, there is no need to reinstall. This is especially useful when developing alongside notebooks or analysis scripts.</p>
+<h2 id="git-dependency-pep-508">Git dependency — PEP 508<a class="headerlink" href="#git-dependency-pep-508" title="Permanent link">¶</a></h2>
+<p>A package can depend directly on another Git repository:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">[project]</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="n">dependencies</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">  </span><span class="s2">"specdata @ git+https://github.com/you/specdata@v0.2.0"</span><span class="p">,</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="p">]</span>
+</code></pre></div>
+<p>Use a tag or commit hash when possible. Depending on a moving branch such as <code>main</code> is convenient, but less reproducible.</p>
+<h2 id="console-scripts">Console scripts<a class="headerlink" href="#console-scripts" title="Permanent link">¶</a></h2>
+<p>Small command-line tools can be exposed from <code>pyproject.toml</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">[project.scripts]</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="n">yourpkg-info</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"yourpkg.cli:main"</span>
+</code></pre></div>
+<p>After installation, the command is available inside the environment:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>yourpkg-info
 </code></pre></div>
 
 
