@@ -10,8 +10,9 @@ theme:
   features:
     - navigation.instant
     - navigation.tracking
+    - navigation.tabs
+    - navigation.top
     - content.code.copy
-    - navigation.tabs # put top-level pages in tabs
     - content.image.zoom
   palette:
     - scheme: bh-dark
@@ -34,29 +35,28 @@ markdown_extensions:
   - attr_list
   - def_list
   - footnotes
+  - md_in_html
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.critic
   - pymdownx.details
-  - pymdownx.tabbed
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
   - pymdownx.superfences:
       custom_fences:
         - name: mermaid
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
-  - pymdownx.arithmatex:   # for LaTeX
-      generic: true  
+  - pymdownx.tabbed:
+      alternate_style: true
   - mdx_truly_sane_lists:
       nested_indent: 4
-  - toc:
-      permalink: true
-  - pymdownx.arithmatex:
-      generic: true
-  - pymdownx.highlight
-  - pymdownx.critic
-  - pymdownx.details
-  - pymdownx.inlinehilite
-  - md_in_html
-  - pymdownx.emoji:
-      emoji_index: !!python/name:material.extensions.emoji.twemoji
-      emoji_generator: !!python/name:material.extensions.emoji.to_svg
 # MARK: EXTRA
 extra_javascript:
   - javascripts/mathjax.js

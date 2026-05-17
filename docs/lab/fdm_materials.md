@@ -82,7 +82,7 @@ functional parts, brackets, containers, moderately outdoor parts
 ## ABS
 
 Acrylonitrile Butadiene Styrene — engineering thermoplastic terpolymer. 
-Terpolymer is made of three monomers, see [ABS monomer components](#abs-monomer-components).
+Terpolymer is made of three monomers, see [ABS monomer components](#abs-asa-monomers).
 
 <span style="color:#4FC3F7; font-weight:600;">
 (C<sub>8</sub>H<sub>8</sub> · C<sub>4</sub>H<sub>6</sub> · C<sub>3</sub>H<sub>3</sub>N)<sub>n</sub>
