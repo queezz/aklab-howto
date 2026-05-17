@@ -91,9 +91,11 @@ dev = [
 ]
 docs = [
   "mkdocs>=1.6",
-  "mkdocs-material>=9.5",
+  "mkdocs-material>=9.6",
   "mkdocstrings[python]>=0.25",
-  "mkdocs-jupyter>=0.25",
+  "pymdown-extensions>=10.0",
+  "mdx_truly_sane_lists>=1.3",
+  "mkdocs-glightbox",
 ]
 
 [project.urls]
@@ -224,31 +226,73 @@ PRECOMMIT = """repos:
 
 
 MKDOCS = """site_name: ${project}
+docs_dir: docs
 repo_url: ${repo_url}
-strict: true
+
 theme:
   name: material
+  icon:
+    repo: fontawesome/brands/github
   features:
     - navigation.instant
     - navigation.tracking
+    - navigation.tabs
+    - navigation.top
     - content.code.copy
-markdown_extensions:
-  - admonition
-  - toc:
-      permalink: true
+    - content.image.zoom
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+
 plugins:
   - search
   - mkdocstrings:
       handlers:
         python:
           options:
-            show_source: false
-  - mkdocs-jupyter
-nav:
-  - Home: index.md
-  - API: reference.md
+            show_source: true
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - mdx_truly_sane_lists:
+      nested_indent: 4
+
 extra_css:
   - stylesheets/extra.css
+
+nav:
+  - Home: index.md
+  - API Reference: reference.md
 """
 
 
@@ -269,7 +313,12 @@ DOCS_REF = """# API Reference
 """
 
 
-DOCS_CSS = ":root { --md-code-bg-color: rgba(0,0,0,.04); }\n"
+DOCS_CSS = """/* Project brand — customize palette overrides here.
+   See https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/ */
+
+/* Example: tint code block backgrounds in light mode */
+/* :root { --md-code-bg-color: rgba(0,0,0,.04); } */
+"""
 
 
 GH_CI = """name: CI
@@ -300,16 +349,11 @@ jobs:
 """
 
 
-GH_PAGES = """name: Deploy Docs
+GH_PAGES = """name: Deploy MkDocs site
 
 on:
   push:
-    branches: [ main ]
-    paths:
-      - "mkdocs.yml"
-      - "docs/**"
-      - "src/**"
-      - ".github/workflows/docs.yml"
+    branches: [ main, master ]
 
 permissions:
   contents: write
@@ -319,16 +363,22 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
       - uses: actions/setup-python@v5
         with:
-          python-version: "3.11"
-      - run: python -m pip install -U pip
-      - run: python -m pip install -e ".[docs]"
-      - run: mkdocs build --strict
+          python-version: "3.x"
+
+      - name: Install MkDocs + plugins
+        run: pip install -e ".[docs]"
+
+      - name: Build site
+        run: mkdocs build --strict
+
       - name: Deploy to gh-pages
-        run: mkdocs gh-deploy --force
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./site
 """
 
 

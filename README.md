@@ -1,51 +1,23 @@
 # Lab How-To
 
-A practical, copy-pasteable handbook of workflows and recipes organized as a MkDocs documentation site.
+A practical handbook of lab workflows, notes, and recipes, published as a MkDocs documentation site.
 
-## PyProject scaffolding
+The site collects reusable procedures for experimental and computational work: hardware, software, KiCad, devices, lab tools, project setup, and other things worth writing down once instead of rediscovering later.
 
-```bash
-python scaffold.py my-new-project --author "Your Name" --email you@example.com --desc "Short one-liner." --git --docs
-```
+[→ Open the docs site](https://queezz.github.io/aklab-howto/)
 
-## Building docs
-- Prerequisites: Python 3.11+, MkDocs, and MkDocs Material theme.
-- Install documentation tooling:
+## Highlights
 
+- Copy-pasteable workflows and setup notes
+- Lab hardware and device documentation
+- Software environment and tooling recipes
+- KiCad and electronics notes
+- Python project scaffolding helper
 
-  ```bash
-  pip install mkdocs mkdocs-material pymdown-extensions mdx_truly_sane_lists mkdocs-glightbox
-  ```
-- Run locally:
-  ```bash
-  mkdocs serve
-  ```
-  Or 
-  ```bash
-  mkdocs serve --livereload
-  ```
+For Python project scaffolding, see:
 
-- Build the site for distribution:
-  ```bash
-  mkdocs build
-  ```
-- Open the site in your browser (default URL: http://127.0.0.1:8000).
+[scaffold.py usage](https://queezz.github.io/aklab-howto/software/scaffold/)
 
-## Repository structure (docs)
-- `docs/software/` — coding & software topics
-- `docs/analysis/` — data wrangling and visualization
-- `docs/hardware/` — electronics & equipment
-- `docs/lab/` — shared lab practices
-- `docs/cheatsheets/` — quick refs
-- `mkdocs.yml` — MkDocs configuration and navigation
-
-## Contributing
-- Follow conventional commit styles as demonstrated in `docs/software/git.md`.
-- Add content under the appropriate section (software, analysis, hardware, lab, cheatsheets).
-- Run `mkdocs serve` to preview changes locally before pushing.
-
-## Documentation site
-- The content is organized under `docs/` and exposed via the MkDocs navigation defined in `mkdocs.yml`.
 
 ## Venv
 ```powershell
