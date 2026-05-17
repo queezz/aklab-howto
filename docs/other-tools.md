@@ -10,6 +10,7 @@
 | [:material-chart-line: fulcher analyzer](https://github.com/queezz/fulcheranalyzer){ .md-button .md-button--small target=_blank } | Analysis tools for Fulcher-α emission using corona-type models. |
 | [<span style="color: #497ded;">:material-atom: sputtering </span>](https://github.com/queezz/sputtering){ .md-button .md-button--small target=_blank } | Notes, scripts, and summaries related to sputtering physics and SRIM simulations. |
 | [:material-fit-to-page: permeation fit](https://github.com/queezz/PermeationFit){ .md-button .md-button--small target=_blank } | Educational hydrogen permeation fitting tool with simple transport models. Recently refactored and planned for future extensions. |
+| [:material-cube-outline: spectrocube](https://github.com/queezz/spectrocube){ .md-button .md-button--small target=_blank } | Lightweight Python standard for calibrated spectroscopic datasets. Wraps xarray with required metadata, validated structure, and NetCDF serialization. |
 
 
 ## 🧰 Helper tools
