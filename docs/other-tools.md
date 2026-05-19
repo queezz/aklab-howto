@@ -6,6 +6,7 @@
 | :--- | :--- |
 | [:material-database: lhd-data](https://github.com/queezz/lhd-data){ .md-button .md-button--small target=_blank } | Python tools for downloading and plotting LHD data, xarray-based with CLI. |
 | [:material-chart-bell-curve-cumulative: echelle spectra](https://github.com/queezz/echelle_spectra){ .md-button .md-button--small target=_blank } | Data loading, calibration, stitching, and analysis helpers for échelle spectrometers. |
+| [:material-sine-wave: echelle-optics](https://github.com/queezz/echelle-optics){ .md-button .md-button--small target=_blank } | Dispersion calculations, order tables, and synthetic detector images for cross-dispersed echelle spectrometers. Targets the LHD CMOS echelle. |
 | [<span style="color: #9ed659;">:material-molecule: bh-molecule</span>](https://github.com/queezz/bh-molecule){ .md-button .md-button--small target=_blank } | Tools and notes for modeling and analyzing BH molecular spectra. |
 | [:material-chart-line: fulcher analyzer](https://github.com/queezz/fulcheranalyzer){ .md-button .md-button--small target=_blank } | Analysis tools for Fulcher-α emission using corona-type models. |
 | [<span style="color: #497ded;">:material-atom: sputtering </span>](https://github.com/queezz/sputtering){ .md-button .md-button--small target=_blank } | Notes, scripts, and summaries related to sputtering physics and SRIM simulations. |
