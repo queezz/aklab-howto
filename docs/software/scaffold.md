@@ -8,9 +8,17 @@ This script is a **one-shot project scaffolding tool**. It is not installed. You
 
 ### 1: Go to your new project dir
 
-```bash
-cd ~/work/your-new-project
-```
+=== "macOS / Linux"
+
+    ```bash
+    mkdir ~/work/spectroview && cd ~/work/spectroview
+    ```
+
+=== "Windows (PowerShell)"
+
+    ```powershell
+    mkdir $HOME\work\spectroview; cd $HOME\work\spectroview
+    ```
 
 The project will be created relative to your current directory (or relative to the path you pass with `--path`).
 
@@ -45,44 +53,28 @@ This scaffold defines the following project properties:
 
 ### 4: Run the scaffold
 
-One canonical example:
-
 === "macOS / Linux"
 
     ```bash
-    python scaffold.py my-new-project \
-      --author "Montbell" \
-      --desc "How to hike" \
-      --docs \
-      --git
+    python scaffold.py spectroview \
+      --here \
+      --author "Arseniy Kuzmin" \
+      --email "arseniy@example.com" \
+      --desc "Spectroscopic data viewer" \
+      --repo-url "https://github.com/queezz/spectroview" \
+      --docs
     ```
 
 === "Windows (PowerShell)"
 
     ```powershell
-    python scaffold.py my-new-project `
-      --author "Montbell" `
-      --desc "How to hike" `
-      --docs `
-      --git
-    ```
-
-This creates `./my-new-project` with a ready-to-use structure.
-
-**In-place (download, run, then delete script):**
-
-=== "macOS / Linux"
-
-    ```bash
-    curl -o scaffold.py https://raw.githubusercontent.com/queezz/aklab-howto/master/src/scaffold.py
-    python scaffold.py my-new-project --here --docs --git
-    ```
-
-=== "Windows (PowerShell)"
-
-    ```powershell
-    Invoke-WebRequest -Uri https://raw.githubusercontent.com/queezz/aklab-howto/master/src/scaffold.py -OutFile scaffold.py
-    python scaffold.py my-new-project --here --docs --git
+    python scaffold.py spectroview `
+      --here `
+      --author "Arseniy Kuzmin" `
+      --email "arseniy@example.com" `
+      --desc "Spectroscopic data viewer" `
+      --repo-url "https://github.com/queezz/spectroview" `
+      --docs
     ```
 
 This scaffolds into the current directory; `.gitignore` will include `scaffold.py`.
