@@ -226,8 +226,10 @@ PRECOMMIT = """repos:
 
 
 MKDOCS = """site_name: ${project}
-docs_dir: docs
+site_description: ${desc}
 repo_url: ${repo_url}
+repo_name: ${repo_name}
+docs_dir: docs
 
 theme:
   name: material
@@ -241,21 +243,22 @@ theme:
     - content.code.copy
     - content.image.zoom
   palette:
+    - scheme: custom-dark
+      primary: custom
+      accent: yellow
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
     - scheme: default
       primary: indigo
       accent: indigo
       toggle:
         icon: material/weather-night
         name: Switch to dark mode
-    - scheme: slate
-      primary: indigo
-      accent: indigo
-      toggle:
-        icon: material/weather-sunny
-        name: Switch to light mode
 
 plugins:
   - search
+  - glightbox
   - mkdocstrings:
       handlers:
         python:
@@ -268,27 +271,33 @@ markdown_extensions:
   - def_list
   - footnotes
   - md_in_html
-  - toc:
-      permalink: true
   - pymdownx.details
-  - pymdownx.emoji:
-      emoji_index: !!python/name:material.extensions.emoji.twemoji
-      emoji_generator: !!python/name:material.extensions.emoji.to_svg
-  - pymdownx.highlight:
-      anchor_linenums: true
-  - pymdownx.inlinehilite
+  - pymdownx.tabbed:
+      alternate_style: true
   - pymdownx.superfences:
       custom_fences:
         - name: mermaid
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
-  - pymdownx.tabbed:
-      alternate_style: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - mdx_truly_sane_lists:
       nested_indent: 4
+  - toc:
+      permalink: true
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
 extra_css:
-  - stylesheets/extra.css
+  - styles/brand.css
 
 nav:
   - Home: index.md
@@ -313,39 +322,199 @@ DOCS_REF = """# API Reference
 """
 
 
-DOCS_CSS = """/* Project brand — customize palette overrides here.
-   See https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/ */
+BRAND_CSS = """/* =========================================================
+   Custom dark scheme: custom-dark
+   See https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/
+   ========================================================= */
 
-/* Example: tint code block backgrounds in light mode */
-/* :root { --md-code-bg-color: rgba(0,0,0,.04); } */
-"""
+[data-md-color-scheme="custom-dark"] {
+
+  color-scheme: dark;
+
+  /* ===== Brand ===== */
+
+  --md-primary-fg-color: #d98e04;
+  --md-primary-fg-color--light: #ffb84d;
+  --md-primary-fg-color--dark: #b37400;
+  --md-typeset-a-color: #ffcc66;
+
+  /* ===== Backgrounds ===== */
+
+  --md-default-bg-color: #0d1117;
+  --md-code-bg-color: #1e2228;
+
+  /* ===== Text ===== */
+
+  --md-default-fg-color: rgba(255,255,240,.92);
+  --md-default-fg-color--light: rgba(255,255,240,.70);
+  --md-default-fg-color--lighter: rgba(255,255,240,.50);
+  --md-default-fg-color--lightest: rgba(255,255,240,.30);
+  --md-typeset-color: var(--md-default-fg-color);
+
+  /* ===== Code ===== */
+
+  --md-code-fg-color: rgba(255,255,240,.95);
+  --md-typeset-code-color: var(--md-code-fg-color);
+  --md-typeset-code-bg: rgba(255,255,255,.08);
+
+  --md-code-hl-operator-color: #f0f0d0;
+  --md-code-hl-keyword-color: #f4c542;
+  --md-code-hl-string-color: #f9e076;
+  --md-code-hl-number-color: #f2b56b;
+  --md-code-hl-name-color: #7acf42;
+  --md-code-hl-attr-color: #9df0b2;
+  --md-code-hl-builtin-color: #a1ebea;
+  --md-code-hl-variable-color: #ffcc66;
+  --md-code-hl-comment-color: rgba(226,196,161,.718);
+  --md-code-hl-punctuation-color: rgba(255,255,240,.75);
+  --md-code-selection-bg-color: rgba(0,0,0,.359);
+
+  /* ===== Misc ===== */
+
+  --md-shadow-z1: 0 2px 4px rgba(0,0,0,.5);
+  --md-accent-fg-color: #66ffa8;
+
+}
 
 
-GH_CI = """name: CI
+/* =========================================================
+   Layout elements
+   ========================================================= */
 
-on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+[data-md-color-scheme="custom-dark"] .md-header,
+[data-md-color-scheme="custom-dark"] .md-tabs {
+  background-color: var(--md-primary-fg-color);
+}
 
-jobs:
-  tests:
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        python-version: [ "3.10", "3.11", "3.12" ]
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with:
-          python-version: ${{ matrix.python-version }}
-      - run: python -m pip install -U pip
-      - run: python -m pip install -e ".[dev]"
-      - run: ruff --version && black --version
-      - run: ruff check .
-      - run: black --check .
-      - run: pytest --maxfail=1 --disable-warnings -q
+[data-md-color-scheme="custom-dark"] .md-search__form {
+  background-color: rgba(255,255,255,.06);
+}
+
+
+/* =========================================================
+   Code
+   ========================================================= */
+
+[data-md-color-scheme="custom-dark"] .md-typeset code {
+  background-color: var(--md-typeset-code-bg);
+  color: var(--md-typeset-code-color);
+}
+
+[data-md-color-scheme="custom-dark"] .md-typeset pre > code,
+[data-md-color-scheme="custom-dark"] pre code {
+  background-color: var(--md-code-bg-color);
+  color: var(--md-code-fg-color);
+}
+
+/* punctuation + operators */
+
+[data-md-color-scheme="custom-dark"] .md-typeset pre .p,
+[data-md-color-scheme="custom-dark"] .md-typeset pre .o {
+  color: var(--md-code-hl-punctuation-color);
+}
+
+/* shell builtins */
+
+[data-md-color-scheme="custom-dark"] .md-typeset pre .nb {
+  color: var(--md-code-hl-builtin-color);
+}
+
+
+/* =========================================================
+   Blockquotes
+   ========================================================= */
+
+[data-md-color-scheme="custom-dark"] .md-typeset blockquote {
+  background-color: #282d35;
+  border-left: .25rem solid #d7ae3b;
+  color: var(--md-default-fg-color);
+  padding: .8em 1em .8em 1.2em;
+  border-radius: 6px;
+}
+
+
+/* =========================================================
+   Keyboard keys
+   ========================================================= */
+
+[data-md-color-scheme="custom-dark"] .md-typeset kbd {
+  background: rgba(255,255,255,.08);
+  color: var(--md-default-fg-color);
+  border: 1px solid rgba(255,255,255,.20);
+  border-bottom-width: 2px;
+  border-radius: .35rem;
+  padding: .1em .45em;
+  font-size: .85em;
+  font-weight: 600;
+  box-shadow: inset 0 -2px 0 rgba(0,0,0,.35);
+}
+
+[data-md-color-scheme="custom-dark"] .md-typeset kbd + kbd {
+  margin-left: .15rem;
+}
+
+[data-md-color-scheme="custom-dark"] .md-typeset kbd + kbd::before {
+  content: " + ";
+  color: var(--md-default-fg-color--light);
+}
+
+
+/* =========================================================
+   Admonitions
+   ========================================================= */
+
+[data-md-color-scheme="custom-dark"] .md-typeset .admonition,
+[data-md-color-scheme="custom-dark"] .md-typeset details {
+  background-color: rgba(255,255,255,.04);
+  color: var(--md-default-fg-color);
+  border: 1px solid rgba(255,255,255,.12);
+}
+
+[data-md-color-scheme="custom-dark"] .md-typeset .admonition-title {
+  background-color: rgba(255,255,255,.06);
+}
+
+[data-md-color-scheme="custom-dark"] .md-typeset .admonition.info    { border-color: #66b3ff; }
+[data-md-color-scheme="custom-dark"] .md-typeset .admonition.warning { border-color: #ffb84d; }
+[data-md-color-scheme="custom-dark"] .md-typeset .admonition.tip     { border-color: #66ffa8; }
+[data-md-color-scheme="custom-dark"] .md-typeset .admonition.note    { border-color: #8ab4ff; }
+
+
+/* =========================================================
+   Tables
+   ========================================================= */
+
+[data-md-color-scheme="custom-dark"] .md-typeset table {
+  background-color: rgba(255,255,255,.03);
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+[data-md-color-scheme="custom-dark"] .md-typeset thead {
+  background-color: rgba(255,255,255,.05);
+}
+
+[data-md-color-scheme="custom-dark"] .md-typeset tbody tr {
+  border-top: 1px solid rgba(255,255,255,.06);
+}
+
+[data-md-color-scheme="custom-dark"] .md-typeset td,
+[data-md-color-scheme="custom-dark"] .md-typeset th {
+  border: none;
+}
+
+[data-md-color-scheme="custom-dark"] .md-typeset tbody tr:nth-child(even) {
+  background-color: rgba(255,255,255,.02);
+}
+
+[data-md-color-scheme="custom-dark"] .md-typeset tbody tr:hover {
+  background: linear-gradient(
+    to right,
+    rgba(255,255,255,.06),
+    rgba(255,255,255,.03)
+  );
+}
 """
 
 
@@ -353,7 +522,7 @@ GH_PAGES = """name: Deploy MkDocs site
 
 on:
   push:
-    branches: [ main, master ]
+    branches: [main, master]
 
 permissions:
   contents: write
@@ -369,7 +538,14 @@ jobs:
           python-version: "3.x"
 
       - name: Install MkDocs + plugins
-        run: pip install -e ".[docs]"
+        run: |
+          pip install \\
+            mkdocs \\
+            mkdocs-material \\
+            pymdown-extensions \\
+            mdx_truly_sane_lists \\
+            "mkdocstrings[python]>=0.25" \\
+            mkdocs-glightbox
 
       - name: Build site
         run: mkdocs build --strict
@@ -379,6 +555,25 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./site
+"""
+
+
+MATHJAX_JS = """window.MathJax = {
+  tex: {
+    inlineMath: [["\\\\(", "\\\\)"]],
+    displayMath: [["\\\\[", "\\\\]"]],
+    processEscapes: true,
+    processEnvironments: true,
+  },
+  options: {
+    ignoreHtmlClass: ".*|",
+    processHtmlClass: "arithmatex",
+  },
+};
+
+document$.subscribe(() => {
+  MathJax.typesetPromise();
+});
 """
 
 
@@ -399,6 +594,7 @@ def main() -> None:
 
     project = args.name.strip()
     module = slugify(project)
+    repo_name = args.repo_url.replace("https://github.com/", "").rstrip("/")
     base = Path(args.path).expanduser().resolve() if args.path is not None else Path.cwd()
     root = base if args.here else base / project
     if args.here and root.exists():
@@ -432,13 +628,12 @@ def main() -> None:
     write(root / ".vscode" / "settings.json", tmpl(VSCODE_SETTINGS, userHome="${userHome}"), overwrite=args.overwrite)
 
     if args.docs:
-        write(root / "mkdocs.yml", tmpl(MKDOCS, project=project, repo_url=args.repo_url, module=module), overwrite=args.overwrite)
+        write(root / "mkdocs.yml", tmpl(MKDOCS, project=project, desc=args.desc, repo_url=args.repo_url, repo_name=repo_name, module=module), overwrite=args.overwrite)
         write(root / "docs" / "index.md", tmpl(DOCS_INDEX, project=project, module=module), overwrite=args.overwrite)
         write(root / "docs" / "reference.md", tmpl(DOCS_REF, module=module), overwrite=args.overwrite)
-        write(root / "docs" / "stylesheets" / "extra.css", DOCS_CSS, overwrite=args.overwrite)
-        write(root / ".github" / "workflows" / "docs.yml", GH_PAGES, overwrite=args.overwrite)
-
-    write(root / ".github" / "workflows" / "ci.yml", GH_CI, overwrite=args.overwrite)
+        write(root / "docs" / "styles" / "brand.css", BRAND_CSS, overwrite=args.overwrite)
+        write(root / "docs" / "javascripts" / "mathjax.js", MATHJAX_JS, overwrite=args.overwrite)
+        write(root / ".github" / "workflows" / "gh-pages.yml", GH_PAGES, overwrite=args.overwrite)
 
     if args.git:
         if not (root / ".git").exists():
