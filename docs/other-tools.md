@@ -49,6 +49,13 @@
 | [:material-github: numerical-tests](https://github.com/queezz/numerical-tests){ .md-button .md-button--small target=_blank } | Old but useful experiments with simple numerical methods and differential equations. |
 
 
+## 🎓 Education
+
+| Tool | Description |
+| :--- | :--- |
+| [:material-math-compass: cnlecture](https://github.com/queezz/cnlecture){ .md-button .md-button--small target=_blank } | Complex-number visualisation tools for lecture use — domain colouring, modular surfaces, streamplots, primitive roots, and interactive parameter controls. |
+
+
 ## 🧩 Meta & integration
 
 | Tool | Description |
