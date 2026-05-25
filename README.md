@@ -20,8 +20,25 @@ For Python project scaffolding, see:
 
 
 ## Venv
+
+### macOS / Linux
+
+```bash
+python -m venv ~/.venvs/explainers
+```
+
+```bash
+source ~/.venvs/explainers/bin/activate
+```
+
+```bash
+python -m pip install -e ".[docs]"
+```
+
+### Windows (PowerShell)
+
 ```powershell
-python -m venv "$env:USERPROFILE/.venvs/explainers" 
+python -m venv "$env:USERPROFILE/.venvs/explainers"
 ```
 
 ```powershell
