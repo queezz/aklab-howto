@@ -558,6 +558,166 @@ jobs:
 """
 
 
+BRAND_CSS_AKLAB = BRAND_CSS.replace('"custom-dark"', '"bh-dark"')
+
+
+MKDOCS_AKLAB = """site_name: ${project}
+site_description: ${desc}
+repo_url: ${repo_url}
+repo_name: ${repo_name}
+docs_dir: docs
+
+theme:
+  name: material
+  icon:
+    repo: fontawesome/brands/github
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.top
+    - content.code.copy
+    - content.image.zoom
+  palette:
+    - scheme: bh-dark
+      primary: custom
+      accent: yellow
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+    - scheme: default
+      primary: amber
+      accent: red
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+
+plugins:
+  - search
+  - glightbox
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - pymdownx.details
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - mdx_truly_sane_lists:
+      nested_indent: 4
+  - toc:
+      permalink: true
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  - https://unpkg.com/mermaid@10/dist/mermaid.min.js
+
+extra_css:
+  - styles/brand.css
+
+nav:
+  - Home: index.md
+  - Software:
+      - 🤖 AI Agent Workflow: software/ai-agent-workflow.md
+"""
+
+
+DOCS_AI_AGENT_PLACEHOLDER = """# AI Agent Workflow
+
+Conventions for working with AI coding assistants in this repository.
+
+---
+
+## Before Any Edit Session
+
+Activate the project venv and verify the build passes:
+
+=== "macOS / Linux"
+
+    ```bash
+    source ~/.venvs/${repo}/bin/activate
+    mkdocs build --strict
+    ```
+
+=== "Windows (PowerShell)"
+
+    ```powershell
+    & "$$env:USERPROFILE/.venvs/${repo}/Scripts/Activate.ps1"
+    mkdocs build --strict
+    ```
+
+---
+
+## Principles
+
+- Incremental changes only — one focused change per session
+- Do not rename files or reorganize directories without explicit intent
+- Add pages to `nav:` in `mkdocs.yml` when adding files to `docs/`
+- Run `mkdocs build --strict` after every meaningful change
+
+---
+
+## Commit Style
+
+- `docs:` — documentation changes
+- `chore:` — CI, config, maintenance
+- `fix:` — corrections
+- `feat:` — new pages or sections
+"""
+
+
+DOCS_CONTRIBUTING = """# Contributing
+
+## Setup
+
+=== "macOS / Linux"
+
+    ```bash
+    python -m venv ~/.venvs/${repo}
+    source ~/.venvs/${repo}/bin/activate
+    python -m pip install -e ".[docs]"
+    ```
+
+=== "Windows (PowerShell)"
+
+    ```powershell
+    python -m venv "$$env:USERPROFILE/.venvs/${repo}"
+    & "$$env:USERPROFILE/.venvs/${repo}/Scripts/Activate.ps1"
+    python -m pip install -e ".[docs]"
+    ```
+
+## Build
+
+```bash
+mkdocs build --strict
+mkdocs serve
+```
+
+## Guidelines
+
+- Keep navigation shallow
+- Stable URLs — do not rename pages without leaving a redirect
+- No unnecessary sections or nesting
+- Prefer figures and diagrams over dense prose
+"""
+
+
 MATHJAX_JS = """window.MathJax = {
   tex: {
     inlineMath: [["\\\\(", "\\\\)"]],
@@ -589,8 +749,12 @@ def main() -> None:
     p.add_argument("--here", action="store_true", help="Scaffold into the target directory itself (no subdirectory)")
     p.add_argument("--git", action="store_true")
     p.add_argument("--docs", action="store_true")
+    p.add_argument("--aklab", action="store_true", help="Emit full AKLab MkDocs setup (implies --docs)")
     p.add_argument("--overwrite", action="store_true")
     args = p.parse_args()
+
+    if args.aklab:
+        args.docs = True
 
     project = args.name.strip()
     module = slugify(project)
@@ -628,12 +792,24 @@ def main() -> None:
     write(root / ".vscode" / "settings.json", tmpl(VSCODE_SETTINGS, userHome="${userHome}"), overwrite=args.overwrite)
 
     if args.docs:
-        write(root / "mkdocs.yml", tmpl(MKDOCS, project=project, desc=args.desc, repo_url=args.repo_url, repo_name=repo_name, module=module), overwrite=args.overwrite)
+        if args.aklab:
+            mkdocs_content = tmpl(MKDOCS_AKLAB, project=project, desc=args.desc, repo_url=args.repo_url, repo_name=repo_name)
+            brand_css_content = BRAND_CSS_AKLAB
+        else:
+            mkdocs_content = tmpl(MKDOCS, project=project, desc=args.desc, repo_url=args.repo_url, repo_name=repo_name, module=module)
+            brand_css_content = BRAND_CSS
+        write(root / "mkdocs.yml", mkdocs_content, overwrite=args.overwrite)
         write(root / "docs" / "index.md", tmpl(DOCS_INDEX, project=project, module=module), overwrite=args.overwrite)
-        write(root / "docs" / "reference.md", tmpl(DOCS_REF, module=module), overwrite=args.overwrite)
-        write(root / "docs" / "styles" / "brand.css", BRAND_CSS, overwrite=args.overwrite)
+        write(root / "docs" / "styles" / "brand.css", brand_css_content, overwrite=args.overwrite)
         write(root / "docs" / "javascripts" / "mathjax.js", MATHJAX_JS, overwrite=args.overwrite)
         write(root / ".github" / "workflows" / "gh-pages.yml", GH_PAGES, overwrite=args.overwrite)
+        if not args.aklab:
+            write(root / "docs" / "reference.md", tmpl(DOCS_REF, module=module), overwrite=args.overwrite)
+
+    if args.aklab:
+        repo = slugify(project)
+        write(root / "docs" / "software" / "ai-agent-workflow.md", tmpl(DOCS_AI_AGENT_PLACEHOLDER, repo=repo), overwrite=args.overwrite)
+        write(root / "CONTRIBUTING.md", tmpl(DOCS_CONTRIBUTING, repo=repo), overwrite=args.overwrite)
 
     if args.git:
         if not (root / ".git").exists():
@@ -644,7 +820,9 @@ def main() -> None:
     print(f"Scaffolded {project} at {root}")
     print("Next:")
     print("  python -m pip install -e \".[dev]\"")
-    if args.docs:
+    if args.aklab:
+        print("  python -m pip install -e \".[docs]\" && mkdocs build --strict && mkdocs serve")
+    elif args.docs:
         print("  python -m pip install -e \".[docs]\" && mkdocs serve")
 
 

@@ -92,6 +92,9 @@ nav:
           - 🎼 Poetry: software/poetry.md
       - 🌐 Flask Server: software/pihti-vacuum.md
       - 🔁 Workflows: software/workflows.md
+      - 🏗️ Infrastructure:
+          - 📐 MkDocs Standard: software/mkdocs-standard.md
+          - 🤖 AI Agent Workflow: software/ai-agent-workflow.md
 
   - 🛠️ Hardware:
       - Equipment:
