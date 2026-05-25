@@ -77,6 +77,7 @@ nav:
   - Home:
       - 🧭 Overview: index.md
       - 🧰 Software & tools: other-tools.md
+      - 📚 paperlib: paperlib.md
       - 🛠️ Design & Fabrication: design-and-fabrication.md
 
   - 💻 Python Dev:
