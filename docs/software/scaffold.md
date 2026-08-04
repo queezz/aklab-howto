@@ -81,7 +81,7 @@ This scaffolds into the current directory; `.gitignore` will include `scaffold.p
 
 ### 5: Point agents at the fleet
 
-Give the new project's `AGENTS.md` one fleet-context line: `RULES.md` (house rules) and `MAP.md` (sibling map) live in the `repomap` repo at `../2026-08-04-repo-map` for a project under `20-Code` ([github.com/queezz/repomap](https://github.com/queezz/repomap)).
+Give the new project's `AGENTS.md` one fleet-context line: `RULES.md` (house rules) and `MAP.md` (sibling map) live in the `fleet` repo at `../fleet` for a project under `20-Code` ([github.com/queezz/fleet](https://github.com/queezz/fleet)).
 
 ---
 
