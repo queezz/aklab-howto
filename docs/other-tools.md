@@ -60,6 +60,7 @@
 
 | Tool | Description |
 | :--- | :--- |
+| [:material-map-search: repomap](https://github.com/queezz/repomap){ .md-button .md-button--small target=_blank } | Map of the whole fleet: an archaeological inventory of every project folder, the house rules distilled from it, and a local read-only dashboard over both. Started with `lab repomap`. |
 | [:material-github: aklab](https://github.com/queezz/aklab){ .md-button .md-button--small target=_blank } | Early attempt to collect lab utilities into a single toolbox. Largely superseded. |
 | [:material-github: leprecon](https://github.com/queezz/leprecon){ .md-button .md-button--small target=_blank } | Predecessor to AKLab: data parsers, simple simulations, and explainers. Abandoned but still useful. |
 | [:material-github: inkscape-figures](https://github.com/queezz/inkscape-figures){ .md-button .md-button--small target=_blank } | Third-party helper for managing Inkscape figures in LaTeX workflows. |
